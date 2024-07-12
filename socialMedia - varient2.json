@@ -1,0 +1,216 @@
+{
+    "type": "APP",
+    "description": "A social media platforms are a digital space that enables users to connect, share, and engage with content and each other online. It facilitates communication and interaction through various features like posts, comments, likes, and direct messages. Users can create profiles, follow others, join groups, and participate in discussions, creating a vibrant online community. The platform supports multimedia sharing, including photos and videos enhancing the user experience. It aims to foster connectivity and engagement while offering tools for content creation, discovery, and collaboration.",
+    "actors": {
+      "User": {
+        "description": "The user is a primary actor who connects, share and engage the content with other users online",
+        
+        "OnboardingFlow": {
+            "description": "The onboarding flow introduces users to the platform features and guides them through setting up their profile and preferences.",
+            "Screens": {
+              "LandingPage": {
+                "WelcomeScreen": {
+                  "description": "The landing page is designed to welcome new users with a vibrant display of the platform's community and features.",
+                  "sections": "1. HeroSection: Displays a captivating image with a 'Get Started' button that initiates the onboarding flow."
+                },
+                "description": "This screen showcases the benefits and core features of the platform.",
+                "sections": "This section contains an image and a brief description of the platform. A 'Next' button navigates to the Preferences Screen.",
+                "screenType": "DetailLayout"
+              },
+              "PreferencesScreen": {
+                "description": "This screen allows users to select their interests to personalize their content feed.",
+                "sections": "This section offers various interest options as clickable tags. Selecting these tags helps tailor the content feed. A 'Next' button navigates to the Profile Setup Screen.",
+                "screenType": "Form"
+              },
+              "ProfileSetupScreen": {
+                "description": "Users can set up their profile by adding a profile picture and a short bio.",
+                "sections": "This section contains fields for uploading a profile picture and entering a bio. A 'Finish' button completes the onboarding process and navigates to the Home screen.",
+                "screenType": "Form"
+              },
+              "LoginScreen": {
+                "description": "The Login screen allows users to log in to their accounts using email and password.",
+                "sections": "This section contains fields for email and password with a 'Login' button to access the user's account.",
+                "screenType": "LoginRegister"
+              }
+            }
+          },
+        "menuItems": {
+          "Home": {
+            "description": "The Home page of a social media platform is where users first land. It features a personalized feed showcasing posts from friends and followed accounts.",
+            "screens": {
+              "HomeScreen": { 
+                "description": "1.PostFeed: Displays a list of content from our connections as cards. Each card includes the type of content shared by the user (Photo/Video), the user's name, the date the content was posted, and a description of the shared content. It also includes buttons for 'Like' (click to increase the like count), 'Comment' (click to add a comment), and 'Share' (click to share with other users).2.PostCreation button: 'New post' button on clicking should let users navigate to create post screen."
+              ,
+              "screenType":"Home"
+              }
+            }
+          },
+          "Profile":{
+            "description":"The profile page displays user account information such as  profile picture, username, bio and settings",
+            "screens":{
+              "ProfileScreen":{
+                "description":"displays user account information such as  profile picture, username, bio",
+                "sections":"AccountInfo: Shows the user's account information, including profile picture, username, and bio, with an 'Edit' button. Clicking the 'Edit' button navigates to the edit profile screen.Posts: The major portion of the profile screen, displaying the content shared by the user. Includes a 'New post' button; clicking it navigates to the create post screen.About: A small card on the profile screen where the user can add details about their college/school/university, where they are from, and where they live. Clicking the 'Edit details' button navigates to the edit about screen.Connections/Friends: A list of friends/connections the user has.",
+                "screenType":"Profile"
+              }
+            }
+          },
+          "Notifications":{
+              "description":"Displays a list of notifications for all the profile interactions such as likes, comments, new followers, etc.",
+              "screens":{
+                "NotificationsScreen":{
+                  "description":"Displays a list of notifications for all the profile interactions such as likes, comments, new followers, etc.",
+                  "sections":"Notification List: List of notifications with icons, short descriptions, and timestampsCall-to-action 'Clear' button, on clicking will clear all notifications.",
+                  "screenType":"Notifications"
+                }
+              }
+            },
+            "Messages":{
+              "description":"Displays a list of all the conversations from our connections",
+              "screens":{
+                "MessageScreen":{
+                  "description":"Displays a list of all the conversations from our connections ",
+                  "sections":"ChatList: List of conversations with friends, each item has friend's username and profile picture. clicking on the item it should navigate user to chat detail view",
+                  "screenType":"MessagesChat"
+                }
+              }
+            },
+            "Network":{
+              "description":"Displays a list of all the user requests",
+              "screens":{
+                "NetworkScreen":{
+                  "description":"Displays a list of all the user requests",
+                  "sections":"List of all the requests from different users, each item user's username, profile picture, bio.Each item has two buttons, 'Accept' and 'Reject', clicking on either the buttons will clear the item from the list",
+                  "screenType":"ListView"
+                }
+              }
+            },
+            "FollowersList":{
+              "description":"Display of friends or followers with profile pictures and usernames",
+              "screens":{
+                "FollowersListScreen":{
+                  "description":"Display of friends or followers with profile pictures and usernames",
+                  "sections":"Displays a list of friends or followers with profile pictures and usernames, each item has 'Follow' and 'Unfollow' button, clicking on either of the buttons will clear the item from the list",
+                  "screenType":"ListView"
+                }
+              }
+            },
+            "Settings":{
+              "description":"A centralized location for managing account details, privacy controls, notification preferences, security options, and account deletion.",
+              "screens":{
+                "FollowersListScreen":{
+                  "description":"A centralized location for managing account details, privacy controls, notification preferences, security options, and account deletion.",
+                  "sections": "AccountSettings: Options to update username, email, password, etc.PrivacySettings: User can control and select options over who can see posts, send messages, view profile. NotificationSettings: Manage notification preferences.SecuritySettings: Options for two-factor authentication, login alerts.DeleteAccount: Option to delete or deactivate the account",
+                  "screenType":"Settings"
+                }
+              }
+            }   
+        }
+      },
+      "Moderator": {
+        "description": "The Moderator oversees user activity to ensure compliance with community guidelines, reviewing and managing content, user reports, and handling disputes.",
+        "menuItems": {
+          "Dashboard": {
+            "description": "The Moderator Dashboard provides a comprehensive overview of flagged content, user reports, and moderation actions.",
+            "screens": {
+              "DashboardScreen": {
+                "description": "Displays a comprehensive overview of flagged content, user reports, and moderation actions.",
+                "sections": "1.FlaggedContent:A list of posts, comments, or media that have been flagged for review.2.UserReports: Displays reports submitted by users about inappropriate content or behavior.3.ModerationActions:A log of actions taken by moderators, such as content removal or user bans."
+              },
+              "screenType": "Dashboard"
+            }
+          },
+          "ReviewContent": {
+            "description": "Allows moderators to review and manage flagged content.",
+            "screens": {
+              "ReviewContentScreen": {
+                "description": "Displays a detailed view of flagged content with options to approve, remove, or escalate for further review.",
+                "sections": "ContentDetails: Shows a list of content in question with user details and context. Each item in the list has buttons for 'Approve' and 'Remove'."
+              },
+              "screenType": "ListView"
+            }
+          },
+          "UserManagement": {
+            "description": "Manages user accounts and handles reports of user behavior.",
+            "screens": {
+              "UserManagementScreen": {
+                "description": "Displays a list of users who have been reported or require moderation.",
+                "sections": 
+                  "UserList: A list of users with details on reports and actions taken.ActionButtons: Each item on list includes buttons for 'Warn', 'Suspend', and 'Ban'. the user"
+                ,
+                "screenType": "ListView"
+              }
+            }
+          },
+          "ReportsAnalytics": {
+            "description": "Provides analytics on moderation activities and platform health.",
+            "screens": {
+              "ReportsAnalyticsScreen": {
+                "description": "Displays detailed reports and statistics on content moderation and user behavior.",
+                "sections": 
+                  "ModerationStats: Key metrics of moderation activities on KPI cards to display the stats such as number of users, users reported, report requests.",              ,
+                "screenType": "ReportsAnalytics"
+              }
+            }
+          }
+        }
+      },
+      "Admin": {
+          "description": "The Admin oversees the entire platform, managing user accounts, monitoring overall activity, ensuring regulatory compliance, and handling high-level moderation tasks.",
+          "menuItems": {
+            "Dashboard": {
+              "description": "The Admin Dashboard provides a high-level overview of platform performance, user activity, and system health.",
+              "screens": {
+                "DashboardScreen": {
+                  "description": "Displays critical metrics, system alerts, and operational statistics.",
+                  "sections": 
+                    "KPICards: Shows platform performance indicators such as active users, posts, and interactions,
+                    SystemHealth: --line graph to show real-time data on 'system performance' and 'health'.,
+                    Alerts: Displays a of system alerts and issues requiring admin attention."
+                  ,
+                  "screenType": "Dashboard"
+                }
+              }
+            },
+            "UserManagement": {
+              "description": "Allows admins to manage accounts, roles, and permissions across the platform.",
+              "screens": {
+                "UserManagementScreen": {
+                  "description": "Displays a comprehensive list of all platform users with management options.",
+                  "sections": 
+                    "UserOverview: Lists all users with 'Edit', 'Delete', or 'Review user activities' button.",                ,
+                  "screenType": "ListView"
+                }
+              }
+            },
+            "ContentManagement": {
+              "description": "Manages all content across the platform, including posts, comments, and media.",
+              "screens": {
+                "ContentManagementScreen": {
+                  "description": "Provides tools to review and manage all user-generated content.",
+                  "sections": 
+                    "ContentList: Displays a list of all content with buttons to 'Approve', 'Edit', or 'Remove'.,
+                    ContentFilters: Tools to filter content by type, date, and user."
+                  ,
+                  "screenType": "ListView"
+                }
+              }
+            },
+            "SystemReports": {
+              "description": "Enables admins to generate and review detailed reports on platform performance and compliance.",
+              "screens": {
+                "SystemReportsScreen": {
+                  "description": "Offers tools for creating and reviewing detailed operational reports.",
+                  "sections": 
+                    "ReportGeneration: Includes a button to generate custom reports based on filters like report type, date range, specific user data, content categories, and other filters to generate tailored reports.,
+                    ReportArchive: List of historical reports for review and audit purposes, each item having report name, date, 'View Report' button which on clicking should navigate to detail report page and 'Download Report' button to download the report.  Includes options for filtering reports by date, report type, and status"
+                  ,
+                  "screenType": "ReportsAnalytics"
+                }
+              }
+            }
+          }
+        }
+      }
+  }
+  
