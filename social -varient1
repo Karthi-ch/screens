@@ -1,0 +1,144 @@
+{
+    "type": "APP",
+    "doc_id": "Social Media",
+    "description": "This platform enables users to share multimedia content like photos and videos, connect with friends, discover new interests, and engage with content through likes, comments, and shares. It supports various features such as personal profiles, messaging, content discovery through feeds, and real-time notifications.",
+    "actors": {
+      "User": {
+        "description": "The User interacts with the platform by posting content, following other users, liking and commenting on posts, and messaging friends.",
+        "OnboardingFlow": {
+          "description": "The onboarding flow introduces users to the platform features and guides them through setting up their profile and preferences.",
+          "Screens": {
+            "WelcomeScreen": {
+              "LandingPage": {
+                "description": "The landing page is designed to welcome new users with a vibrant display of the platform's community and features.",
+                "sections": "1. HeroSection: Displays a captivating image with a 'Get Started' button that initiates the onboarding flow."
+              },
+              "description": "This screen showcases the benefits and core features of the platform.",
+              "sections": "This section contains an image and a brief description of the platform. A 'Next' button navigates to the Preferences Screen.",
+              "screenType": "DetailLayout"
+            },
+            "PreferencesScreen": {
+              "description": "This screen allows users to select their interests to personalize their content feed.",
+              "sections": "This section offers various interest options as clickable tags. Selecting these tags helps tailor the content feed. A 'Next' button navigates to the Profile Setup Screen.",
+              "screenType": "Form"
+            },
+            "ProfileSetupScreen": {
+              "description": "Users can set up their profile by adding a profile picture and a short bio.",
+              "sections": "This section contains fields for uploading a profile picture and entering a bio. A 'Finish' button completes the onboarding process and navigates to the Home screen.",
+              "screenType": "Form"
+            },
+            "LoginScreen": {
+              "description": "The Login screen allows users to log in to their accounts using email and password.",
+              "sections": "This section contains fields for email and password with a 'Login' button to access the user's account.",
+              "screenType": "LoginRegister"
+            }
+          }
+        },
+        "menuItems": {
+          "Home": {
+            "description": "The Home page displays a personalized feed of posts from followed users and suggested content.",
+            "screens": {
+              "FeedScreen": {
+                "description": "Shows list of feeds, each feed card  contain images or videos, with buttons to 'like', 'comment', or 'share'.
+                  on click on 'like' it will increase the like count and change the color of the button to 'blue'. on click on 'comment' it will show comment input box. on click on 'share' it will open the share options.
+                   on click on 'View ' it will navigate to the detail Feed screen.
+                  ",
+                "screenType": "ActivityFeed"
+              },
+              "FeedDetailScreen": {
+                "description": "Displays detailed view of a post with comments, likes, and options to interact.",
+                "sections": "1. PostContent: Shows the main post content with images or videos.
+                 2. Comments: Displays  list fo user comments , each comment card contains name, comment and click on 'Share ' it will open the share options.",
+                "screenType": "DetailLayout"
+              }
+            
+            }
+          },
+          "Posts":{
+            "description": "Allows users to create and share posts with multimedia content like images and videos.",
+            "screens": {
+               "PostListsScreen":{
+                "description": "Displays a list of user posts in a grid view with images or videos.",
+                "sections": "This section contains user posts in a grid view with images or videos. Each post card includes the post video or image and description  and buttons to like, comment, or share.
+                    on click on 'like' it will increase the like count and change the color of the button to 'blue'. on click on 'comment' it will show comment input box. on click on 'share' it will open the share options.
+                    on click on 'View ' it will navigate to the detail post screen.
+                ",
+                "screenType": "ListView"
+               }, 
+              "CreatePostScreen": {
+                "description": "Users can create a new post by uploading images or videos, adding captions, and tagging friends.",
+                "sections": "This section contains fields for uploading media photo or video, entering captions, . A 'Post' button publishes the post to the feed.",
+                "screenType": "Form"
+              },
+              "PostDetailScreen": {
+                "description": "Displays detailed view of a post with comments, likes, and options to interact.",
+                "sections": "1. PostContent: Shows the main post content with images or videos.
+                 2. Comments: Displays  list fo user comments , each comment card contains name, comment and click on 'Share ' it will open the share options on click on Edit it will navigate to the edit post screen.",
+                "screenType": "DetailLayout"
+              }
+            }
+
+          },
+         
+          "Profile": {
+            "description": "Displays the user's personal profile with posts, followers, and following stats.",
+            "screens": {
+              "ProfileScreen": {
+                "description": "
+                This sections contains  Categorization(Tabs)
+                  in first tab :this section contains user profile details like profile picture, bio, followers, following, and posts. on click on 'Edit Profile' it will navigate to the edit profile screen.
+                   in second    list of posts: show list of user posts in grid view with images or videos. on click on 'View ' it will navigate to the detail view of the post.",
+                "screenType": "Profile"
+              }
+            }
+          },
+          "ChatsListScreen": {
+            "description": "Enables private and group messaging with other users.",
+            "screens": {
+              "ChatScreen": {
+                "description": "Display list of charts, each chat card contains user name, last message, and time. on click on chat card it will navigate to the chat detail screen.",
+                "screenType": "MessagesChat"
+              },
+                "ChatDetailScreen": {
+                    "description": "Display chat details with user name, chat messages, and input box to send messages.",
+                    "sections": "1. ChatHeader: Contains user name and back button. 2. ChatMessages: Displays chat messages with user avatars. 3. ChatInput: Contains input box to type and send messages.",
+                    "screenType": "MessagesChat"
+                }
+            }
+          }
+
+       
+        }
+      },
+      "Admin": {
+        "description": "The Admin manages the platform, monitors activity, enforces policies, and handles user reports.",
+        "menuItems": {
+          "Dashboard": {
+            "description": "Admin dashboard for monitoring user activity and platform metrics.",
+            "screens": {
+              "DashboardScreen": {
+                "description": "
+                1. Displays KPI cards for  active users,  new users, total posts
+                2. stats :  --linegraph user joined per day, --bar graph post created per day, --pie chart user by country",
+                "screenType": "Dashboard"
+              }
+            }
+          },
+          "UserManagement": {
+            "description": "Allows admins to manage user accounts and resolve issues.",
+            "screens": {
+              "UserListScreen": {
+                "description": "List  of users with details like name, email, role, and status. on click on user card it will navigate to the user detail screen.",
+                "screenType": "ListView"
+              },
+                "UserDetailScreen": {
+                    "description": "Displays user details and activity with options to edit, suspend, or delete the account.",
+                    "sections": "1. UserDetails: Contains user profile details like name, email, role, and status. ",
+                    "screenType": "DetailLayout"
+                }
+            }
+          }
+        }
+      }
+    }
+  }
