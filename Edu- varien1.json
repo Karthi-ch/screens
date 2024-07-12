@@ -1,0 +1,326 @@
+
+{
+    "type": "APP",
+    "doc_id": "Edutech",
+    "description": "This platform facilitates online learning by offering a wide range of courses and learning materials. It connects students with instructors across various subjects and provides tools for both parties to interact effectively. Courses can include video lectures, quizzes, assignments, and discussions, offering a comprehensive learning experience. The platform supports features like course discovery, enrollment, progress tracking, and certification.",
+  
+    "actors": {
+      "Student": {
+        "description": "The Student is the primary actor who browses, enrolls in, and completes courses and submit assignments  on the platform.",
+       
+  
+        "OnboardingFlow":{
+              "description": "The Onboarding flow shows the introduction and guides students through setting up their profile, selecting interests, and finding courses.",
+              "Screens":{
+                  
+                  "WelcomeScreen": {
+                      "LandingPage":{
+                          "description": "The Landing page is the first page that displays to students , its contains image and button to start  the flow  ",
+                          "sections": 
+                          "  1. HeroSection: List the courses available on the platform with a 'Get Started' button. Clicking the button navigates to the onboarding flow."  
+                        },
+                    "sections": "
+                        this section contains  image  and description about the   app according to student  and on click of 'Next' button it will navigate to  courses info screen."
+                    ,
+                    "screenType": "DetailLayout"
+                  },
+                  "CoursesInfoScreen": {
+                    "description": "The second screen of the onboarding flow, which contains info about the courses available on the platform.",
+                    "sections": "
+                        this section contains  image  and description about the   courses available on the platform and on click of 'Next' button it will navigate  Learning Experience Screen .",
+                      "screenType": "DetailLayout"
+                  },
+                  "LearningExperienceScreen": {
+                    "description": "The third screen of the onboarding flow, which contains info about the learning experience on the platform.",
+                    "sections": "
+                        this section contains  image  and description about the   learning experience on the platform and on click of 'Next' button it will navigate to  login screen.
+                        ",
+                      "screenType": "DetailLayout"
+  
+                  },
+                  "LoginScreen": {
+                    "description": "The Login screen allows students to log in to their accounts using email and password.",
+                    "sections": "
+                        this section contains image and 'Login' Button",
+                      "screenType": "DetailLayout"
+                  }
+  
+  
+                  
+            
+                  
+              }
+        },
+        "menuItems": {
+          "Home": {
+            "description": "The Home page is the landing page, showcasing featured courses, popular categories, and personalized recommendations.",
+            "screens": {
+              "HomeScreen": {
+                "description": "Displays featured courses, popular categories, and personalized recommendations.",
+                "sections": "
+                  1. FeaturedCourses: Displays a carousel of featured courses.Each card with course image, title, instructor name, and a 'View Course' button. Clicking the button navigates to the course details page.,
+                  2. PopularCategories: Displays cards for popular categories, each with a category image, title, and a brief description in grid layout. Clicking on a 'View' to the category's course list page.,
+                  3. PersonalizedRecommendations: Shows a list of recommended courses based on past interactions, each card with a course image, title, and 'View Course' button. Clicking navigates to the course details page."
+                ,
+                "screenType": "Home"
+              }
+            }
+          },
+          "Courses": {
+            "description": "The Courses page displays all available courses, allowing students to browse and filter by categories, difficulty level, ratings, and other attributes.",
+            "screens": {
+              "CourseListScreen": {
+                "description": "Displays a list of all available courses with search and  filtering options. on top actions  it will have search and filter options .",
+                "sections": [
+                  "1. CourseList: Displays list of  course cards, each with a course image, title, instructor name, rating, and 'View Course' button. Clicking the button navigates to the course details page.",
+                ],
+                "screenType": "ListView"
+              },
+              "CourseDetailScreen": {
+                "description": "Displays detailed information about a specific course, including overview, curriculum, reviews, and enrollment options.",
+                "sections": "
+                  1. CourseOverview: Displays the course  title, image, instructor name, overall rating, and brief description.,
+                  2. Reviews: Shows student reviews and ratings . Review card  contains student image, name, rating, review text, and date.,
+                  3. EnrollmentOptions: Displays  'Enroll Now'  and 'Add to Cart'. Clicking 'Enroll Now' button  navigates to  courses checkout screen , while 'Add to Cart' adds the course to the student's cart."
+                ,
+                "screenType": "DetailView"
+              }
+            }
+          },
+          "MyCourses": {
+            "description": "The My Courses page displays all courses a student is enrolled in, allowing them to track progress and resume learning.",
+            "screens": {
+              "MyCourseListScreen": {
+                "description": "Displays a list of enrolled courses with progress tracking.",
+                "sections": [
+                  "1. EnrolledCourses: Displays  List of currently enrolled courses . Each course card  with course image, title, progress bar, and 'Resume' button. Clicking the button navigates to the course Details screen."
+                ],
+                "screenType": "ListView"
+              },
+              "CourseDetailScreen": {
+                "description": "Displays the current lesson for the course being taken. Includes video player, lesson resources, and navigation.",
+                "sections": "
+                  1. VideoPlayer: Plays the video lesson with controls for play/pause, volume, and fullscreen.,
+                  2. LessonResources: Lists downloadable resources like PDFs, links, and additional materials,
+                  3  CourseActions:   provides buttons in grid layout   for on click on  'Mark Complete' it updates the lesson progress and unlocks the next lesson.
+                                      and on click on 'Next Lesson' it navigates to the next lesson., on click on 'Previous Lesson' it navigates to the previous lesson.
+                                      "
+                  
+                  ,
+                "screenType": "DetailView"
+              }
+            }
+          },
+          "Profile": {
+            "description": "The Profile page displays the student's account information, enrollment history, certificates, and settings.",
+            "screens": {
+              "ProfileScreen": {
+                "description": "Displays the student's account information, enrollment history, and certificates.",
+                "sections": "
+                  1. AccountInfo: Shows the student's account information including name, email, and profile picture with 'Edit' button. on click of Edit button it will navigate to edit profile screen.,
+                  2. EnrollmentHistory: Lists all courses the student has enrolled . Each course card  contains course image, title, and completion status.,
+                  3. Certificates: Displays earned certificates with course title and date of completion. Each certificate card contains course image, title, and completion date. on click of  'Download' it will  download the certificate.,"
+                ,
+                "screenType": "Profile"
+              }
+            }
+          }
+        }
+      },
+  
+      "Instructor": {
+        "description": "The Instructor creates and manages courses, tracks student progress, and engages with students through discussions and assignments.",
+        "LandingPage": {
+          "description": "The Landing page is the first page that displays to instructors, containing an image and a button to start the onboarding flow.",
+          "sections": "1. HeroSection: Contains a hero image with a welcome message and a 'Get Started' button. Clicking the button navigates to the onboarding flow."
+        },
+  
+    "OnboardingFlow": {
+      "description": "The Onboarding flow guides instructors through setting up their profile, creating courses, and engaging with students.",
+      "Screens": {
+        "WelcomeScreen": {
+          "description": "The first screen of the onboarding flow, introducing instructors to the platform's features.",
+          "sections": "This section contains an image and description about the platform tailored for instructors. A 'Next' button allows navigation to the Course Creation Screen.",
+          "screenType": "Intro"
+        },
+        "CourseCreationScreen": {
+          "description": "The second screen of the onboarding flow, which provides information on how to create and manage courses.",
+          "sections": "This section contains an image and description about the course creation tools available on the platform. A 'Next' button will navigate to the Engagement Tools Screen."
+        },
+        "EngagementToolsScreen": {
+          "description": "The third screen of the onboarding flow, which highlights the tools available for engaging with students and tracking course progress.",
+          "sections": "This section contains an image and description about the engagement tools on the platform. A 'LogIn' button navigates to the login screen."
+        },
+        "LoginScreen": {
+          "description": "The Login screen allows instructors to log in to their accounts using email and password.",
+          "sections": "This section contains an image and 'Login' button."
+        }
+      }
+    },
+        "menuItems": {
+          "Dashboard": {
+            "description": "The Dashboard provides an overview of course performance, student engagement, and key metrics.",
+            "screens": {
+              "DashboardScreen": {
+                "description": "Displays an overview of course performance, student engagement, and key metrics.",
+                "sections": "
+                  1. CoursePerformance: Shows KPI cards like 'Total Enrollments', 'Active Students', 'Average Rating', and 'Total Reviews'.,
+                  2. StudentEngagement:   Shows KPI cards which contains  student activities such as completed lessons, submitted assignments,
+                  3. CourseStats:  This section displays charts and graphs for course performance metrics .
+                                    --line graph : shows the top 2 or 4 course performance metrics like 'Enrollments', 'Completions', 'Ratings', and 'Reviews' over time.,
+                      
+                  ."
+                ,
+                "screenType": "Dashboard"
+              }
+            }
+          },
+          "ManageCourses": {
+            "description": "The Manage Courses page allows instructors to create, update, and delete their courses.",
+            "screens": {
+              "CourseListScreen": {
+                "description": "Displays a list of all courses created by the instructor with options to add, edit, or delete courses.
+                on top actions  it will have add course button ans search and filter options .",
+                "sections": "
+                  1. CourseList: Lists courses with course image, title, status, and 'Edit' and 'Delete' buttons. on click of Edit button it will navigate to course edit screen and on click of delete button it will delete the course.",
+                "screenType": "ListView"
+              },
+              "CourseDetailScreen":{
+                "description": "Displays detailed information about a specific course created by the instructor, including course details, curriculum, and student engagement.",
+                "sections": "
+                  1. CourseDetails: Shows course card with  title, description, category, difficulty level, and course image.,
+                  2. CourseActions:  provides button  for 'Edit Course' and 'Delete Course'. Clicking 'Edit Course' button  navigates to  courses edit screen , while 'Delete Course' deletes the course.,
+                  3. this section contains 'View Enrollments' button to view the list of students enrolled in the course. on click on enrollments it will navigate to student list screen with filter of current course."
+  
+              },
+              "CourseCreationScreen": {
+                "description": "Allows instructors to create a new course by entering course details, uploading content, and setting curriculum.",
+                "sections": "
+                  1. CourseDetailsForm: Fields for course title, description, category, difficulty level, and course image upload button .,
+                  2. Videos upload: This Section contains' Upload Videos ' button   and  array of input fields to provide video links .,
+                  3. uploadResources: This Section contains 'Upload Resources' button and array of input fields to provide downloadable resources like PDFs, slides, and assignments.,
+                  4. this section contains  'Create course' button to create the course.,
+                ",
+                "screenType": "Form"
+              }
+            }
+          },
+          "StudentManagement": {
+            "description": "The Student Management page allows instructors to track and manage student progress in their courses.",
+            "screens": {
+              "StudentListScreen": {
+                "description": "Displays a list of students enrolled in the instructor's courses with progress tracking and engagement details.",
+                "sections": "
+                  1. StudentList: Lists students with names, enrolled courses, progress bars, and last activity dates."
+                ,
+                "screenType": "ListView"
+              },
+              "StudentDetailScreen": {
+                "description": "Displays detailed information about a specific student’s progress and activities in the instructor's courses.",
+                "sections": [
+                  "1. StudentInfo: Shows student card with  name, email, and profile picture.",
+                  "2. CourseProgress: Lists courses the student is enrolled in with progress bars and completion status.",
+                ],
+                "screenType": "DetailView"
+              }
+            }
+          }
+        }
+      },
+  
+      "Admin": {
+        "description": "The Admin oversees the entire platform, managing user accounts, monitoring course quality, and ensuring smooth operation.",
+        "LandingPage": {
+          "description": "The Landing page is the first page that displays to platform admins, containing an image and a button to start the onboarding flow.",
+          "sections": "1. HeroSection: Contains a hero image with a welcome message and a 'Get Started' button. Clicking the button navigates to the onboarding flow."
+        },
+        "OnboardingFlow": {
+          "description": "The Onboarding flow guides platform admins through the dashboard functionalities, user management, and analytics tools.",
+          "Screens": {
+            "WelcomeScreen": {
+              "description": "The first screen of the onboarding flow, introducing platform admins to the dashboard and its comprehensive tools.",
+              "sections": "This section contains an image and description about the administrative dashboard tailored for platform admins. A 'Next' button allows navigation to the User Management Screen.",
+              "screenType": "Intro"
+            },
+            "UserManagementScreen": {
+              "description": "The second screen of the onboarding flow, which provides information on managing user roles, permissions, and profiles.",
+              "sections": "This section contains an image and description about the user management tools available on the platform. A 'Next' button will navigate to the Analytics Tools Screen."
+            },
+            "AnalyticsToolsScreen": {
+              "description": "The third screen of the onboarding flow, which highlights the analytics tools available for tracking platform usage and course effectiveness.",
+              "sections": "This section contains an image and description about the analytics tools on the platform. A 'LogIn' button navigates to the login screen."
+            },
+            "LoginScreen": {
+              "description": "The Login screen allows admins to log in to their accounts using email and password.",
+              "sections": "This section contains an image and 'Login' button."
+            }
+          }
+        },
+        "menuItems": {
+          "Dashboard": {
+            "description": "The Dashboard provides detailed insights and reports on platform usage, course performance, and user activities.",
+            "screens": {
+              "DashboardScreen": {
+                "description": "Displays key performance indicators, recent activities, system alerts, and various reports to help admins monitor and manage the platform efficiently.",
+                "sections": "
+                  1. KPICards: Shows key performance indicators like 'Total Users', 'Active Students', 'Total Courses', and 'New Enrollments'.,
+                  2. stats : shows --line graph : shows the platform usage metrics like 'New Users', 'Course Completions', 'Ratings', and 'Reviews' over time.
+                  3. InstructorPerformance: Provides information on the instructor's performance, including course ratings and student feedback.
+                       "
+  
+                ,
+                "screenType": "Dashboard"
+              }
+            }
+          },
+          "InstructorManagement": {
+            "description": "The Instructor Management page allows admins to manage instructor accounts, review course content, and provide feedback.",
+            "screens": {
+              "InstructorListScreen": {
+                "description": "Displays a list of all instructors with options to view, approve, reject, or provide feedback on courses.
+                  on top actions  it will have search and filter options and export button to export  the Instructors  .",
+                "sections": [
+                  "1. InstructorList: Lists instructors with details like instructor ID, name, email, courses created, and status, with 'View Instructor' button."
+                ],
+                "screenType": "ListView"
+              },
+              "InstructorDetailScreen": {
+                "description": "Displays detailed information about a specific instructor, including account details, courses created, and student engagement.",
+                "sections": 
+                  
+                  " This sections contains  Categorization(Tabs)
+                   1. in one  category(first tab)  it  Shows detailed account information such as instructor ID, name, email, courses created, and registration date.,
+                  2. in second category(second tab)  Courses: Lists courses created by the instructor. Each card with titles, categories, and ratings and 'View Course' button.
+                       on click on view course it will navigate to course details screen.",
+                
+                "screenType": "DetailView"
+              }
+            }
+          },
+          "UserManagement": {
+            "description": "The User Management page allows admins to manage user accounts, roles, permissions, and access control.",
+            "screens": {
+              "UserListScreen": {
+                "description": "Displays a list of all users with options to view, edit, delete, ",
+                "sections": 
+                  "1. UserList: Lists users with details like user ID, name, email, role, and status, with 'View User' button."
+                
+                "screenType": "ListView"
+              },
+              "UserDetailScreen": {
+                "description": "Displays detailed information about a specific user, including account details, roles, permissions, and activity logs.",
+                "sections": [
+                  "  This sections contains  Categorization(Tabs)
+                   1. in one  category(first tab)  it  Shows detailed account information such as user ID, name, email, role, and registration date.,
+                  2. in second category(second tab)  Courses: Lists courses enrolled by the user. Each card with titles, categories, and ratings and 'View Course' button.
+                       on click on view course it will navigate to course details screen."
+                ],
+                "screenType": "DetailView"
+              }
+            }
+          }
+        
+        }
+      }
+    }
+  }

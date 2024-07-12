@@ -1,0 +1,263 @@
+{
+    "type": "APP",
+    "doc_id": "RealEstatePlatform",
+    "description": "This platform facilitates real estate transactions by connecting buyers, sellers, and real estate agents. It offers tools for listing properties, scheduling viewings, managing offers, and tracking transaction progress. The platform supports features like property discovery, virtual tours, agent interaction, and transaction management.",
+  
+    "actors": {
+      "Buyer": {
+        "description": "The Buyer browses properties, schedules viewings, makes offers, and tracks the progress of their purchase, including plots and homes.",
+       
+        "OnboardingFlow": {
+          "description": "Guides new users through setting up their preferences, such as locations of interest, property types, and budget ranges.",
+          "Screens": {
+              "LandingPage": {
+                  "description": "The first page that displays to buyers, featuring prominent property listings and a search interface.",
+                  "sections": "1. HeroSection: Contains a large featured list of  of a premium  properties with a 'Search Properties' button. Clicking the button its navigates to Welcome Screen",
+                  "screenType": "LandingPage"
+                },
+            "WelcomeScreen": {
+              "description": "Introduces the platform's features to new buyers with a welcoming image and text.",
+              "sections": "This section contains a welcome message and a 'Next' button that navigates to the Preferences Setup Screen.",
+              "screenType": "Intro"
+            },
+            "PreferencesSetupScreen": {
+              "description": "Allows users to set their property search preferences including location, property type, and budget.",
+              "sections": "This section includes dropdowns and sliders for setting preferences and a 'Next' button that navigates to the Login Screen.",
+              "screenType": "Form"
+            },
+            "LoginScreen": {
+              "description": "Allows users to create a new account or log in to an existing one.",
+              "sections": "This section contains fields for email and password with a 'Login' button.",
+              "screenType": "LoginRegister"
+            }
+          }
+        },
+        "menuItems": {
+          "PropertiesScreen": {
+            "description": "Displays available properties based on user preferences and search filters.",
+            "screens": {
+              "PropertyListScreen": {
+                "description": "Shows a list of properties that match the user's preferences with options to view details, schedule a viewing, or contact the agent.",
+                "sections": "1. PropertyCards: Each card displays a property image, brief details, price, and 'View Details' button. Clicking 'View Details' navigates to the Property Detail Screen.",
+                "screenType": "ListView"
+              },
+              "PropertyDetailScreen": {
+                "description": "Provides detailed information about a property, including photos, descriptions, features, and contact options.",
+                "sections": "1. PropertyOverview: Displays detailed information including images, descriptions, and amenities. 2. ContactAgent: Includes a 'Contact Agent' button that opens a contact form. 3. ScheduleViewing: A 'Schedule Viewing' button opens a calendar to select a date and time.",
+                "screenType": "DetailView"
+              },
+              "AddPropertyScreen": {
+                "description": "Allows users to add new properties to the platform for sale or rent.",
+                "sections": "This section   contains form fields with  image upload , name , price , location , description . on click on 'Add Property' button property will be added to the list of properties.",
+                "screenType": "DetailView"
+              }
+            }
+          },
+          "Favorites": {
+            "description": "Allows users to save and manage their favorite properties for easy access.",
+            "screens": {
+              "FavoritesScreen": {
+                "description": "Displays a list of properties that the user has marked as favorites.",
+                "sections": "1. FavoriteProperties: Lists favorite property cards, each card contains property image, name, price and a 'View Details' button. Clicking 'View Details' navigates to the Property Detail Screen.",
+                "screenType": "ListView"
+              }
+            }
+          },
+         
+          "Profile": {
+            "description": "Displays user account information and settings.",
+            "screens": {
+              "ProfileScreen": {
+                "description": "Shows user profile details and preferences with options to edit.",
+                "sections": "
+                This sections contains  Categorization(Tabs)
+                1. UserInfo: Displays user information  with Card , it contains user image, name, email, phone number and a 'Edit Profile' button.
+                2. history : displays previously visited  list of properties, each card contains property image, name, price and a 'View Details' button. on click on 'View Details' button navigates to the Property Detail Screen.",
+                "screenType": "Profile"
+              }
+            }
+          }
+        }
+      },
+      "Seller": {
+        "description": "The Seller lists properties for sale, interacts with potential buyers, and manages offers and transactions.",
+       
+        "OnboardingFlow": {
+          "description": "Guides new sellers through setting up their profiles, adding property listings, and managing inquiries.",
+          "Screens": {
+            "LandingPage": {
+              "description": "The first page that displays to sellers, including a quick overview of their active listings and inquiries.",
+              "sections": "1. HeroSection: Contains a dashboard overview with a 'Manage Listings' button. Clicking the button navigates to the listings management flow.",
+              "screenType": "LandingPage"
+            },
+            "WelcomeScreen": {
+              "description": "Introduces the seller functionalities of the platform with an overview image and text.",
+              "sections": "This section contains an introductory message and a 'Next' button that navigates to the Login Screen.",
+              "screenType": "Onboarding"
+            },
+            "LoginScreen": {
+              "description": "Allows sellers to log in to their professional accounts.",
+              "sections": "This section contains fields for email and password with a 'Login' button.",
+              "screenType": "DetailView"
+            }
+          }
+        },
+        "menuItems": {
+          "PropertyListing": {
+            "description": "Provides an overview of all listings managed by the seller, with performance metrics and inquiries.",
+            "screens": {
+              "DashboardScreen": {
+                "description": "Shows a summary of listings on top actions to 'Add New' listings  and with filtes",
+                "sections": "1. ListingsSummary:  displays all property listings. each property list card contain property image, name, price and a 'View Details' button. Clicking 'View Details' navigates to the Property Detail Screen. ",
+                "screenType": "Dashboard"
+              }
+            }
+          },
+          "SellerPropertyDetail": {
+            "description": "Displays detailed information about a property listing, including photos, descriptions, and inquiries.",
+            "screens": {
+              "PropertyDetailScreen": {
+                "description": "Shows detailed information about a property listing, including images, descriptions, and inquiries.",
+                "sections": "1. PropertyOverview: Displays detailed information including images, descriptions, and amenities. 'Edit Property' button  which edits the property. ",
+                "screenType": "DetailView"
+              }
+            }
+          }
+         
+          }
+      },
+      "RealEstateAgent": {
+        "description": "The Real Estate Agent manages property listings, interacts with potential buyers, and facilitates the selling process.",
+       
+        "OnboardingFlow": {
+          "description": "Guides new agents through setting up their profiles and listings.",
+          "Screens": {
+          "LandingPage": {
+              "description": "The first page that displays to agents, including a quick overview of their active listings and inquiries.",
+              "sections": "1. HeroSection: Contains a dashboard overview with a 'Manage Listings' button. Clicking the button navigates to the listings management flow.",
+              "screenType": "LandingPage"
+              },
+            "WelcomeScreen": {
+              "description": "Introduces the agent functionalities of the platform with an overview image and text.",
+              "sections": "This section contains an introductory message and a 'Next' button that navigates to the Login Screen.",
+              "screenType": "Onboarding"
+            },
+            "LoginScreen": {
+              "description": "Allows agents to log in to their professional accounts.",
+              "sections": "This section contains fields for email and password with a 'Login' button.",
+              "screenType": "DetailView"
+            }
+          }
+        },
+        "menuItems": {
+          "PropertyListing": {
+            "description": "Provides an overview of all listings managed by the agent, with performance metrics and inquiries.",
+            "screens": {
+              "DashboardScreen": {
+                "description": "Shows a summary of listings on top actions to 'Add New' listings  and with filter 'New' and 'Sold' properties.",
+                "sections": "1. ListingsSummary:  displays all property listings. each property list card contain property image, name, price and a 'View Details' button. Clicking 'View Details' navigates to the Property Detail Screen. ",
+                "screenType": "Dashboard"
+              }
+            }
+          },
+        
+          "Inquiries": {
+            "description": "Manages communications with potential buyers and schedules viewings.",
+            "screens": {
+              "InquiriesScreen": {
+                "description": "Lists all inquiries received from potential buyers.",
+                "sections": "1. InquiryList: Displays inquiries with buyer details and a 'Contact' button.",
+                "screenType": "ListView"
+              }
+            }
+          }
+        }
+      },
+      "Admin": {
+        "description": "The Admin oversees the entire platform, managing user accounts, monitoring transactions, and ensuring regulatory compliance.",
+        "LandingPage": {
+          "description": "The first page that displays to admins, containing a comprehensive dashboard of platform activity.",
+          "sections": "1. HeroSection: Contains a dashboard summary with a 'View Reports' button. Clicking the button navigates to the reports section.",
+          "screenType": "LandingPage"
+        },
+        "OnboardingFlow": {
+          "description": "Guides new admins through familiarization with platform controls and monitoring tools.",
+          "Screens": {
+            "WelcomeScreen": {
+              "description": "Provides an introduction to the administrative functionalities of the platform.",
+              "sections": "This section contains an overview of admin tools and a 'Next' button that navigates to the User Management Screen.",
+              "screenType": "Intro"
+            },
+            "UserManagementScreen": {
+              "description": "Introduces tools for managing user accounts and permissions.",
+              "sections": "This section offers an overview of user management capabilities with a 'Next' button that navigates to the Analytics Tools Screen.",
+              "screenType": "Form"
+            },
+            "AnalyticsToolsScreen": {
+              "description": "Shows the analytics and reporting tools available for tracking platform usage and effectiveness.",
+              "sections": "This section includes a display of various analytics tools with a 'LogIn' button that navigates to the login screen.",
+              "screenType": "ReportsAnalytics"
+            },
+            "LoginScreen": {
+              "description": "Allows admins to securely log in to manage the platform.",
+              "sections": "This section contains fields for email and password with a 'Login' button.",
+              "screenType": "LoginRegister"
+            }
+          }
+        },
+        "menuItems": {
+          "Dashboard": {
+            "description": "Provides comprehensive insights into platform operations, user activities, and transaction metrics.",
+            "screens": {
+              "DashboardScreen": {
+                "description": "Displays critical metrics, system alerts, and operational statistics to help admins manage the platform effectively.",
+                "sections": "1. PerformanceMetrics: Shows platform performance indicators such as user activity levels, transaction volumes, and system health. 2. UserActivity: Provides real-time data on user interactions and behaviors. 3. Alerts: Displays system alerts and issues requiring admin attention.",
+                "screenType": "Dashboard"
+              }
+            }
+          },
+          "UserManagement": {
+            "description": "Allows admins to manage accounts, roles, and permissions across the platform.",
+            "screens": {
+              "UserListScreen": {
+                "description": "Displays a comprehensive list of all platform users with management options.",
+                "sections": "1.UserList: Lists users with details like user ID, name, email, role, and status, with 'View User' button.",
+                "screenType": "ListView"
+              },
+              "UserDetailScreen": {
+                "description": "Shows detailed information about a user account and allows admins to modify roles and permissions.",
+                "sections": "1.     This sections contains  Categorization(Tabs)
+                  1. first tab contains user information with Card , it contains user image, name, email, phone number and a 'Edit Profile' button.
+                  2. history : displays previously visited  list of properties, each card contains property image, name, price and a 'View Details' button. on click on 'View Details' button navigates to the Property Detail Screen.
+                "
+                
+                "screenType": "DetailView"
+            }
+          },
+          "AgentManagement": {
+            "description": "Enables admins to oversee real estate agents, their listings, and performance.",
+            "screens": {
+              "AgentListScreen": {
+                "description": "Lists all registered agents with their contact details and performance metrics.",
+                "sections": "1. AgentList: Displays agents with details like agent ID, name, email, phone, and performance metrics.",
+                "screenType": "ListView"
+              },
+              "AgentDetailScreen": {
+                "description": "Shows detailed information about an agent, including listings, inquiries, and performance data.",
+                "sections": "
+                
+                This sections contains  Categorization(Tabs)
+                1. AgentInfo: Displays agent information with Card , it contains agent image, name, email, phone number and a 'Edit Profile' button.
+                2. Listings: Displays all property listings managed by the agent. each property list card contain property image, name, price and a 'View Details' button. Clicking 'View Details' navigates to the Property Detail Screen.
+                ",
+                "screenType": "DetailView"
+              }
+            }
+          }
+         
+        }
+      }
+    }
+  }
+  }
+  

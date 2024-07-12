@@ -1,0 +1,106 @@
+{
+    "type": "APP",
+    "doc_id": "HealthAndFitness",
+    "description": "This platform facilitates health and fitness by offering tailored workout and diet plans, connecting users with fitness coaches, and providing tools to monitor health statistics like calorie intake and workout progress. It supports features like diet tracking, workout routines, progress monitoring, and health insights.",
+    
+    "actors": {
+      "User": {
+        "description": "The User is the primary actor who sets fitness goals, tracks daily activities, logs meals, and interacts with the coaches.",
+       
+        "OnboardingFlow": {
+          "description": "Guides users through setting up their profile, defining fitness goals, and introduces the app's features.",
+         
+          "Screens": {
+            "LandingPage": {
+                "description": "The first page that users see, containing motivational images and a button to start the onboarding process.",
+                "sections": "1. HeroSection: Contains a large motivational image with a 'Get Started' button that navigates the WelcomeScreen",
+                "screenType": "LandingPage"
+              },
+            "WelcomeScreen": {
+              "description": "Introduces the app and its core features with a welcoming image and text.",
+              "sections": "This section contains an introductory message and a 'Next' button that navigates to the Goals Setup Screen.",
+              "screenType": "TutorialOnboarding"
+            },
+            "GoalsSetupScreen": {
+              "description": "Allows users to set their fitness goals like weight loss, muscle gain, or maintaining fitness.",
+              "sections": "This section includes options for goal setting with descriptions and a 'Next' button that navigates to the Diet Preferences Screen.",
+              "screenType": "Form"
+            },
+            "DietPreferencesScreen": {
+              "description": "Collects user preferences for diet types like vegetarian, vegan, keto, etc.",
+              "sections": "This section contains diet options with checkboxes and a 'Next' button that navigates to the Login Screen.",
+              "screenType": "Form"
+            },
+            "LoginScreen": {
+              "description": "Allows users to create a new account or log in to an existing one.",
+              "sections": "This section contains email and password fields with a 'Login' button.",
+              "screenType": "LoginRegister"
+            }
+          }
+        },
+        "menuItems": {
+          "Dashboard": {
+            "description": "Provides an overview of daily activities, calorie intake, and workouts.",
+            "screens": {
+              "DashboardScreen": {
+                "description": "Shows daily summaries and progress towards goals.",
+                "sections": "1. ActivitySummary: Displays KPI cards for steps taken, calories burned, . 2. CalorieIntake: Shows last 7 days calorie intake in Table with a breakdown of meals into breakfast, lunch, dinner, and snacks including total calories .3. Subscriptions : displays  subscription plain in cards. Each card contains plan name, price, and duration. on click on 'Choose' it will navigate to the payment screen",
+                "screenType": "Dashboard"
+              }
+            }
+          },
+          "Diet": {
+            "description": "Allows users to log meals and view nutritional information.",
+            "screens": {
+              "MealLoggingScreen": {
+                "description": "Users can log each meal and view calorie counts. In top action it has 'Add Meal' and filters .",
+                "sections": "List of Meals: shoe list of meal in table view with columns like meal name, calories, date, and time",
+                "screenType": "DetailsView"
+              },
+              "AddMealScreen": {
+                "description": "Allows users to add a new meal with details like name, calories, and time.",
+                "sections": "This section contains  form fields for meal name, calories, date, and time with an 'Add' button. On click of 'Add' button it will navigate to the MealLoggingScreen",
+                "screenType": "DetailsView"
+              }
+            }
+          },
+          "Workouts": {
+            "description": "Displays available workout plans and tracks user workouts",
+            "screens": {
+              "WorkoutListScreen": {
+                "description": "Lists all available workouts with options to customize or start them.",
+                "sections": "1. WorkoutOptions: Displays list of workouts , each workout card contains image , title  on click 'View ' it will  navigate to  workout Details screen",
+                "screenType": "ListView"
+              },
+              "WorkoutDetailsScreen": {
+                "description": "Shows detailed information about a workout plan, including exercises, duration, and intensity.",
+                "sections": "1. WorkoutDetails: Contains workout plan details like exercises, duration, and intensity  and timer , on click on 'Start workOut' timer will start .",
+                "screenType": "DetailsView"
+              },
+            }
+          },
+          "Progress": {
+            "description": "Tracks the user's fitness progress over time with graphs and metrics.",
+            "screens": {
+              "ProgressTrackingScreen": {
+                "description": "Displays progress charts for weight, strength gains, and stamina improvements. on Top action it will have 'set Goal' button",
+                "sections": "1. ProgressCharts: Line graphs showing progress metrics over time for weight, body fat percentage, and muscle mass. 2. GoalTracking: Displays current goals and achievements with visual progress bars and milestone markers.",
+                "screenType": "ReportsAnalytics"
+              }
+            }
+          },
+          "Settings": {
+            "description": "Allows users to adjust app settings, manage accounts, and configure notifications.",
+            "screens": {
+              "SettingsScreen": {
+                "description": "Provides options for notifications, account management, and app settings.",
+                "sections": "1. NotificationSettings: Toggle settings for app notifications. 2. AccountManagement: Options to update user profile and subscription detail card with subscription plan name , end date and on click upgrade button it will navigate to subscription details page , with direct links to privacy settings and account deletion options.",
+                "screenType": "Settings"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
