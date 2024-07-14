@@ -1,0 +1,126 @@
+{
+  "type": "APP",
+  "doc_id": "DateMatch",
+  "description": "A  platform that enables users to find matches based on interests, location, and preferences. Features include profile creation, swiping for matches, messaging, and privacy settings.",
+
+  "actors": {
+    "User": {
+      "description": "The primary actor who can create and manage their profile, search for matches, like profiles, and engage in conversations.",
+
+      "OnboardingFlow": {
+        "description": "Guides users through setting up their profile and preferences to start finding matches.",
+        "Screens": {
+          "LandingPage": {
+            "description": "Which describes about the platform with a image which represents people connecting ",
+            "sections": "This section includes a image which represents people connecting , on click on  'Get started' button it will navigate to welcome screen.",
+            "screenType": "Intro"
+          },
+        "WelcomeScreen": {
+            "description": "Welcomes users to the platform and provides an overview of the features.",
+            "sections": "This section includes a welcome message and  quote about connection, on  'Next' button click navigates to the SignUpScreen.",
+            "screenType": "TutorialOnboarding"
+        },
+         
+          "ProfileSetupScreen": {
+            "description": "Users can set up their profile by adding photos, a bio, and preferences for matches.",
+            "sections": "Includes options to upload photos, write a bio, and set preferences such as age range, interests, and desired relationship type. on click on 'Next' button it will navigate to the PreferenceSetupScreen",
+            "screenType": "Form"
+          },
+          "PreferenceSetupScreen": {
+            "description": "Allows users to fine-tune their matching preferences based on several criteria.",
+            "sections": "Options include sliders for distance, age range, and checkboxes for interests  , on click on 'Next' button it will navigate to the DiscoverScreen",
+            "screenType": "Form"
+          }
+        }
+      },
+      "menuItems": {
+        "Discover": {
+          "description": "The main screen where users  will  find potential matches based on their preferences by  swiping left or right. When two users swipe right on each other, they become a match and can start a conversation.",
+          "screens": {
+            "SwipeScreen": {
+              "description": "Displays potential matches in carousel with (Effect cards) that users can swipe left to pass or right  ",
+              "sections": "1. carousel with (Effect cards): Each carousel card shows a photo, name, age, and a short bio. on swipe right, the user will be able to see the next card and swipe left to pass the card. 2. its card that contains 'Left' and 'Right' buttons to swipe the card left or right. on click on the 'Right' button, the user will be able to see the next card and showed interest and on click on the 'Left' button, the user will be able to pass the card and not interested  ",
+              "screenType": "CardSwipe"
+            }
+          }
+        },
+        "Matches": {
+          "description": "Displays a list of all matches and conversations.",
+          "screens": {
+            "MatchesScreen": {
+              "description": "Shows all list  users who have mutually liked each other . Each user card contains a profile photo, name, and and click  'View' button its navigate to match detail screen, and 'Chat' button its navigate to chat screen",
+              "sections": "Each match includes a profile photo, name, and an indicator of new messages.",
+              "screenType": "ListView"
+            },
+            "MatchDetailScreen": {
+              "description": "Displays detailed information about a match, including photos, bio, and interests.",
+              "sections": "1. Pictures: Displays a carousel of the match's photos, each carousel card contain image and caption . 2. Bio: Shows the match's bio in  2 or 3 lines of description   and  interests in chips format.  On click on the 'Chat' button, the user will be able to navigate to the chat screen.  On Click on the 'Unmatch' button, the user will be able to unmatch the user and remove from the match list. on Click on the 'Block' button, the user will be able to block the user and remove from the match list. ",
+              "screenType": "DetailView"
+            }
+          }
+        },
+        "Messages": {
+          "description": "Users can chat with their matches.",
+          "screens": {
+            "MessagesScreen": {
+              "description": "List of all ongoing conversations.",
+              "sections": "It displays list of chats Each conversation entry shows the match's name, last message, and time since the last message.On click 'Message' button, the user will be able to navigate to chat screen",
+              "screenType": "ListView"
+            },
+            "ChatScreen": {
+              "description": "A chat interface for messaging with matches.",
+              "sections": "1. Displays  ",
+              "screenType": "Chat"
+            }
+          }
+        },
+        "Profile": {
+          "description": "Allows users to view and edit their own profile and settings.",
+          "screens": {
+            "ProfileScreen": {
+              "description": "Displays user's own profile for review and editing.",
+              "sections": "1. Displays user Profile photo, name, age, bio, and interests.Displays No of matches, No of likes, and No of messages. 4. Edit Profile button to navigate to the edit profile screen  and click on share button it will share the profile/ shows share options . ",
+              "screenType": "DetailView"
+            }
+          }
+        }
+      }
+    },
+
+    "Admin": {
+      "description": "The administrator who manages user accounts, resolves disputes, and ensures the platform operates smoothly.",
+      "LandingPage": {
+        "description": "Admin dashboard for accessing various management features of the platform.",
+        "sections": "1. Displays   the what dashboard contains  ,dummy line and pie chats "
+      },
+      "menuItems": {
+        "Dashboard": {
+          "description": "Displays an overview of user activity, new sign-ups, and account status.",
+          "screens": {
+            "DashboardScreen": {
+              "description": "Displays an overview of user activity, new sign-ups, and account status.",
+              "sections": "1. Includes KPI cars for total users, reported users , active users, and inactive users. 2. Includes a line  graph for user activity over time. 3. Includes a pie chart for user status distribution (active, inactive, reported).",
+              "screenType": "Dashboard"
+            }
+          }
+        },
+        "UserManagement": {
+          "description": "Allows admins to monitor and manage user accounts.",
+          "screens": {
+            "UserListScreen": {
+              "description": "Displays a list of users with options to view, edit, or deactivate accounts. on top actions includes export user list, search and filter options with reported.",
+              "sections": "Each user entry includes image , name, email, last login, and toggle button to activate or deactivate account,  on click on the 'View' button, the user will be able to navigate to the user detail screen, on click on the 'Edit' button, the user will be able to navigate to the user edit screen, on click on the 'Deactivate' button, the user will be able to deactivate the user account.",
+              "screenType": "ListView"
+            },
+            "UserDetailScreen": {
+              "description": "Provides detailed information about a user’s account and activity.",
+              "sections": "Details include profile information such as name, email, age, and interests. number of matches, likes,no of reports and messages and  buttons  include  'Deactivate' button to deactivate the user account, 'Block' button to block the user, '",
+              "screenType": "DetailView"
+            }
+          }
+        }
+        
+      }
+    }
+  }
+}
