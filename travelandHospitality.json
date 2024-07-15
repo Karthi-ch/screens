@@ -1,133 +1,164 @@
 {
-    "type": "APP",
-    "description": "A Travel and Hospitality platform is designed to facilitate booking and managing travel plans. It allows users to search for flights, hotels, and rental cars, make reservations, and explore destinations. The platform aims to provide a seamless travel planning experience by offering features like itinerary management, travel recommendations, user reviews, and customer support.",
-    "actors": {
-      "Traveler": {
-        "description": "The Traveler uses the platform to plan, book, and manage their travel itineraries, including flights, accommodations, and transportation.",
-       "OnboardingFlow": {
-       "description": "Guides new users through setting up their travel preferences, such as destinations, accommodation types, and budget ranges.",
-       "Screens": {
-    "LandingPage": {
-      "description": "The first page that displays to users, featuring popular travel destinations and a search interface.",
-      "sections": "1. HeroSection: Contains a large featured list of popular destinations with a 'Search Destinations' button. Clicking the button navigates to the Welcome Screen",
-      "screenType": "LandingPage"
-    },
-    "WelcomeScreen": {
-      "description": "Introduces the platform's features to new users with a welcoming image and text.",
-      "sections": "This section contains a welcome message and a 'Next' button that navigates to the Preferences Setup Screen.",
-      "screenType": "Intro"
-    },
-    "PreferencesSetupScreen": {
-      "description": "Allows users to set their travel preferences including destination, accommodation type, and budget.",
-      "sections": "This section includes dropdowns and sliders for setting preferences and a 'Next' button that navigates to the Login Screen.",
-      "screenType": "Form"
-    },
-    "LoginScreen": {
-      "description": "Allows users to create a new account or log in to an existing one.",
-      "sections": "This section contains fields for email and password with a 'Login' button.",
-      "screenType": "LoginRegister"
-    }
-  }
-},
-  "menuItems": {
-          "Home": {
-            "description": "The Home page provides a personalized feed with travel deals, recommendations, and recent searches.",
-            "screens": {
-              "HomeScreen": {
-                "description": "Displays featured deals, personalized travel recommendations, and recent searches.",
-                "sections": 
-                  "FeaturedDeals: Display a carousel highlighting special offers and discounts on flights, hotels, and vacation packages.,
-                  Recommendations: Display a cards for Personalized travel recommendations based on user preferences and past bookings. Each card must have an image and location name. Includes ''View Package' button on clicking navigates to package detail view,
-                  RecentSearches: Display a cards of recent searches for quick access to previous queries.Each card must have an image and location name. Includes ''View Package' button on clicking navigates to package detail view"
-                ,
-                "screenType": "Home"
-              }
-            }
+  "type": "APP",
+  "description": "A Travel and Hospitality platform is designed to facilitate booking and managing travel plans. It allows users to search for flights, hotels, and rental cars, make reservations, and explore destinations. The platform aims to provide a seamless travel planning experience by offering features like itinerary management, travel recommendations, user reviews, and customer support.",
+  "actors": {
+    "Traveler": {
+      "description": "The Traveler uses the platform to plan, book, and manage their travel itineraries, including flights, accommodations, and transportation.",
+      "OnboardingFlow": {
+        "description": "Guides new users through setting up their travel preferences, such as destinations, accommodation types, and budget ranges.",
+        "screens": {
+          "LandingPage": {
+            "description": "The first page that displays to users, featuring popular travel destinations and a search interface.",
+            "sections": "1. HeroSection: Contains a large featured list of popular destinations with a 'Search Destinations' button. Clicking the button navigates to the Welcome Screen",
+            "screenType": "LandingPage"
           },
-          "Bookings": {
-            "description": "Displays the user's current and past bookings with details and management options.",
-            "screens": {
-              "BookingsScreen": {
-                "description": "Lists all bookings with options to view details, modify, or cancel reservations.",
-                "sections": 
-                  "UpcomingBookings: Displays a list of upcoming travel plans, each item in the list has 'View Details' button which on clicking would navigate to bookings detail page,
-                  PastBookings: Displays a list of previous trips, each item in the list has 'View receipts' which navigates to receipts detailed view and 'Rating and Review' button which on click would navigate to ratings and review create view"
-                ,
-                "screenType": "ListView"
-              }
-            }
+          "WelcomeScreen": {
+            "description": "Introduces the platform's features to new users with a welcoming image and text.",
+            "sections": "This section contains a welcome message and a 'Next' button that navigates to the Preferences Setup Screen.",
+            "screenType": "Intro"
           },
-          "Profile": {
-            "description": "Displays user account information, travel preferences, and settings.",
-            "screens": {
-              "ProfileScreen": {
-                "description": "Shows user account information, travel preferences, and settings.",
-                "sections": 
-                  "AccountInfo: Displays the user's account information including profile picture, username, and bio, with an 'Edit Profile' button which on click would navigate to edit profile screen.,
-                  TravelPreferences: Allows the user to set and edit their travel preferences.On clicking 'Edit' it will navigate to travel preferences edit screen,
-                  Settings: Access to account settings and preferences."
-                ,
-                "screenType": "Profile"
-              }
-            }
+          "PreferencesSetupScreen": {
+            "description": "Allows users to set their travel preferences including destination, accommodation type, and budget.",
+            "sections": "This section includes dropdowns and sliders for setting preferences and a 'Next' button that navigates to the Login Screen.",
+            "screenType": "Form"
           },
-          "Notifications": {
-            "description": "Displays a list of notifications related to bookings, deals, and travel updates.",
-            "screens": {
-              "NotificationsScreen": {
-                "description": "Shows notifications for booking updates, special deals, and other relevant information.",
-                "sections": 
-                  "NotificationList: List of notifications with icons, short descriptions, and timestamps.,
-                  ClearButton: A 'Clear' button to remove all notifications."
-                ,
-                "screenType": "ListView"
-              }
-            }
-          },
-          "Messages": {
-            "description": "Displays a list of conversations with customer support and service providers.",
-            "screens": {
-              "MessagesScreen": {
-                "description": "Lists all conversations with customer support and service providers.",
-                "sections": 
-                  "ChatList: List of conversations with icons for each service provider or support agent.,
-                  NewMessageButton: A 'New Message' button to start a new conversation."
-                ,
-                "screenType": "MessagesChat"
-              }
-            }
-          },
-          "Favorites": {
-            "description": "Displays a list of saved flights, hotels, and destinations.",
-            "screens": {
-              "FavoritesScreen": {
-                "description": "Shows a list of flights, hotels, and destinations that the user has marked as favorites.",
-                "sections": 
-                  "FavoriteList: Displays favorite items with 'View details' onclicking should navigate to package detail view or 'Remove' button to delete from favorites."
-                ,
-                "screenType": "ListView"
-              }
-            }
-          },
-          "Settings": {
-            "description": "A centralized location for managing account details, privacy controls, notification preferences, and security options.",
-            "screens": {
-              "SettingsScreen": {
-                "description": "Allows the user to manage account details, privacy controls, notification preferences, and security options.",
-                "sections": 
-                  "AccountSettings: Options to update username, email, password, etc. Has 'Edit' button which on click navigates to edit profile view,
-                  PrivacySettings: Control over who can see posts, send messages, and view profile.Has 'Edit' button which on click navigates to edit privacy view,
-                  NotificationSettings: Manage notification preferences.Has 'Edit' button which on click navigates to edit notification view,
-                  DeleteAccount: Option to delete or deactivate the account. Includes 'Delete' button which on click navigates to delete account detail view"
-                ,
-                "screenType": "Settings"
-              }
-            }
+          "LoginScreen": {
+            "description": "Allows users to create a new account or log in to an existing one.",
+            "sections": "This section contains fields for email and password with a 'Login' button.",
+            "screenType": "LoginRegister"
           }
         }
       },
-      "Admin": {
+      "menuItems": {
+        "Home": {
+          "description": "The Home page provides a personalized feed with travel deals, recommendations, and recent searches.",
+          "screens": {
+            "HomeScreen": {
+              "description": "Displays featured deals, personalized travel recommendations, and recent searches.",
+              "sections": 
+                  "FeaturedDeals: Display a carousel highlighting special offers and discounts on flights, hotels, and vacation packages.,
+                  Recommendations: Display a cards for Personalized travel recommendations based on user preferences and past bookings. Each card must have an image and location name. Includes ''View Package' button on clicking navigates to package detail view,
+                  RecentSearches: Display a cards of recent searches for quick access to previous queries.Each card must have an image and location name. Includes ''View Package' button on clicking navigates to package detail view","screenType": "Home"
+            }
+          }
+        },
+        "Bookings": {
+          "description": "Displays the user's current and past bookings with details and management options.",
+          "screens": {
+            "BookingsScreen": {
+              "description": "Lists all bookings with options to view details, modify, or cancel reservations.",
+              "sections": 
+                  "UpcomingBookings: Displays a list of upcoming travel plans, each item in the list has 'View Details' button which on clicking would navigate to bookings detail page,
+                  PastBookings: Displays a list of previous trips, each item in the list has 'View receipts' which navigates to receipts detailed view and 'Rating and Review' button which on click would navigate to ratings and review create view","screenType": "ListView"
+            }
+          }
+        },
+        "Profile": {
+          "description": "Displays user account information, travel preferences, and settings.",
+          "screens": {
+            "ProfileScreen": {
+              "description": "Shows user account information, travel preferences, and settings.",
+              "sections": 
+                  "AccountInfo: Displays the user's account information including profile picture, username, and bio, with an 'Edit Profile' button which on click would navigate to edit profile screen.,
+                  TravelPreferences: Allows the user to set and edit their travel preferences.On clicking 'Edit' it will navigate to travel preferences edit screen,
+                  Settings: Access to account settings and preferences.","screenType": "Profile"
+            }
+          }
+        },
+        "Notifications": {
+          "description": "Displays a list of notifications related to bookings, deals, and travel updates.",
+          "screens": {
+            "NotificationsScreen": {
+              "description": "Shows notifications for booking updates, special deals, and other relevant information.",
+              "sections": 
+                  "NotificationList: List of notifications with icons, short descriptions, and timestamps.,
+                  ClearButton: A 'Clear' button to remove all notifications.","screenType": "ListView"
+            }
+          }
+        },
+        "Messages": {
+          "description": "Displays a list of conversations with customer support and service providers.",
+          "screens": {
+            "MessagesScreen": {
+              "description": "Lists all conversations with customer support and service providers.",
+              "sections": 
+                  "ChatList: List of conversations with icons for each service provider or support agent.,
+                  NewMessageButton: A 'New Message' button to start a new conversation.","screenType": "MessagesChat"
+            }
+          }
+        },
+        "Favorites": {
+          "description": "Displays a list of saved flights, hotels, and destinations.",
+          "screens": {
+            "FavoritesScreen": {
+              "description": "Shows a list of flights, hotels, and destinations that the user has marked as favorites.",
+              "sections": "FavoriteList: Displays favorite items with 'View details' onclicking should navigate to package detail view or 'Remove' button to delete from favorites.",
+              "screenType": "ListView"
+            }
+          }
+        },
+        "Settings": {
+          "description": "A centralized location for managing account details, privacy controls, notification preferences, and security options.",
+          "screens": {
+            "SettingsScreen": {
+              "description": "Allows the user to manage account details, privacy controls, notification preferences, and security options.",
+              "sections": 
+                  "AccountSettings: Options to update username, email, password, etc. Has 'Edit' button which on click navigates to edit profile view,
+                  PrivacySettings: Control over who can see posts, send messages, and view profile.Has 'Edit' button which on click navigates to edit privacy view,
+                  NotificationSettings: Manage notification preferences.Has 'Edit' button which on click navigates to edit notification view,
+                  DeleteAccount: Option to delete or deactivate the account. Includes 'Delete' button which on click navigates to delete account detail view","screenType": "Settings"
+            }
+          }
+        }
+      }
+    },
+    "Admin": {
       "description": "The Admin oversees the entire platform, managing user accounts, monitoring transactions, and ensuring regulatory compliance.",
+      "OnboardingFlow": {
+        "description": "Guides new admins through setting up their account and managing listings, user roles, and analytics.",
+        "screens": {
+          "LandingPage": {
+            "description": "The first page that displays to admins, showcasing an overview of administrative features and tools.",
+            "sections": "1. HeroSection: Contains a summary of admin capabilities with a 'Get Started' button. Clicking the button navigates to the Welcome Screen",
+            "screenType": "DetailView"
+          },
+          "WelcomeScreen": {
+            "description": "Introduces the platform's admin features to new admins with a welcoming image and text.",
+            "sections": "This section contains a welcome message and a 'Next' button that navigates to the Profile Setup Screen.",
+            "screenType": "DetailView"
+          },
+          "ProfileSetupScreen": {
+            "description": "Allows admins to set up their profile information including name, role, and contact details.",
+            "sections": "This section includes fields for entering profile details and a 'Next' button that navigates to the Listings Management Setup Screen.",
+            "screenType": "Form"
+          },
+          "ListingsManagementSetupScreen": {
+            "description": "Guides admins through the initial setup of listings management including property details, availability, and pricing.",
+            "sections": "This section includes forms and fields for setting up property listings and a 'Next' button that navigates to the User Management Setup Screen.",
+            "screenType": "Form"
+          },
+          "UserManagementSetupScreen": {
+            "description": "Allows admins to configure user roles and permissions, manage user accounts, and oversee user activities.",
+            "sections": "This section includes options for setting up different user roles and access levels, and a 'Next' button that navigates to the Booking Management Setup Screen.",
+            "screenType": "Settings"
+          },
+          "BookingManagementSetupScreen": {
+            "description": "Guides admins through the setup of booking management tools to handle reservations, cancellations, and customer inquiries.",
+            "sections": "This section includes options for configuring booking settings and a 'Next' button that navigates to the Analytics Setup Screen.",
+            "screenType": "Settings"
+          },
+          "AnalyticsSetupScreen": {
+            "description": "Guides admins through the setup of analytics and reporting tools to monitor performance and user engagement.",
+            "sections": "This section includes options for selecting key performance indicators and a 'Finish' button that completes the onboarding process.",
+            "screenType": "Settings"
+          },
+          "LoginScreen": {
+            "description": "Allows admins to create a new account or log in to an existing one.",
+            "sections": "This section contains fields for email and password with a 'Login' button.",
+            "screenType": "DetailView"
+          }
+        }
+      },
       "menuItems": {
         "Dashboard": {
           "description": "Provides comprehensive insights into platform operations, user activities, and transaction metrics.",
@@ -137,9 +168,7 @@
               "sections": 
                 "KPICards: Shows platform performance indicators such as user activity levels, transaction volumes, and system health.,
                 UserActivity: Provides real-time data on user interactions and behaviors.,
-                Alerts: Display a list of system alerts and issues requiring admin attention."
-            ,
-              "screenType": "Dashboard"
+                Alerts: Display a list of system alerts and issues requiring admin attention.","screenType": "Dashboard"
             }
           }
         },
@@ -150,18 +179,14 @@
               "description": "Displays a comprehensive list of all platform users with management options.",
               "sections": 
                 "UserOverview: Lists all users with options to edit, delete, or review user activities.Clicking on 'Edit' button navigates us to user edit screen, on clicking the 'Delete' button deletes the user data, on clicking the 'Review User data', navigates to user detail view,
-                SearchUsers: A search bar to find specific users."
-              ,
-              "screenType": "ListView"
+                SearchUsers: A search bar to find specific users.","screenType": "ListView"
             },
             "UserDetailScreen": {
               "description": "Provides detailed information about a specific user, including account activity and settings.",
               "sections": 
                 "AccountInfo: Displays user account details such as name, email, and account status.,
                 ActivityLog: Shows recent activities and interactions of the user on the platform.,
-                Actions: Has 'Edit','Suspend' and 'Delete' buttons for editing, suspending, or deleting the user account."
-              ,
-              "screenType": "DetailView"
+                Actions: Has 'Edit','Suspend' and 'Delete' buttons for editing, suspending, or deleting the user account.","screenType": "DetailView"
             }
           }
         },
@@ -172,18 +197,14 @@
               "description": "Displays a list of all transactions with details and management options.",
               "sections": 
                 "TransactionOverview: Lists all transactions with details such as date, amount, and status.,
-                FilterTransactions: Options to filter transactions by date, type, and status."
-              ,
-              "screenType": "ListView"
+                FilterTransactions: Options to filter transactions by date, type, and status.","screenType": "ListView"
             },
             "TransactionDetailScreen": {
               "description": "Provides detailed information about a specific transaction.",
               "sections": 
                 "TransactionInfo: Displays details such as transaction ID, date, amount, and involved parties.,
                 StatusUpdates: Shows the history of status updates for the transaction.,
-                Actions: Buttons for approving, rejecting, or refunding the transaction. clicking on 'Reject' or 'Refund' button should navigate to confirmation detail page"
-              ,
-              "screenType": "DetailView"
+                Actions: Buttons for approving, rejecting, or refunding the transaction. clicking on 'Reject' or 'Refund' button should navigate to confirmation detail page","screenType": "DetailView"
             }
           }
         },
@@ -194,9 +215,7 @@
               "description": "Displays a list of all content items with management options.",
               "sections": 
                 "ContentOverview: Lists all content items with options to edit, delete, or review. 'Edit' button navigates to edit content view, 'Delete' button deletes the record, 'Review' button should navigate to content detail view.,
-                FilterContent: Options to filter content by type, date, and status."
-              ,
-              "screenType": "ListView"
+                FilterContent: Options to filter content by type, date, and status.","screenType": "ListView"
             },
             "ContentDetailScreen": {
               "description": "Provides detailed information about a specific content item.",
@@ -216,9 +235,7 @@
               "description": "Offers tools for creating and reviewing detailed operational reports.",
               "sections": 
                 "ReportGeneration: Includes options to generate custom reports.Clicking on 'Generate custom report' navigates to custom report detail view,
-                ReportArchive: Access to historical reports for review and audit purposes."
-              ,
-              "screenType": "ReportsAnalytics"
+                ReportArchive: Access to historical reports for review and audit purposes.","screenType": "ReportsAnalytics"
             }
           }
         },
@@ -230,9 +247,7 @@
               "sections": 
                 "GeneralSettings: Options to configure general platform settings such as site name, logo, and contact information. Has 'Edit' button which navigates to genral settings edit screen,
                 SecuritySettings: Settings for security features such as two-factor authentication and access controls.Has 'Edit' button which navigates to security settings edit screen,
-                NotificationSettings: Manage notification preferences for system alerts and updates.Has 'Edit' button which navigates to notification settings edit screen"
-              ,
-              "screenType": "Settings"
+                NotificationSettings: Manage notification preferences for system alerts and updates.Has 'Edit' button which navigates to notification settings edit screen","screenType": "Settings"
             }
           }
         }
@@ -240,6 +255,46 @@
     },
     "Moderator": {
       "description": "The Moderator is responsible for overseeing user-generated content, ensuring compliance with community guidelines, and handling user reports.",
+      "OnboardingFlow": {
+        "description": "Guides new moderators through setting up their account and managing user-generated content, reviews, and user reports.",
+        "screens": {
+          "LandingPage": {
+            "description": "The first page that displays to moderators, showcasing an overview of moderation features and tools.",
+            "sections": "1. HeroSection: Contains a summary of moderation capabilities with a 'Get Started' button. Clicking the button navigates to the Welcome Screen",
+            "screenType": "DetailView"
+          },
+          "WelcomeScreen": {
+            "description": "Introduces the platform's moderation features to new moderators with a welcoming image and text.",
+            "sections": "This section contains a welcome message and a 'Next' button that navigates to the Profile Setup Screen.",
+            "screenType": "Intro"
+          },
+          "ProfileSetupScreen": {
+            "description": "Allows moderators to set up their profile information including name, role, and contact details.",
+            "sections": "This section includes fields for entering profile details and a 'Next' button that navigates to the Content Moderation Setup Screen.",
+            "screenType": "Form"
+          },
+          "ContentModerationSetupScreen": {
+            "description": "Guides moderators through the initial setup of content moderation including guidelines and tools for reviewing user-generated content.",
+            "sections": "This section includes dropdowns and checkboxes for setting up moderation preferences and a 'Next' button that navigates to the Review Management Setup Screen.",
+            "screenType": "Settings"
+          },
+          "ReviewManagementSetupScreen": {
+            "description": "Allows moderators to manage user reviews, including approving, rejecting, and responding to reviews.",
+            "sections": "This section includes options for managing reviews and a 'Next' button that navigates to the User Reports Management Screen.",
+            "screenType": "Settings"
+          },
+          "UserReportsManagementScreen": {
+            "description": "Guides moderators through the setup of handling user reports, including reviewing, taking action, and resolving issues.",
+            "sections": "This section includes options for managing user reports and a 'Finish' button that completes the onboarding process.",
+            "screenType": "Settings"
+          },
+          "LoginScreen": {
+            "description": "Allows moderators to create a new account or log in to an existing one.",
+            "sections": "This section contains fields for email and password with a 'Login' button.",
+            "screenType": "DetailView"
+          }
+        }
+      },
       "menuItems": {
         "Dashboard": {
           "description": "Provides an overview of the platform's user-generated content, pending reviews, and flagged items.",
@@ -249,9 +304,7 @@
               "sections": 
                 "KPICards: Shows statistics on pending reviews, approved content, and flagged items.,
                 RecentFlags: Lists recently flagged content for quick access and review.,
-                UserReports: Displays a summary of recent user reports and their statuses."
-              ,
-              "screenType": "Dashboard"
+                UserReports: Displays a summary of recent user reports and their statuses.","screenType": "Dashboard"
             }
           }
         },
@@ -262,18 +315,14 @@
               "description": "Displays a list of all user-generated content pending review.",
               "sections": 
                 "ContentOverview: Lists all pending content items with options to approve, reject, or flag for further review using 'Approve','Reject','Flag for further review' buttons.,
-                FilterContent: Options to filter content by type, date, and status."
-              ,
-              "screenType": "ListView"
+                FilterContent: Options to filter content by type, date, and status.","screenType": "ListView"
             },
             "ContentDetailScreen": {
               "description": "Provides detailed information about a specific content item, including user details and content history.",
               "sections": 
                 "ContentInfo: Displays details such as content type, submission date, and user information.,
                 ReviewHistory: Shows the history of reviews and actions taken on the content.,
-                Actions: 'Approve','Reject' and 'Falg' buttons for approving, rejecting, or flagging the content."
-              ,
-              "screenType": "DetailView"
+                Actions: 'Approve','Reject' and 'Falg' buttons for approving, rejecting, or flagging the content.","screenType": "DetailView"
             }
           }
         },
@@ -284,18 +333,14 @@
               "description": "Displays a list of all user reports with details and management options.",
               "sections": 
                 "ReportOverview: Lists all user reports with details such as report type, date, and status.,
-                FilterReports: Options to filter reports by type, date, and status."
-              ,
-              "screenType": "ListView"
+                FilterReports: Options to filter reports by type, date, and status.","screenType": "ListView"
             },
             "ReportDetailScreen": {
               "description": "Provides detailed information about a specific user report, including the reported content and user history.",
               "sections": 
                 "ReportInfo: Displays details such as report type, date, and reported content.,
                 UserHistory: Shows the history of reports and actions taken on the reported user.,
-                Actions: 'Resolve','Dismiss' and 'Escalte the report' buttons for resolving, dismissing, or escalating the report."
-              ,
-              "screenType": "DetailView"
+                Actions: 'Resolve','Dismiss' and 'Escalte the report' buttons for resolving, dismissing, or escalating the report.","screenType": "DetailView"
             }
           }
         },
@@ -306,18 +351,14 @@
               "description": "Displays a list of all users with options to manage their accounts.",
               "sections": 
                 "UserOverview: Lists all users with, 'Suspend','Ban','Review' buttons to suspend, ban, or review user activities.,
-                SearchUsers: A search bar to find specific users."
-              ,
-              "screenType": "ListView"
+                SearchUsers: A search bar to find specific users.","screenType": "ListView"
             },
             "UserDetailScreen": {
               "description": "Provides detailed information about a specific user, including account activity and moderation actions.",
               "sections": 
                 "AccountInfo: Displays user account details such as name, email, and account status.,
                 ActivityLog: Shows recent activities and interactions of the user on the platform.,
-                Actions: Buttons for suspending, banning, or restoring the user account."
-              ,
-              "screenType": "DetailView"
+                Actions: Buttons for suspending, banning, or restoring the user account.","screenType": "DetailView"
             }
           }
         },
@@ -328,23 +369,18 @@
               "description": "Displays a list of all moderation actions with details.",
               "sections": 
                 "LogOverview: Lists all moderation actions with details such as action type, date, and moderator involved.,
-                FilterLogs: Options to filter logs by type, date, and moderator."
-              ,
-              "screenType": "ListView"
+                FilterLogs: Options to filter logs by type, date, and moderator.","screenType": "ListView"
             },
             "LogDetailScreen": {
               "description": "Provides detailed information about a specific moderation action.",
               "sections": 
                 "ActionInfo: Displays details such as action type, date, and content involved.,
                 ModeratorInfo: Shows information about the moderator who took the action.,
-                Actions: 'Reverse', 'Comment' buttons for reversing or commenting on the action."
-              ,
-              "screenType": "DetailView"
+                Actions: 'Reverse', 'Comment' buttons for reversing or commenting on the action.","screenType": "DetailView"
             }
           }
         }
       }
     }
-    }
   }
-  
+}

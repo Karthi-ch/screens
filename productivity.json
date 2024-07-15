@@ -1,0 +1,188 @@
+{
+    "type": "APP",
+    "description": "Productivity Apps help users manage their tasks, schedules, and notes efficiently. These apps provide tools for organizing work, setting reminders, tracking progress, and collaborating with others. The aim is to enhance productivity and streamline daily activities through intuitive interfaces and powerful features.",
+    "actors": {
+        "TaskMaster": {
+            "description": "The User utilizes the app to manage tasks, schedules, and notes to enhance productivity and organization.",
+            "OnboardingFlow": {
+                "description": "Guides new users through setting up their productivity preferences, such as task categories, notification settings, and integrations.",
+                "screens": {
+                    "LandingPage": {
+                        "description": "The first page that displays to users, featuring an overview of productivity tools and a call to action to get started.",
+                        "sections": "1. HeroSection: Contains an overview of the app's features with a 'Get Started' button. Clicking the button navigates to the Welcome Screen",
+                        "screenType": "DetailView"
+                    },
+                    "WelcomeScreen": {
+                        "description": "Introduces the platform's features to new users with a welcoming image and text.",
+                        "sections": "This section contains a welcome message and a 'Next' button that navigates to the Preferences Setup Screen.",
+                        "screenType": "DetailView"
+                    },
+                    "PreferencesSetupScreen": {
+                        "description": "Allows users to set their productivity preferences including task categories, notification settings, and integrations.",
+                        "sections": "This section includes dropdowns and toggles for setting preferences and a 'Next' button that navigates to the Login Screen.",
+                        "screenType": "Form"
+                    },
+                    "LoginScreen": {
+                        "description": "Allows users to create a new account or log in to an existing one.",
+                        "sections": "This section contains fields for email and password with a 'Login' button.",
+                        "screenType": "DetailView"
+                    }
+                }
+            },
+            "menuItems": {
+                "Dashboard": {
+                    "description": "The Dashboard provides an overview of the user's tasks, calendar events, and recent notes.",
+                    "screens": {
+                        "DashboardScreen": {
+                            "description": "Displays a summary of tasks, upcoming events, and recent notes.",
+                            "sections": 
+                  "TaskSummary: Shows a list of upcoming and overdue tasks.,
+                  CalendarSummary: Displays the next few events on the user's calendar.,
+                  NotesSummary: Lists recently added or edited notes., 'Add' button to add notes, 'Edit' button to edit note","screenType": "Dashboard"
+                        }
+                    }
+                },
+                "Task Management": {
+                    "description": "Allows users to create, update, and organize their tasks.",
+                    "screens": {
+                        "TaskListScreen": {
+                            "description": "Displays a list of tasks with options to mark as complete, edit, or delete.",
+                            "sections": "TaskItems: Lists all tasks with checkboxes for completion and buttons for editing or deleting tasks.,'Add' button to add task, 'Edit' button to edit task, 'Delete' button to remove the task from the list. Clicking on the task it should navigate to task detail screen",
+                            "screenType": "ListView"
+                        }
+                    }
+                },
+                "TaskDetailScreen": {
+                    "description": "Provides detailed information about a specific task, including due date, priority, and notes.",
+                    "screens": {
+                        "TaskDetailScreen": {
+                            "description": "Displays a detailed information about a specific task, including due date, priority, and notes.",
+                            "sections": 
+                "TaskInfo: Shows task details with 'Edit' button to edit.,
+                Subtasks: Lists any subtasks with ''Add' and 'Remove' buttons to add or remove the sub-tasks."                  ,"screenType": "ListView"
+                        }
+                    }
+                },
+                "Notes": {
+                    "description": "Allows users to create, view, and organize notes.",
+                    "screens": {
+                        "NotesListScreen": {
+                            "description": "Displays a list of notes with options to view, edit, or delete.",
+                            "sections": "NoteItems: Lists all notes with 'Edit' and 'Delete' buttons to edit or delete.",
+                            "screenType": "ListView"
+                        }
+                    }
+                },
+                "EisenhowerMatrix": {
+                    "description": "Allows users to organize priorities.",
+                    "screens": {
+                        "MatrixScreen": {
+                            "description": "Displays the Eisenhower Matrix with quadrants for different priority levels.",
+                            "sections": 
+                "UrgentImportant: Lists tasks that are both urgent and important.,
+                NotUrgentImportant: Lists tasks that are important but not urgent.,
+                UrgentNotImportant: Lists tasks that are urgent but not important.,
+                NotUrgentNotImportant: Lists tasks that are neither urgent nor important.","screenType": "ListView"
+                        }
+                    }
+                },
+                "HabitTracker": {
+                    "description": "Offers a habit tracker to view, add, and analyze habits.",
+                    "screens": {
+                        "MatrixScreen": {
+                            "description": "Displays a list of habits with progress tracking.",
+                            "sections": "HabitItems: Lists all habits with progress indicators and 'Add' and 'Remove' buttons to add or remove habits.",
+                            "screenType": "ListView"
+                        }
+                    }
+                },
+                "Settings": {
+                    "description": "A centralized location for managing account details, notification preferences, and app settings.",
+                    "screens": {
+                        "SettingsScreen": {
+                            "description": "Displays options for managing account details, notification preferences, and app settings.",
+                            "sections": 
+                  "AccountSettings: 'Edit' button to update username, email, and password. on clicking edit it should navigate to profile edit view,
+                  NotificationSettings: Manage notification preferences.,
+                  AppSettings: Options for customizing app behavior and appearance.","screenType": "Settings"
+                        }
+                    }
+                }
+            }
+        },
+        "TimeKeeper": {
+            "description": "The TimeKeeper oversees the app’s overall functionality and user management.",
+            "OnboardingFlow": {
+                "description": "Guides new administrators through setting up their management preferences, such as user roles, permissions, and system settings.",
+                "screens": {
+                    "LandingPage": {
+                        "description": "The first page that displays to administrators, featuring an overview of administrative tools and a call to action to get started.",
+                        "sections": "1. HeroSection: Contains an overview of the admin features with a 'Get Started' button. Clicking the button navigates to the Welcome Screen",
+                        "screenType": "DetailView"
+                    },
+                    "WelcomeScreen": {
+                        "description": "Introduces the admin platform's features to new administrators with a welcoming image and text.",
+                        "sections": "This section contains a welcome message and a 'Next' button that navigates to the Preferences Setup Screen.",
+                        "screenType": "DetailView"
+                    },
+                    "PreferencesSetupScreen": {
+                        "description": "Allows administrators to set up their preferences including user roles, permissions, and system settings.",
+                        "sections": "This section includes dropdowns and toggles for setting preferences and a 'Next' button that navigates to the Login Screen.",
+                        "screenType": "Form"
+                    },
+                    "LoginScreen": {
+                        "description": "Allows administrators to create a new account or log in to an existing one.",
+                        "sections": "This section contains fields for email and password with a 'Login' button.",
+                        "screenType": "DetailView"
+                    }
+                }
+            },
+            "menuItems": {
+                "User Management": {
+                    "description": "Allows the TimeKeeper to manage user accounts and access levels.",
+                    "screens": {
+                        "UserListScreen": {
+                            "description": "Displays a list of all users with options to edit, delete, or change access levels.",
+                            "sections": "UserItems: Lists all users with 'Edit','Delete' and 'Change access level' buttons for editing, deleting, or changing access levels. clicking on each item of the list it should navigate to user detail screen",
+                            "screenType": "ListView"
+                        }
+                    }
+                },
+                "UserDetailScreen": {
+                    "description": "Allows the TimeKeeper to manage user accounts and access levels.",
+                    "screens": {
+                        "AppSettingsScreen": {
+                            "description": "Provides detailed information about a specific user, including account details and access level.",
+                            "sections": "UserInfo: Shows user details with 'Edit' button to edit. User details include user name, email, activity",
+                            "screenType": "DetailView"
+                        }
+                    }
+                },
+                "AppSettings": {
+                    "description": "Allows the TimeKeeper to configure global app settings.",
+                    "screens": {
+                        "AppSettingsScreen": {
+                            "description": "Displays global settings for configuring app behavior and appearance.",
+                            "sections": 
+                "GeneralSettings: Options for general app configurations.,
+                NotificationSettings: Manage global notification settings.,
+                PrivacySettings: Options for privacy and data handling.","screenType": "Settings"
+                        }
+                    }
+                },
+                "Reports": {
+                    "description": "Provides the TimeKeeper with access to app usage reports and analytics.",
+                    "screens": {
+                        "ReportsScreen": {
+                            "description": "Displays various reports and analytics on app usage and user activity.",
+                            "sections": 
+                "UsageReports: Reports on app usage statistics.,
+                ActivityReports: Reports on user activities and interactions.,
+                PerformanceReports: Reports on app performance and issues.","screenType": "ReportsAnalytics"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

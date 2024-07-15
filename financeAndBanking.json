@@ -1,0 +1,558 @@
+{
+    "type": "APP",
+    "description": "A finance and banking app enables users to manage their financial activities conveniently through their mobile devices. It provides services like account management, funds transfer, bill payments, expense tracking, and investment monitoring, offering a secure and efficient way to handle personal finances.",
+    "actors": {
+        "User": {
+            "description": "The user is the primary actor who manages their finances, performs transactions, and monitors their accounts through the app.",
+            "OnboardingFlow": {
+                "description": "Guides new users through setting up their financial preferences, such as account types, security settings, and notification preferences.",
+                "screens": {
+                    "LandingPage": {
+                        "description": "The first page that displays to users, highlighting the app's features and benefits with a call to action to get started.",
+                        "sections": "1. HeroSection: Contains an overview of the app's features with a 'Get Started' button. Clicking the button navigates to the Welcome Screen",
+                        "screenType": "DetailView"
+                    },
+                    "WelcomeScreen": {
+                        "description": "Introduces the platform's features to new users with a welcoming image and text.",
+                        "sections": "This section contains a welcome message and a 'Next' button that navigates to the Account Setup Screen.",
+                        "screenType": "DetailView"
+                    },
+                    "AccountSetupScreen": {
+                        "description": "Allows users to set up their account information including name, contact details, and account type.",
+                        "sections": "This section includes fields for entering personal and account details and a 'Next' button that navigates to the Security Settings Screen.",
+                        "screenType": "Form"
+                    },
+                    "SecuritySettingsScreen": {
+                        "description": "Allows users to configure their security settings including password, PIN, and two-factor authentication.",
+                        "sections": "This section includes options for setting up security measures and a 'Next' button that navigates to the Notification Preferences Screen.",
+                        "screenType": "Settings"
+                    },
+                    "NotificationPreferencesScreen": {
+                        "description": "Allows users to set their notification preferences for account activities, transactions, and updates.",
+                        "sections": "This section includes toggles for setting notification preferences and a 'Next' button that navigates to the Payment Methods Screen.",
+                        "screenType": "Settings"
+                    },
+                    "PaymentMethodsScreen": {
+                        "description": "Allows users to add and manage their payment methods such as credit cards, debit cards, and bank accounts.",
+                        "sections": "This section includes fields for entering payment details and a 'Finish' button that completes the onboarding process.",
+                        "screenType": "Form"
+                    },
+                    "LoginScreen": {
+                        "description": "Allows users to create a new account or log in to an existing one.",
+                        "sections": "This section contains fields for email and password with a 'Login' button.",
+                        "screenType": "DetailView"
+                    }
+                }
+            },
+            "menuItems": {
+                "Dashboard": {
+                    "description": "The Dashboard provides an overview of the user's financial status, including account balances, recent transactions, and financial insights.",
+                    "screens": {
+                        "DashboardScreen": {
+                            "description": "Displays a summary of account balances, recent transactions, and key financial metrics.",
+                            "sections": 
+                  "AccountSummary: KPI cards to Show balances for checking, savings, and other linked accounts.,
+                  RecentTransactions: Lists recent transactions with details like date, amount, and description.,
+                  FinancialInsights: Provides personalized insights and recommendations based on spending habits.","screenType": "Dashboard"
+                        }
+                    }
+                },
+                "Accounts": {
+                    "description": "Allows users to view detailed information about their bank accounts, including transaction history and account statements.",
+                    "screens": {
+                        "AccountsScreen": {
+                            "description": "Displays detailed information for each account, including transaction history and downloadable statements.",
+                            "sections": 
+                  "AccountList: Lists all linked bank accounts with balances.,
+                  TransactionHistory: Shows a detailed history of transactions for a selected account.,
+                  Statements: Provides 'Download' to download the statement and 'View account statement'button which navigates to statements detail view","screenType": "DetailView"
+                        }
+                    }
+                },
+                "Transfer": {
+                    "description": "Facilitates fund transfers between the user's accounts or to other bank accounts.",
+                    "screens": {
+                        "TransferScreen": {
+                            "description": "Provides options for transferring funds between accounts or to other recipients.",
+                            "sections": 
+                  "TransferForm: Input fields for selecting the source and destination accounts, and entering the transfer amount.,
+                  RecentRecipients: Lists frequently used recipients for quick transfers.,
+                  TransferSummary: Shows a summary of the transfer details before confirmation.","screenType": "Form"
+                        }
+                    }
+                },
+                "Payments": {
+                    "description": "Enables users to pay bills, set up recurring payments, and manage payees.",
+                    "screens": {
+                        "PaymentsScreen": {
+                            "description": "Provides options to pay bills, set up recurring payments, and manage payees.",
+                            "sections": 
+                  "BillPay: Form to enter bill payment details including payee, amount, and due date.,
+                  RecurringPayments: Lists and manages recurring payments with options to edit or cancel.,
+                  ManagePayees: 'Add','Edit' and 'Remove' buttons for users to add, edit, or remove payees for bill payments.","screenType": "Form"
+                        }
+                    }
+                },
+                "Investments": {
+                    "description": "Provides an overview of the user's investment portfolio, including stocks, bonds, mutual funds, and other assets.",
+                    "screens": {
+                        "InvestmentsScreen": {
+                            "description": "Displays detailed information about the user's investment portfolio.",
+                            "sections": 
+                  "PortfolioOverview: Shows the value and performance of the overall investment portfolio using Echarts,
+                  InvestmentDetails: Lists individual investments with performance metrics and recent activity.,
+                  MarketNews: Provides news and updates relevant to the user's investments.","screenType": "DetailView"
+                        }
+                    }
+                },
+                "Budgeting": {
+                    "description": "Helps users track their expenses, set budget goals, and monitor spending against budgets.",
+                    "screens": {
+                        "BudgetingScreen": {
+                            "description": "Provides tools for tracking expenses, setting budget goals, and monitoring spending.",
+                            "sections": 
+                  "ExpenseTracker: Lists recent expenses categorized by type (e.g., groceries, utilities, entertainment), includes a pie-chart to show the data,
+                  BudgetGoals: Allows users to set and track budget goals for different categories.,
+                  SpendingInsights: Provides insights and charts showing spending trends and patterns.","screenType": "DetailView"
+                        }
+                    }
+                },
+                "Notifications": {
+                    "description": "Displays alerts and notifications related to account activities, such as low balance alerts, transaction confirmations, and security alerts.",
+                    "screens": {
+                        "NotificationsScreen": {
+                            "description": "Lists notifications with details about account activities and alerts.",
+                            "sections": 
+                  "NotificationList: Displays notifications with icons, short descriptions, and timestamps.,
+                  ClearNotifications: A 'Clear' button to clear all notifications.","screenType": "ListView"
+                        }
+                    }
+                },
+                "Profile": {
+                    "description": "Displays and manages user account information, preferences, and security settings.",
+                    "screens": {
+                        "ProfileScreen": {
+                            "description": "Shows user profile details and preferences with options to edit account information and manage settings.",
+                            "sections": 
+                  "AccountInfo: Displays user's profile picture, username, email, and contact details with an 'Edit' button, which navigates to edit profile view,
+                  Preferences: Options to manage notification preferences, language settings, and personalized features.,
+                  SecuritySettings: Provides options for password changes, two-factor authentication, and session management.","screenType": "Profile"
+                        }
+                    }
+                },
+                "Settings": {
+                    "description": "A centralized location for managing account details, privacy controls, notification preferences, security options, and app settings.",
+                    "screens": {
+                        "SettingsScreen": {
+                            "description": "Manages app settings including account details, privacy controls, notification preferences, and security options.",
+                            "sections": 
+                  "AccountSettings: Options to update username, email, password, and profile picture.,
+                  PrivacySettings: Controls for who can see the user's activity and personal information.,
+                  NotificationSettings: Manage notification preferences for account alerts, transaction confirmations, and promotional messages.,
+                  SecuritySettings: Options for two-factor authentication, login alerts, and session management.","screenType": "Settings"
+                        }
+                    }
+                }
+            }
+        },
+        "Admin": {
+            "description": "The Admin oversees the entire platform, managing user accounts, monitoring transactions, ensuring compliance with regulations, and maintaining security.",
+            "OnboardingFlow": {
+                "description": "Guides new admins through setting up the organization's banking services, configuring user permissions, and managing financial products.",
+                "screens": {
+                    "LandingPage": {
+                        "description": "The first page that displays to admins, highlighting the app's administrative features and a call to action to get started.",
+                        "sections": "1. HeroSection: Contains an overview of the app's features with a 'Get Started' button. Clicking the button navigates to the Welcome Screen.",
+                        "screenType": "DetailView"
+                    },
+                    "WelcomeScreen": {
+                        "description": "Introduces the platform's features to new admins with a welcoming image and text.",
+                        "sections": "This section contains a welcome message and a 'Next' button that navigates to the Organization Setup Screen.",
+                        "screenType": "DetailView"
+                    },
+                    "OrganizationSetupScreen": {
+                        "description": "Allows admins to set up their organization information including name, logo, and contact details.",
+                        "sections": "This section includes fields for entering organization details and a 'Next' button that navigates to the User Permissions Screen.",
+                        "screenType": "Form"
+                    },
+                    "UserPermissionsScreen": {
+                        "description": "Allows admins to configure user roles and permissions within the banking platform.",
+                        "sections": "This section includes options for setting permissions and a 'Next' button that navigates to the Financial Products Screen.",
+                        "screenType": "Settings"
+                    },
+                    "FinancialProductsScreen": {
+                        "description": "Allows admins to manage financial products such as loans, savings accounts, and investment options.",
+                        "sections": "This section includes options for configuring financial products and a 'Next' button that navigates to the Reporting Tools Screen.",
+                        "screenType": "Form"
+                    },
+                    "ReportingToolsScreen": {
+                        "description": "Introduces the various reporting and analytics tools available to admins.",
+                        "sections": "This section includes an overview of tools with a 'Finish' button that completes the onboarding process.",
+                        "screenType": "Intro"
+                    },
+                    "LoginScreen": {
+                        "description": "Allows admins to create a new account or log in to an existing one.",
+                        "sections": "This section contains fields for email and password with a 'Login' button.",
+                        "screenType": "DetailView"
+                    }
+                }
+            },
+            "menuItems": {
+                "Dashboard": {
+                    "description": "The Dashboard provides a comprehensive overview of platform activity, user statistics, and system health.",
+                    "screens": {
+                        "DashboardScreen": {
+                            "description": "Displays key metrics, system alerts, and operational statistics to help admins manage the platform effectively.",
+                            "sections": 
+                  "PerformanceMetrics: Using KPI cards show platform performance indicators such as user activity levels, transaction volumes, and system health.,
+                  UserActivity: Provides real-time data on user interactions and behaviors.,
+                  SystemAlerts: List displaying system alerts and issues requiring admin attention.","screenType": "Dashboard"
+                        }
+                    }
+                },
+                "UserList": {
+                    "description": "Allows admins to manage user accounts, roles, and permissions across the platform.",
+                    "screens": {
+                        "UserListScreen": {
+                            "description": "Displays a comprehensive list of all platform users with management options.",
+                            "sections": 
+                  "UserOverview: Lists all users with with 'Edit' which navigates to user edit view, 'Delete' on clicking deletes the record and 'Review user activity' button on clicking navigates to user detail screen.,
+                  SearchBar: Allows admins to search for specific users by name, email, or account number.,
+                  FilterOptions: Filters users based on criteria such as account status, activity level, or role.","screenType": "ListView"
+                        }
+                    }
+                },
+                "UserDetail": {
+                    "description": "Allows admins a detailed information about a specific user account with options for account management.",
+                    "screens": {
+                        "UserDetailScreen": {
+                            "description": "Provides detailed information about a specific user account with options for account management.",
+                            "sections": 
+                  "AccountInfo: Displays user account details such as name, email, account status, and role.,
+                  TransactionHistory: Shows a list of recent transactions made by the user.,
+                  ActivityLog: Provides a log of user activities within the app.,
+                  ManageButtons: Includes 'Suspend','Delete' and 'Edit' buttons to perform suspend, delete, or edit actions on user account details.","screenType": "DetailView"
+                        }
+                    }
+                },
+                "TransactionMonitoring": {
+                    "description": "Allows admins to manage user accounts, roles, and permissions across the platform.",
+                    "screens": {
+                        "TransactionListScreen": {
+                            "description": "Displays a list of all transactions with options to filter, sort, and search.",
+                            "sections": 
+                  "TransactionOverview: Lists all transactions with details such as date, amount, sender, receiver, and status. Clicking on item in the list should navigate to transaction detail view,
+                  SearchBar: Allows admins to search for specific transactions by transaction ID, user, or amount.,
+                  FilterOptions: Filters transactions based on criteria such as status, amount range, date range, or type.","screenType": "ListView"
+                        }
+                    }
+                },
+                "TransactionDetail": {
+                    "description": "Allows admins to monitor and review transactions occurring on the platform to ensure security and compliance.",
+                    "screens": {
+                        "TransactionListScreen": {
+                            "description": "Provides detailed information about a specific transaction.",
+                            "sections": 
+                  "TransactionInfo: Displays transaction details such as ID, date, amount, sender, receiver, and status.,
+                  AuditTrail: Shows the history of actions taken on the transaction.,
+                  ManageButtons: Includes 'Apprve','Decline' and 'Flag' buttons to approve, decline, or flag the transaction for further review.","screenType": "DetailView"
+                        }
+                    }
+                },
+                "ComplianceManagement": {
+                    "description": "Ensures the platform adheres to financial regulations and compliance standards.",
+                    "screens": {
+                        "ComplianceDashboard": {
+                            "description": "Provides an overview of compliance status and recent activities.",
+                            "sections": 
+                 "ComplianceSummary: Displays key compliance metrics and status updates using KPI cards,
+                  RecentAudits: Lists recent compliance audits and their outcomes.,
+                  Alerts: Shows alerts for any compliance issues or required actions.","screenType": "Dashboard"
+                        }
+                    }
+                },
+                "AuditLogs": {
+                    "description": "Allows admins to review detailed logs of all actions and changes made on the platform for audit purposes..",
+                    "screens": {
+                        "AuditListScreen": {
+                            "description": "Provides an overview of detailed logs of all actions and changes made on the platform for audit purposes.",
+                            "sections":
+                    "LogList: Displays a list of audit logs with details such as date, time, action, user, and affected records.,
+                    SearchBar: Allows admins to search for specific logs by user, action, or date.,
+                    FilterOptions: Filters logs based on criteria such as date range, action type, or user." ,"screenType": "ListView"
+                        }
+                    }
+                },
+                "SecurityManagement": {
+                    "description": "Manages the platform's security settings and monitors for any security breaches or issues.",
+                    "screens": {
+                        "SecurityDashboard": {
+                            "description": "Provides an overview of the platform's security status and recent activities.",
+                            "sections": 
+                  "SecuritySummary: Displays key security metrics and status updates using Kpi cards.,
+                  RecentIncidents: Lists recent security incidents and their resolutions.,
+                  Alerts: Shows alerts for any security issues or required actions.","screenType": "Dashboard"
+                        }
+                    }
+                },
+                "UserAccessLogs": {
+                    "description": "Allows admins to review detailed logs of all actions and changes made on the platform for audit purposes..",
+                    "screens": {
+                        "UserAccessLogsListScreen": {
+                            "description": "Privides an overview of user access and activities for security purposes.",
+                            "sections":
+                    "AccessLogList: Displays a list of access logs with details such as date, time, user, and action.,
+                  SearchBar: Allows admins to search for specific logs by user, action, or date.,
+                  FilterOptions: Filters logs based on criteria such as date range, action type, or user.","screenType": "ListView"
+                        }
+                    }
+                }
+            }
+        },
+        "SupportAgent": {
+            "description": "The Support Agent assists users with their inquiries and issues, providing guidance, troubleshooting, and resolutions to ensure a smooth user experience.",
+            "OnboardingFlow": {
+                "description": "Guides new support agents through setting up their profiles, learning support tools, and familiarizing themselves with customer service processes.",
+                "screens": {
+                    "LandingPage": {
+                        "description": "The first page that displays to support agents, highlighting the app's support features and a call to action to get started.",
+                        "sections": "1. HeroSection: Contains an overview of the app's features with a 'Get Started' button. Clicking the button navigates to the Welcome Screen.",
+                        "screenType": "DetailView"
+                    },
+                    "WelcomeScreen": {
+                        "description": "Introduces the platform's features to new support agents with a welcoming image and text.",
+                        "sections": "This section contains a welcome message and a 'Next' button that navigates to the Profile Setup Screen.",
+                        "screenType": "DetailView"
+                    },
+                    "ProfileSetupScreen": {
+                        "description": "Allows support agents to set up their profile information including name, profile picture, and contact details.",
+                        "sections": "This section includes fields for entering profile details and a 'Next' button that navigates to the Support Tools Screen.",
+                        "screenType": "Form"
+                    },
+                    "SupportToolsScreen": {
+                        "description": "Introduces the various support tools available to agents, such as ticketing systems and customer communication platforms.",
+                        "sections": "This section includes an overview of tools with a 'Next' button that navigates to the Customer Service Processes Screen.",
+                        "screenType": "Intro"
+                    },
+                    "CustomerServiceProcessesScreen": {
+                        "description": "Explains the customer service processes and protocols support agents need to follow.",
+                        "sections": "This section includes guidelines and a 'Next' button that navigates to the Training Resources Screen.",
+                        "screenType": "DetailView"
+                    },
+                    "TrainingResourcesScreen": {
+                        "description": "Provides access to training resources and materials for support agents.",
+                        "sections": "This section includes links to training videos, documents, and a 'Finish' button that completes the onboarding process.",
+                        "screenType": "DetailView"
+                    },
+                    "LoginScreen": {
+                        "description": "Allows support agents to create a new account or log in to an existing one.",
+                        "sections": "This section contains fields for email and password with a 'Login' button.",
+                        "screenType": "DetailView"
+                    }
+                }
+            },
+            "menuItems": {
+                "Dashboard": {
+                    "description": "The Support Agent Dashboard provides an overview of user inquiries, tickets, and their statuses.",
+                    "screens": {
+                        "DashboardScreen": {
+                            "description": "Displays key metrics and recent activities related to user support.",
+                            "sections": 
+                                "TicketSummary: Shows the number of open, closed, and pending support tickets using kpi cards,
+                                RecentTickets: Lists the most recent support tickets and their statuses.,
+                                PerformanceMetrics: Displays metrics such as response times, resolution times, and user satisfaction ratings.","screenType": "Dashboard"
+                        }
+                    }
+                },
+                "TicketManagementList": {
+                    "description": "Allows support agents to view, manage, and resolve user support tickets.",
+                    "screens": {
+                        "TicketListScreen": {
+                            "description": "Displays a list of all support tickets with options to filter, sort, and search.",
+                            "sections": 
+                                "TicketOverview: Lists all support tickets with details such as ticket ID, user name, issue, status, and date created, clicking on any ticket would navigate to ticket detail view,
+                                SearchBar: Allows support agents to search for specific tickets by ticket ID, user name, or issue.,
+                                FilterOptions: Filters tickets based on criteria such as status, priority, or date range.","screenType": "ListView"
+                        }
+                    }
+                },
+                "TicketManagementDetail": {
+                    "description": "Allows support agents to view, manage, and resolve user support tickets.",
+                    "screens": {
+                        "TicketDetailScreen": {
+                            "description": "Provides detailed information about a specific support ticket.",
+                            "sections": 
+                                "TicketInfo: Displays ticket details such as ID, user name, issue description, status, and date created.,
+                                UserDetails: Shows user information related to the ticket, including account details and contact information.,
+                                CommunicationLog: Provides a log of all communications between the support agent and the user regarding the ticket.,
+                                Actions: Includes options to update ticket status, add notes, and respond to the user.","screenType": "DetailView"
+                        }
+                    }
+                },
+                "UserManagementList": {
+                    "description": "Allows support agents to view and manage user accounts and provide assistance with account-related issues.",
+                    "screens": {
+                        "UserListScreen": {
+                            "description": "Displays a list of all platform users with management options.",
+                            "sections": 
+                                "UserOverview: Lists all users with options to view account details and recent activities.,
+                                SearchBar: Allows support agents to search for specific users by name, email, or account number.,
+                                FilterOptions: Filters users based on criteria such as account status, activity level, or type.","screenType": "ListView"
+                        }
+                    }
+                },
+                "UserManagementDetail": {
+                    "description": "Allows support agents to view and manage user accounts and provide assistance with account-related issues.",
+                    "screens": {
+                        "UserDetailScreen": {
+                            "description": "Provides detailed information about a specific user account.",
+                            "sections": 
+                                "AccountInfo: Displays user account details such as name, email, account status, and type.,
+                                TransactionHistory: Shows a list of recent transactions made by the user.,
+                                ActivityLog: Provides a log of user activities within the app.,
+                                Actions: Includes options to assist with account-related issues, reset passwords, or update account information.","screenType": "DetailView"
+                        }
+                    }
+                },
+                "Articles": {
+                    "description": "Provides support agents with access to a repository of articles and guides to assist in resolving user inquiries.",
+                    "screens": {
+                        "KnowledgeBaseScreen": {
+                            "description": "Displays a list of knowledge base articles and guides.",
+                            "sections": 
+                                "ArticleList: Lists all articles and guides with options to search and filter, clicking on the article it navigates to articles detail view.,
+                                SearchBar: Allows support agents to search for specific articles by keyword or topic.,
+                                FilterOptions: Filters articles based on categories such as account management, transactions, or troubleshooting.","screenType": "ListView"
+                        }
+                    }
+                },
+                "KnowledgeBase": {
+                    "description": "Provides support agents with access to a repository of articles and guides to assist in resolving user inquiries.",
+                    "screens": {
+                        "ArticleDetailScreen": {
+                            "description": "Provides detailed information about a specific knowledge base article.",
+                            "sections": 
+                                "ArticleContent: Displays the full content of the article or guide.,
+                                RelatedArticles: Lists related articles and guides for further assistance.,
+                                Actions: Includes options to mark the article as helpful or not helpful, and to provide feedback.","screenType": "DetailView"
+                        }
+                    }
+                },
+                "ReportsList": {
+                    "description": "Allows support agents to generate and view reports related to user support activities and performance metrics.",
+                    "screens": {
+                        "ReportListScreen": {
+                            "description": "Displays a list of available reports.",
+                            "sections": 
+                                "ReportOverview: Lists all available reports with 'View' button which on click navigates to report detail view and 'Download' button to download.,
+                                SearchBar: Allows support agents to search for specific reports by name or date.,
+                                FilterOptions: Filters reports based on criteria such as date range, type, or status.","screenType": "ListView"
+                        }
+                    }
+                },
+                "ReportsDetail": {
+                    "description": "Allows support agents to generate and view reports related to user support activities and performance metrics.",
+                    "screens": {
+                        "ReportDetailScreen": {
+                            "description": "Provides detailed information about a specific report.",
+                            "sections": 
+                                "ReportContent: Displays the full content of the report.,
+                                Summary: Provides a summary of key findings and metrics.,
+                                Actions: Includes options to download the report or share it with other team members.","screenType": "DetailView"
+                        }
+                    }
+                }
+            }
+        },
+        "ThirdPartyIntegrator": {
+            "description": "The Third-Party Integrator manages and oversees integrations with external services and APIs, ensuring seamless data exchange and functionality.",
+            "OnboardingFlow": {
+                "description": "Guides third-party integrators through setting up their integration profile, accessing API documentation, and configuring integration settings.",
+                "screens": {
+                    "LandingPage": {
+                        "description": "The first page that displays to integrators, highlighting the app's integration capabilities and a call to action to get started.",
+                        "sections": "1. HeroSection: Contains an overview of the app's features with a 'Get Started' button. Clicking the button navigates to the Welcome Screen.",
+                        "screenType": "DetailView"
+                    },
+                    "WelcomeScreen": {
+                        "description": "Introduces the platform's features to new integrators with a welcoming image and text.",
+                        "sections": "This section contains a welcome message and a 'Next' button that navigates to the Integration Profile Setup Screen.",
+                        "screenType": "DetailView"
+                    },
+                    "IntegrationProfileSetupScreen": {
+                        "description": "Allows integrators to set up their profile information including organization name, contact details, and integration goals.",
+                        "sections": "This section includes fields for entering profile details and a 'Next' button that navigates to the API Documentation Screen.",
+                        "screenType": "DetailView"
+                    },
+                    "APIDocumentationScreen": {
+                        "description": "Provides access to API documentation and guidelines for integrating with the banking platform.",
+                        "sections": "This section includes links to API documentation and a 'Next' button that navigates to the Integration Settings Screen.",
+                        "screenType": "DetailView"
+                    },
+                    "IntegrationSettingsScreen": {
+                        "description": "Allows integrators to configure integration settings including API keys, webhook URLs, and permissions.",
+                        "sections": "This section includes options for configuring settings and a 'Next' button that navigates to the Testing and Validation Screen.",
+                        "screenType": "Form"
+                    },
+                    "TestingAndValidationScreen": {
+                        "description": "Provides tools and resources for testing and validating the integration.",
+                        "sections": "This section includes links to testing tools, validation procedures, and a 'Finish' button that completes the onboarding process.",
+                        "screenType": "DetailView"
+                    },
+                    "LoginScreen": {
+                        "description": "Allows integrators to create a new account or log in to an existing one.",
+                        "sections": "This section contains fields for email and password with a 'Login' button.",
+                        "screenType": "DetailView"
+                    }
+                }
+            },
+            "menuItems": {
+                "IntegrationDashboard": {
+                    "description": "Central hub for managing and monitoring third-party integrations.",
+                    "screens": {
+                        "IntegrationOverviewScreen": {
+                            "description": "Displays a summary of all active integrations, status, and performance metrics.",
+                            "sections": 
+                      "ActiveIntegrations: List of active integrations with status indicators.,
+                      PerformanceMetrics: Key metrics such as data transfer rates and error rates.,
+                      Actions: Options to add, update, or remove integrations.","screenType": "Dashboard"
+                        }
+                    }
+                },
+                "APIManagement": {
+                    "description": "Tools for managing API keys and access permissions.",
+                    "screens": {
+                        "APIKeyListScreen": {
+                            "description": "Displays a list of API keys with options to manage permissions.",
+                            "sections": 
+                      "APIKeyOverview: List of API keys with details and status.,
+                      Actions: Options to generate, revoke, or update API keys.","screenType": "ListView"
+                        }
+                    }
+                },
+                "LogsList": {
+                    "description": "Access to integration logs and activity history.",
+                    "screens": {
+                        "LogListScreen": {
+                            "description": "Displays a list of logs related to third-party integrations.",
+                            "sections": 
+                      "LogOverview: List of logs with timestamps and status, clicking on any item on the list navigates to logs detail view,
+                      Actions: Options to filter and search logs.","screenType": "ListView"
+                        }
+                    }
+                },
+                "LogsDetail": {
+                    "description": "Access to integration logs and activity history.",
+                    "screens": {
+                        "LogDetailScreen": {
+                            "description": "Detailed view of a specific log entry.",
+                            "sections": 
+                      "LogContent: Full content of the log entry.,
+                      Actions: Options to download or share the log entry.","screenType": "DetailView"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

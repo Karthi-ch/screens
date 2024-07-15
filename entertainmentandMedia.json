@@ -1,0 +1,258 @@
+{
+    "type": "APP",
+    "description": "An entertainment and media app provides users with access to a wide range of content such as movies, TV shows, music, and news. It allows users to browse, stream, and download content, create playlists, and stay updated with the latest releases and trending media.",
+    "actors": {
+        "User": {
+            "description": "The user is the primary actor who browses, streams, and interacts with the content available on the platform.",
+            "OnboardingFlow": {
+                "description": "Guides new users through setting up their entertainment preferences, such as genres, favorite shows, and content recommendations.",
+                "screens": {
+                    "LandingPage": {
+                        "description": "The first page that displays to users, showcasing popular shows and movies with a call to action to start their journey.",
+                        "sections": "1. HeroSection: Contains a featured list of trending content with a 'Get Started' button. Clicking the button navigates to the Welcome Screen",
+                        "screenType": "DetailView"
+                    },
+                    "WelcomeScreen": {
+                        "description": "Introduces the platform's features to new users with a welcoming image and text.",
+                        "sections": "This section contains a welcome message and a 'Next' button that navigates to the Preferences Setup Screen.",
+                        "screenType": "DetailView"
+                    },
+                    "PreferencesSetupScreen": {
+                        "description": "Allows users to set their entertainment preferences including favorite genres, shows, and movies.",
+                        "sections": "This section includes dropdowns and checkboxes for selecting preferences and a 'Next' button that navigates to the Profile Setup Screen.",
+                        "screenType": "Form"
+                    },
+                    "ProfileSetupScreen": {
+                        "description": "Allows users to set up their profile information including name, profile picture, and viewing preferences.",
+                        "sections": "This section includes fields for entering profile details and a 'Next' button that navigates to the Subscription Plan Screen.",
+                        "screenType": "Form"
+                    },
+                    "SubscriptionPlanScreen": {
+                        "description": "Allows users to select a subscription plan that suits their needs.",
+                        "sections": "This section includes options for different subscription plans and a 'Next' button that navigates to the Payment Screen.",
+                        "screenType": "Form"
+                    },
+                    "PaymentScreen": {
+                        "description": "Allows users to enter payment information to complete their subscription.",
+                        "sections": "This section includes fields for payment details and a 'Finish' button that completes the onboarding process.",
+                        "screenType": "Form"
+                    },
+                    "LoginScreen": {
+                        "description": "Allows users to create a new account or log in to an existing one.",
+                        "sections": "This section contains fields for email and password with a 'Login' button.",
+                        "screenType": "DetailView"
+                    }
+                }
+            },
+            "menuItems": {
+                "Home": {
+                    "description": "The Home page provides a personalized feed with recommendations, trending content, and the latest releases.",
+                    "screens": {
+                        "HomeScreen": {
+                            "description": "Displays a curated feed of recommended content, trending media, and latest releases.",
+                            "sections": 
+                  "HeroBanner:  Display a carousel of latest movies, offers, featured TV shows. Each has a 'View now' button which navigates to content detail page,
+                  Recommendations: A display of cards for personalized content recommendations based on user preferences and watch history. Each card has content thumbnail, content name and 'Play' icon which on clicking would navigate to content detail screen.,
+                  TrendingNow: A section highlighting currently popular content across the platform as display of cards, where each card has content thumbnail, content name and 'Play' icon which on clicking would navigate to content detail screen.,
+                  NewReleases: A display of cards for the latest movies, TV shows, or music albums added to the platform.
+                  Also includes search component to to search the content","screenType": "Home"
+                        }
+                    }
+                },
+                "ContentDetail": {
+                    "description": "Displays detailed information about a selected movie, TV show, or music album.",
+                    "screens": {
+                        "ContentDetailScreen": {
+                            "description": "Provides an overview of the content, including synopsis, cast, crew, user ratings, and reviews.",
+                            "sections": 
+                  "ContentOverview: A card displaying title, cover image, synopsis, and main cast/crew details.,
+                  UserRatings: Shows average user ratings and a 'Rating' button to rate the content.,
+                  Reviews: Lists of user reviews with each item in the list has 'Like' and 'Report' icons to like or report reviews.,
+                  RelatedContent: Suggestions for similar content that the user might enjoy.","screenType": "DetailView"
+                        }
+                    }
+                },
+                "Playlist": {
+                    "description": "Allows users to create and manage playlists of their favorite movies, TV shows, or music.",
+                    "screens": {
+                        "PlaylistScreen": {
+                            "description": "Displays user's playlists with options to create new playlists, add or remove content, and play or share playlists.",
+                            "sections": 
+                  "MyPlaylists: Lists all user-created playlists with cover images and titles.,
+                  CreatePlaylist: A 'New Playlist'button to create a new playlist and add content to it.,
+                  PlaylistDetail: Shows the content in a selected playlist with 'Play','Remove' and 'Share' icons to play, remove, or share.","screenType": "ListView"
+                        }
+                    }
+                },
+                "Downloads": {
+                    "description": "Allows users to view and manage downloaded content for offline viewing or listening.",
+                    "screens": {
+                        "DownloadsScreen": {
+                            "description": "Displays a list of downloaded movies, TV shows, or music with options to play or remove downloads.",
+                            "sections": 
+                  "DownloadedContent: Lists all downloaded items with cover images, titles, and download sizes.,
+                  ManageDownloads: Each item in the list has 'Play' and 'Delete' icons to play or delete downloaded content.","screenType": "ListView"
+                        }
+                    }
+                },
+                "Profile": {
+                    "description": "Displays and manages user account information, preferences, and settings.",
+                    "screens": {
+                        "ProfileScreen": {
+                            "description": "Shows user profile details and preferences with options to edit account information and manage settings.",
+                            "sections": 
+                  "AccountInfo: Displays user's profile picture, username, email, and subscription status with an 'Edit' button which navigates to account edit view.,
+                  Preferences: Options to manage content preferences, playback settings, and notification preferences.,
+                  Subscription: Information about the user's current subscription plan with buttons to 'Upgrade' or 'Cancel'.,
+                  WatchHistory: A list of recently watched content with 'Clear' and 'Resume' buttons to clear history or resume playback.","screenType": "Profile"
+                        }
+                    }
+                },
+                "Notifications": {
+                    "description": "Displays notifications about new releases, content recommendations, and platform updates.",
+                    "screens": {
+                        "NotificationsScreen": {
+                            "description": "Lists notifications with options to view details or clear notifications.",
+                            "sections": 
+                  "NotificationList: Displays notifications with icons, short descriptions, and timestamps.,
+                  ClearNotifications: A 'Clear' button to clear all notifications.","screenType": "ListView"
+                        }
+                    }
+                },
+                "Settings": {
+                    "description": "A centralized location for managing account details, privacy controls, notification preferences, security options, and app settings.",
+                    "screens": {
+                        "SettingsScreen": {
+                            "description": "Manages app settings including account details, privacy controls, notification preferences, and security options.",
+                            "sections": 
+                  "AccountSettings: Options to update username, email, password, and profile picture.,
+                  PrivacySettings: Controls for who can see the user's profile, activity, and playlists.,
+                  NotificationSettings: Manage notification preferences for new releases, recommendations, and app updates.,
+                  SecuritySettings: Options for two-factor authentication, login alerts, and session management.","screenType": "Settings"
+                        }
+                    }
+                }
+            }
+        },
+        "Admin": {
+            "description": "The admin oversees the entire platform, managing media content, user accounts, analytics, and system settings.",
+            "OnboardingFlow": {
+                "description": "Guides new admins through setting up their account and managing content, user roles, and analytics.",
+                "screens": {
+                    "LandingPage": {
+                        "description": "The first page that displays to admins, showcasing an overview of administrative features and tools.",
+                        "sections": "1. HeroSection: Contains a summary of admin capabilities with a 'Get Started' button. Clicking the button navigates to the Welcome Screen",
+                        "screenType": "DetailView"
+                    },
+                    "WelcomeScreen": {
+                        "description": "Introduces the platform's admin features to new admins with a welcoming image and text.",
+                        "sections": "This section contains a welcome message and a 'Next' button that navigates to the Profile Setup Screen.",
+                        "screenType": "DetailView"
+                    },
+                    "ProfileSetupScreen": {
+                        "description": "Allows admins to set up their profile information including name, role, and contact details.",
+                        "sections": "This section includes fields for entering profile details and a 'Next' button that navigates to the Content Management Setup Screen.",
+                        "screenType": "Form"
+                    },
+                    "ContentManagementSetupScreen": {
+                        "description": "Guides admins through the initial setup of content management including categories, genres, and metadata.",
+                        "sections": "This section includes dropdowns and checkboxes for setting up content categories and a 'Next' button that navigates to the User Management Setup Screen.",
+                        "screenType": "Form"
+                    },
+                    "UserManagementSetupScreen": {
+                        "description": "Allows admins to configure user roles and permissions.",
+                        "sections": "This section includes options for setting up different user roles and access levels, and a 'Next' button that navigates to the Analytics Setup Screen.",
+                        "screenType": "Settings"
+                    },
+                    "AnalyticsSetupScreen": {
+                        "description": "Guides admins through the setup of analytics and reporting tools.",
+                        "sections": "This section includes options for selecting key performance indicators and a 'Finish' button that completes the onboarding process.",
+                        "screenType": "Settings"
+                    },
+                    "LoginScreen": {
+                        "description": "Allows admins to create a new account or log in to an existing one.",
+                        "sections": "This section contains fields for email and password with a 'Login' button.",
+                        "screenType": "DetailView"
+                    }
+                }
+            },
+            "menuItems": {
+                "Dashboard": {
+                    "description": "The Dashboard offers a comprehensive view of platform activity, including user statistics, content performance, and system health.",
+                    "screens": {
+                        "DashboardScreen": {
+                            "description": "Displays key metrics and analytics to monitor app usage, user engagement, content performance, and system health.",
+                            "sections": 
+                "UserStatistics: Overview of user demographics, active users, and new registrations. using KPI cards,
+                ContentPerformance: Charts and graphs depicting views, likes, shares, and trends for media content.,
+                SystemHealth: Alerts and diagnostics for monitoring server status, database performance, and app uptime.","screenType": "Dashboard"
+                        }
+                    }
+                },
+                "ContentManagement": {
+                    "description": "Enables admins to manage media content, including uploading, categorizing, and moderating.",
+                    "screens": {
+                        "ContentListScreen": {
+                            "description": "Lists all media content with options to view details, edit, delete, and categorize.",
+                            "sections": 
+                "MediaList: Displays a comprehensive list of media content with titles, categories, and performance metrics.,
+                ContentActions: Provides options to edit content details, delete content, and manage categories.","screenType": "ListView"
+                        },
+                        "ContentUploadScreen": {
+                            "description": "Allows admins to upload new media content, with fields for title, description, tags, and categories.",
+                            "sections": 
+                "UploadForm: Fields for title, description, tags, categories, and file upload.,
+                UploadActions: Options to preview and submit the upload.","screenType": "Form"
+                        }
+                    }
+                },
+                "UserManagement": {
+                    "description": "Enables admins to manage user accounts, permissions, and access controls.",
+                    "screens": {
+                        "UserListScreen": {
+                            "description": "Lists all registered users with options to view profiles, edit permissions, suspend accounts, and manage user roles.",
+                            "sections": 
+                "UserList: Displays a comprehensive list of registered users with usernames, email addresses, and roles.,
+                AccountActions: Provides options to suspend accounts, reset passwords, and manage user permissions.","screenType": "ListView"
+                        }
+                    }
+                },
+                "ContentModeration": {
+                    "description": "Tools for monitoring and moderating user-generated content to enforce community guidelines and ensure appropriate content.",
+                    "screens": {
+                        "ModerationScreen": {
+                            "description": "Allows admins to review reported content, apply moderation actions (like hide, delete, or warn), and manage content filters.",
+                            "sections": 
+                "ReportedContent: Lists reported posts, comments, or media with details and moderation options.,
+                ModerationActions: Options to take action on reported content, including hide, delete, or issue warnings.","screenType": "Moderation"
+                        }
+                    }
+                },
+                "Analytics": {
+                    "description": "Provides analytics and reports on app usage, user engagement, and content performance.",
+                    "screens": {
+                        "AnalyticsScreen": {
+                            "description": "Generates reports and visualizes data on user activity, content views, feature usage, and app performance.",
+                            "sections": 
+                "UsageReports: Detailed reports on user activity, content views, and feature usage.,
+                PerformanceMetrics: Charts and graphs illustrating app performance metrics like response times and server load.,
+                EngagementAnalysis: Insights into user engagement levels, popular content, and user retention rates.","screenType": "Analytics"
+                        }
+                    }
+                },
+                "Settings": {
+                    "description": "Controls app settings, including security configurations, notification preferences, and integration settings.",
+                    "screens": {
+                        "SettingsScreen": {
+                            "description": "Manages app configurations, security settings, integration with third-party services, and notification preferences.",
+                            "sections": 
+                "SecuritySettings: Options for configuring authentication methods, access controls, and data encryption.,
+                NotificationSettings: Manage notification preferences for admin alerts, system updates, and user reports.,
+                IntegrationSettings: Configure API integrations and third-party services used by the app.","screenType": "Settings"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

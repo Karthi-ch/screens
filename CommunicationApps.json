@@ -1,0 +1,184 @@
+{
+    "type": "APP",
+    "description": "A communication app facilitates real-time messaging and collaboration between users. It supports various features such as one-on-one messaging, group chats, file sharing, voice and video calls, and notifications. Users can create profiles, manage contacts, and customize their communication preferences. The app aims to enhance connectivity and productivity by providing seamless communication tools.",
+    "actors": {
+        "User": {
+            "description": "The primary actor who uses the communication app to send messages, make calls, share files, and manage communication settings.",
+            "OnboardingFlow": {
+                "description": "Guides new users through setting up their communication preferences, such as profile information, notification settings, and contact syncing.",
+                "screens": {
+                    "LandingPage": {
+                        "description": "The first page that displays to users, showcasing key features and a prompt to get started.",
+                        "sections": "1. HeroSection: Contains an overview of the app's features with a 'Get Started' button. Clicking the button navigates to the Welcome Screen",
+                        "screenType": "DetailView"
+                    },
+                    "WelcomeScreen": {
+                        "description": "Introduces the platform's features to new users with a welcoming image and text.",
+                        "sections": "This section contains a welcome message and a 'Next' button that navigates to the Profile Setup Screen.",
+                        "screenType": "Intro"
+                    },
+                    "ProfileSetupScreen": {
+                        "description": "Allows users to set up their profile information including name, profile picture, and status.",
+                        "sections": "This section includes fields for entering profile details and a 'Next' button that navigates to the Notification Settings Screen.",
+                        "screenType": "Form"
+                    },
+                    "NotificationSettingsScreen": {
+                        "description": "Allows users to configure their notification preferences for messages, calls, and other app activities.",
+                        "sections": "This section includes toggles for setting notification preferences and a 'Next' button that navigates to the Contact Syncing Screen.",
+                        "screenType": "Settings"
+                    },
+                    "ContactSyncingScreen": {
+                        "description": "Allows users to sync their contacts to find and connect with friends and colleagues.",
+                        "sections": "This section includes options to sync contacts and a 'Finish' button that completes the onboarding process.",
+                        "screenType": "Form"
+                    },
+                    "LoginScreen": {
+                        "description": "Allows users to create a new account or log in to an existing one.",
+                        "sections": "This section contains fields for email and password with a 'Login' button.",
+                        "screenType": "DetailView"
+                    }
+                }
+            },
+            "menuItems": {
+                "Chat": {
+                    "description": "The Chat feature allows users to send text messages and multimedia files to individuals or groups.",
+                    "screens": {
+                        "ChatScreen": {
+                            "description": "Displays ongoing conversations with contacts or groups. Supports text messages, emojis, file attachments, and timestamps.",
+                            "sections": 
+                  "ConversationList: Displays a list of ongoing conversations with contacts or groups.,
+                  MessageThread: Shows the selected conversation with messages, timestamps, and options to send new messages or attachments.","screenType": "MessagesChat"
+                        }
+                    }
+                },
+                "Calls": {
+                    "description": "Enables users to make voice and video calls with contacts.",
+                    "screens": {
+                        "CallsScreen": {
+                            "description": "Lists recent calls and provides options to make new calls, view call history, and manage call settings.",
+                            "sections": 
+                  "RecentCalls: Displays a list of recent calls with contacts.,
+                  Dialer: Allows users to dial a number or select a contact to initiate a new call.,
+                  CallHistory: Shows a history of incoming and outgoing calls with timestamps and call durations.","screenType": "ListView"
+                        }
+                    }
+                },
+                "Contacts": {
+                    "description": "Manages user contacts, including adding, editing, and deleting contacts.",
+                    "screens": {
+                        "ContactsScreen": {
+                            "description": "Displays a list of contacts with options to add new contacts, edit existing contacts, and delete contacts.",
+                            "sections": 
+                  "ContactList: Lists user contacts with names, profile pictures, and 'Edit' and 'Delete' buttons to edit or delete contacts.,
+                  AddContact: Provides fields to add a new contact using 'Add contact' button with name, phone number, and profile picture.","screenType": "ListView"
+                        }
+                    }
+                },
+                "Settings": {
+                    "description": "A centralized location for managing account details, notification preferences, privacy settings, and app preferences.",
+                    "screens": {
+                        "SettingsScreen": {
+                            "description": "Allows users to configure account settings, notification preferences, privacy settings, and app preferences.",
+                            "sections": 
+                  "AccountSettings: 'Edit' to update username, email, password, etc. on clicking edit button it navigates to profile edit view,
+                  NotificationSettings: Manage notification preferences for messages, calls, and other app activities.,
+                  PrivacySettings: Control over who can see profile information and contact details.,","screenType": "Settings"
+                        }
+                    }
+                }
+            }
+        },
+        "Admin": {
+            "description": "The admin oversees the entire communication platform, managing user accounts, monitoring app performance, and enforcing community guidelines.",
+            "OnboardingFlow": {
+                "description": "Guides new admins through setting up their account and managing user roles, communication settings, and analytics.",
+                "screens": {
+                    "LandingPage": {
+                        "description": "The first page that displays to admins, showcasing an overview of administrative features and tools.",
+                        "sections": "1. HeroSection: Contains a summary of admin capabilities with a 'Get Started' button. Clicking the button navigates to the Welcome Screen",
+                        "screenType": "DetailView"
+                    },
+                    "WelcomeScreen": {
+                        "description": "Introduces the platform's admin features to new admins with a welcoming image and text.",
+                        "sections": "This section contains a welcome message and a 'Next' button that navigates to the Profile Setup Screen.",
+                        "screenType": "DetailView"
+                    },
+                    "ProfileSetupScreen": {
+                        "description": "Allows admins to set up their profile information including name, role, and contact details.",
+                        "sections": "This section includes fields for entering profile details and a 'Next' button that navigates to the User Management Setup Screen.",
+                        "screenType": "Form"
+                    },
+                    "UserManagementSetupScreen": {
+                        "description": "Allows admins to configure user roles and permissions, manage user accounts, and oversee user activities.",
+                        "sections": "This section includes options for setting up different user roles and access levels, and a 'Next' button that navigates to the Communication Settings Setup Screen.",
+                        "screenType": "Settings"
+                    },
+                    "CommunicationSettingsSetupScreen": {
+                        "description": "Guides admins through the initial setup of communication settings, such as message retention policies, group settings, and notification preferences.",
+                        "sections": "This section includes dropdowns and toggles for configuring communication settings and a 'Next' button that navigates to the Analytics Setup Screen.",
+                        "screenType": "Settings"
+                    },
+                    "AnalyticsSetupScreen": {
+                        "description": "Guides admins through the setup of analytics and reporting tools to monitor user engagement and app performance.",
+                        "sections": "This section includes options for selecting key performance indicators and a 'Finish' button that completes the onboarding process.",
+                        "screenType": "Settings"
+                    },
+                    "LoginScreen": {
+                        "description": "Allows admins to create a new account or log in to an existing one.",
+                        "sections": "This section contains fields for email and password with a 'Login' button.",
+                        "screenType": "DetailView"
+                    }
+                }
+            },
+            "menuItems": {
+                "Dashboard": {
+                    "description": "The Dashboard offers a comprehensive view of platform activity, including user statistics, message traffic, and system health.",
+                    "screens": {
+                        "DashboardScreen": {
+                            "description": "Displays key metrics and analytics to monitor app usage, user engagement, message traffic, and system performance.",
+                            "sections": 
+                "UserStatistics: KPI cards of user demographics, active users, and new registrations.,
+                MessageTraffic: Charts and graphs depicting message volumes, peak activity times, and trends.,
+                SystemHealth: Alerts and diagnostics for monitoring server status, database performance, and app uptime.","screenType": "Dashboard"
+                        }
+                    }
+                },
+                "UserManagement": {
+                    "description": "Enables admins to manage user accounts, permissions, and access controls.",
+                    "screens": {
+                        "UserListScreen": {
+                            "description": "Lists all registered users with options to view profiles, edit permissions, suspend accounts, and manage user roles.",
+                            "sections": 
+                "UserList: Displays a comprehensive list of registered users with usernames, email addresses, and roles.,
+                AccountActions: Provides options to suspend accounts, reset passwords, and manage user permissions.","screenType": "ListView"
+                        }
+                    }
+                },
+                "Analytics": {
+                    "description": "Provides analytics and reports on app usage, user engagement, and performance metrics.",
+                    "screens": {
+                        "AnalyticsScreen": {
+                            "description": "Generates reports and visualizes data on user activity, message trends, feature usage, and app performance.",
+                            "sections": 
+                "UsageReports: Detailed reports on user activity, message volumes, and feature usage.,
+                PerformanceMetrics: Charts and graphs illustrating app performance metrics like response times and server load.,
+                EngagementAnalysis: Insights into user engagement levels, popular features, and user retention rates.","screenType": "ReportsAnalytics"
+                        }
+                    }
+                },
+                "Settings": {
+                    "description": "Controls app settings, including security configurations, notification preferences, and integration settings.",
+                    "screens": {
+                        "SettingsScreen": {
+                            "description": "Manages app configurations, security settings, integration with third-party services, and notification preferences.",
+                            "sections": 
+                "SecuritySettings: Options for configuring authentication methods, access controls, and data encryption.,
+                NotificationSettings: Manage notification preferences for admin alerts, system updates, and user reports.,
+                IntegrationSettings: Configure API integrations and third-party services used by the app.","screenType": "Settings"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
