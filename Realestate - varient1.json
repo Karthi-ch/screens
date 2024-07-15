@@ -98,7 +98,7 @@
             "LoginScreen": {
               "description": "Allows sellers to log in to their professional accounts.",
               "sections": "This section contains fields for email and password with a 'Login' button.",
-              "screenType": "DetailView"
+              "screenType": "LoginRegister"
             }
           }
         },
@@ -145,7 +145,7 @@
             "LoginScreen": {
               "description": "Allows agents to log in to their professional accounts.",
               "sections": "This section contains fields for email and password with a 'Login' button.",
-              "screenType": "DetailView"
+              "screenType": "LoginRegister"
             }
           }
         },

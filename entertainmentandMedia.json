@@ -40,7 +40,7 @@
                     "LoginScreen": {
                         "description": "Allows users to create a new account or log in to an existing one.",
                         "sections": "This section contains fields for email and password with a 'Login' button.",
-                        "screenType": "DetailView"
+                        "screenType": "LoginRegister"
                     }
                 }
             },
@@ -172,7 +172,7 @@
                     "LoginScreen": {
                         "description": "Allows admins to create a new account or log in to an existing one.",
                         "sections": "This section contains fields for email and password with a 'Login' button.",
-                        "screenType": "DetailView"
+                        "screenType": "LoginRegister"
                     }
                 }
             },

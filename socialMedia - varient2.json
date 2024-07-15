@@ -30,7 +30,7 @@
           "LoginScreen": {
             "description": "The Login screen allows users to log in to their accounts using email and password.",
             "sections": "This section contains fields for email and password with a 'Login' button to access the user's account.",
-            "screenType": "DetailView"
+            "screenType": "LoginRegister"
           }
         }
       },
@@ -144,7 +144,7 @@
           "LoginScreen": {
             "description": "Allows moderators to create a new account or log in to an existing one.",
             "sections": "This section contains fields for email and password with a 'Login' button.",
-            "screenType": "DetailView"
+            "screenType": "LoginRegister"
           }
         }
       },
@@ -230,7 +230,7 @@
           "LoginScreen": {
             "description": "Allows admins to create a new account or log in to an existing one.",
             "sections": "This section contains fields for email and password with a 'Login' button.",
-            "screenType": "DetailView"
+            "screenType": "LoginRegister"
           }
         }
       },

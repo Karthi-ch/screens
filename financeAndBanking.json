@@ -40,7 +40,7 @@
                     "LoginScreen": {
                         "description": "Allows users to create a new account or log in to an existing one.",
                         "sections": "This section contains fields for email and password with a 'Login' button.",
-                        "screenType": "DetailView"
+                        "screenType": "LoginRegister"
                     }
                 }
             },
@@ -188,12 +188,12 @@
                     "ReportingToolsScreen": {
                         "description": "Introduces the various reporting and analytics tools available to admins.",
                         "sections": "This section includes an overview of tools with a 'Finish' button that completes the onboarding process.",
-                        "screenType": "Intro"
+                        "screenType": "ReportsAnalytics"
                     },
                     "LoginScreen": {
                         "description": "Allows admins to create a new account or log in to an existing one.",
                         "sections": "This section contains fields for email and password with a 'Login' button.",
-                        "screenType": "DetailView"
+                        "screenType": "LoginRegister"
                     }
                 }
             },
@@ -332,7 +332,7 @@
                     "SupportToolsScreen": {
                         "description": "Introduces the various support tools available to agents, such as ticketing systems and customer communication platforms.",
                         "sections": "This section includes an overview of tools with a 'Next' button that navigates to the Customer Service Processes Screen.",
-                        "screenType": "Intro"
+                        "screenType": "DetailView"
                     },
                     "CustomerServiceProcessesScreen": {
                         "description": "Explains the customer service processes and protocols support agents need to follow.",
@@ -347,7 +347,7 @@
                     "LoginScreen": {
                         "description": "Allows support agents to create a new account or log in to an existing one.",
                         "sections": "This section contains fields for email and password with a 'Login' button.",
-                        "screenType": "DetailView"
+                        "screenType": "LoginRegister"
                     }
                 }
             },
@@ -502,7 +502,7 @@
                     "LoginScreen": {
                         "description": "Allows integrators to create a new account or log in to an existing one.",
                         "sections": "This section contains fields for email and password with a 'Login' button.",
-                        "screenType": "DetailView"
+                        "screenType": "LoginRegister"
                     }
                 }
             },

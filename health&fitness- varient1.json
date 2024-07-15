@@ -14,7 +14,7 @@
             "LandingPage": {
                 "description": "The first page that users see, containing motivational images and a button to start the onboarding process.",
                 "sections": "1. HeroSection: Contains a large motivational image with a 'Get Started' button that navigates the WelcomeScreen",
-                "screenType": "LandingPage"
+                "screenType": "DetailView"
               },
             "WelcomeScreen": {
               "description": "Introduces the app and its core features with a welcoming image and text.",
@@ -60,7 +60,7 @@
               "AddMealScreen": {
                 "description": "Allows users to add a new meal with details like name, calories, and time.",
                 "sections": "This section contains  form fields for meal name, calories, date, and time with an 'Add' button. On click of 'Add' button it will navigate to the MealLoggingScreen",
-                "screenType": "DetailsView"
+                "screenType": "DetailView"
               }
             }
           },
@@ -75,7 +75,7 @@
               "WorkoutDetailsScreen": {
                 "description": "Shows detailed information about a workout plan, including exercises, duration, and intensity.",
                 "sections": "1. WorkoutDetails: Contains workout plan details like exercises, duration, and intensity  and timer , on click on 'Start workOut' timer will start .",
-                "screenType": "DetailsView"
+                "screenType": "DetailView"
               },
             }
           },

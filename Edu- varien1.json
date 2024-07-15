@@ -42,7 +42,7 @@
                     "description": "The Login screen allows students to log in to their accounts using email and password.",
                     "sections": "
                         this section contains image and 'Login' Button",
-                      "screenType": "DetailLayout"
+                      "screenType": "LoginRegister"
                   }
   
   
