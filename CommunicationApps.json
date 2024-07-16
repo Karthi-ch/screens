@@ -14,17 +14,17 @@
                     },
                     "WelcomeScreen": {
                         "description": "Introduces the platform's features to new users with a welcoming image and text.",
-                        "sections": "This section contains a welcome message and a 'Next' button that navigates to the Profile Setup Screen.",
+                        "sections": "This section contains a welcome message, Image and a 'Next' button that navigates to the Profile Setup Screen.",
                         "screenType": "Intro"
                     },
                     "ProfileSetupScreen": {
-                        "description": "Allows users to set up their profile information including name, profile picture, and status.",
-                        "sections": "This section includes fields for entering profile details and a 'Next' button that navigates to the contact syncing Screen.",
+                        "description": "Allows users to set up their profile information.",
+                        "sections": "This section includes fields for entering profile details including name, profile picture, and status. A 'Next' button that navigates to the contact syncing Screen.",
                         "screenType": "Form"
                     },
                     "ContactSyncingScreen": {
-                        "description": "Allows users to sync their contacts to find and connect with friends and colleagues.",
-                        "sections": "This section includes options to sync contacts and a 'Finish' button that completes the onboarding process.",
+                        "description": "Allows users to sync their contacts.",
+                        "sections": "This section includes options to sync contacts to find and connect with friends and colleagues. A 'Finish' button that completes the onboarding process.",
                         "screenType": "Form"
                     },
                     "LoginScreen": {
