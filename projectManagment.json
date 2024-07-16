@@ -9,27 +9,17 @@
           "Screens": {
             "LandingPage": {
               "description": "The first page that displays to team members, highlighting the app's collaborative features and a call to action to get started.",
-              "sections": "1. HeroSection: Contains an overview of the app's features with a 'Get Started' button. Clicking the button navigates to the Welcome Screen.",
+              "sections": "1. HeroSection: Contains an overview of the app's features, Image and 'Get Started' button. Clicking the button navigates to the Welcome Screen.",
               "screenType": "DetailView"
             },
             "WelcomeScreen": {
               "description": "Introduces the platform's features to new team members with a welcoming image and text.",
-              "sections": "This section contains a welcome message and a 'Next' button that navigates to the Profile Setup Screen.",
+              "sections": "This section contains a welcome message, Image and a 'Next' button that navigates to the Profile Setup Screen.",
               "screenType": "DetailView"
             },
             "ProfileSetupScreen": {
-              "description": "Allows team members to set up their profile information including name, profile picture, and role.",
-              "sections": "This section includes fields for entering profile details and a 'Next' button that navigates to the Team Joining Screen.",
-              "screenType": "DetailView"
-            },
-            "TeamJoiningScreen": {
-              "description": "Allows team members to join existing teams or request to join new teams.",
-              "sections": "This section includes options to search for teams and a 'Next' button that navigates to the Tool Introduction Screen.",
-              "screenType": "Form"
-            },
-            "ToolIntroductionScreen": {
-              "description": "Introduces the various project management tools and features available to team members.",
-              "sections": "This section includes an overview of tools with a 'Finish' button that completes the onboarding process.",
+              "description": "Allows team members to set up their profile information.",
+              "sections": "This section includes fields for entering profile details such as  including name, profile picture, and role.'Next' button that navigates to the login Screen.",
               "screenType": "DetailView"
             },
             "LoginScreen": {
@@ -94,7 +84,7 @@
         "description": "The organization admin oversees platform usage, manages user accounts and permissions, tracks project progress, and provides support.",
         "OnboardingFlow": {
           "description": "Guides new organization admins through setting up their organization, creating teams, and configuring project settings.",
-          "Screens": {
+          "screens": {
             "LandingPage": {
               "description": "The first page that displays to admins, highlighting the app's administrative features and a call to action to get started.",
               "sections": "1. HeroSection: Contains an overview of the app's features with a 'Get Started' button. Clicking the button navigates to the Welcome Screen.",
@@ -102,12 +92,12 @@
             },
             "WelcomeScreen": {
               "description": "Introduces the platform's features to new admins with a welcoming image and text.",
-              "sections": "This section contains a welcome message and a 'Next' button that navigates to the Organization Setup Screen.",
+              "sections": "This section contains a welcome message, Image and a 'Next' button that navigates to the Organization Setup Screen.",
               "screenType": "DetailView"
             },
             "OrganizationSetupScreen": {
-              "description": "Allows admins to set up their organization information including name, logo, and details.",
-              "sections": "This section includes fields for entering organization details and a 'Next' button that navigates to the Team Creation Screen.",
+              "description": "Allows admins to set up their organization information.",
+              "sections": "This section includes fields for entering organization details including name, logo, and details. and a 'Next' button that navigates to the Team Creation Screen.",
               "screenType": "Form"
             },
             "TeamCreationScreen": {
@@ -116,14 +106,9 @@
               "screenType": "Form"
             },
             "ProjectSettingsScreen": {
-              "description": "Allows admins to configure project settings including permissions, roles, and integrations.",
-              "sections": "This section includes options for setting project parameters and a 'Next' button that navigates to the Tool Introduction Screen.",
+              "description": "Allows admins to configure project settings.",
+              "sections": "This section includes options for setting project parameters including permissions, roles, and integrations, and a 'Next' button that navigates to the login Screen.",
               "screenType": "Settings"
-            },
-            "ToolIntroductionScreen": {
-              "description": "Introduces the various project management tools and features available to admins.",
-              "sections": "This section includes an overview of tools with a 'Finish' button that completes the onboarding process.",
-              "screenType": "DetailView"
             },
             "LoginScreen": {
               "description": "Allows admins to create a new account or log in to an existing one.",
@@ -165,7 +150,7 @@
                 "description": "Displays an overview of projects with options to manage them.",
                 "sections": 
                     "ProjectList: List of projects with status, deadlines, and teams assigned.,
-                    ProjectDetails: Detailed view of individual projects with progress and performance metrics.,
+                    ProjectDetails: Detailed view of individual projects with progress and performance metrics using KPI cards.,
                     Actions: 'New projects','Assign teams','Update' to add new projects, assign teams, and update project details.","screenType": "ListView"
               }
             }

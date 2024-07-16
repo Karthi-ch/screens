@@ -9,7 +9,7 @@
                 "screens": {
                     "LandingPage": {
                         "description": "The first page that displays to users, showcasing key features and a prompt to get started.",
-                        "sections": "1. HeroSection: Contains an overview of the app's features with a 'Get Started' button. Clicking the button navigates to the Welcome Screen",
+                        "sections": "1. HeroSection: Contains an overview of the app's features, Image and a 'Get Started' button. Clicking the button navigates to the Welcome Screen",
                         "screenType": "DetailView"
                     },
                     "WelcomeScreen": {
@@ -19,13 +19,8 @@
                     },
                     "ProfileSetupScreen": {
                         "description": "Allows users to set up their profile information including name, profile picture, and status.",
-                        "sections": "This section includes fields for entering profile details and a 'Next' button that navigates to the Notification Settings Screen.",
+                        "sections": "This section includes fields for entering profile details and a 'Next' button that navigates to the contact syncing Screen.",
                         "screenType": "Form"
-                    },
-                    "NotificationSettingsScreen": {
-                        "description": "Allows users to configure their notification preferences for messages, calls, and other app activities.",
-                        "sections": "This section includes toggles for setting notification preferences and a 'Next' button that navigates to the Contact Syncing Screen.",
-                        "screenType": "Settings"
                     },
                     "ContactSyncingScreen": {
                         "description": "Allows users to sync their contacts to find and connect with friends and colleagues.",
@@ -82,7 +77,8 @@
                             "sections": 
                   "AccountSettings: 'Edit' to update username, email, password, etc. on clicking edit button it navigates to profile edit view,
                   NotificationSettings: Manage notification preferences for messages, calls, and other app activities.,
-                  PrivacySettings: Control over who can see profile information and contact details.,","screenType": "Settings"
+                  PrivacySettings: Control over who can see profile information and contact details.,
+                            ","screenType": "Settings"
                         }
                     }
                 }
@@ -95,7 +91,7 @@
                 "screens": {
                     "LandingPage": {
                         "description": "The first page that displays to admins, showcasing an overview of administrative features and tools.",
-                        "sections": "1. HeroSection: Contains a summary of admin capabilities with a 'Get Started' button. Clicking the button navigates to the Welcome Screen",
+                        "sections": "1. HeroSection: Contains a summary of admin capabilities, Image and a 'Get Started' button. Clicking the button navigates to the Welcome Screen",
                         "screenType": "DetailView"
                     },
                     "WelcomeScreen": {
@@ -104,8 +100,8 @@
                         "screenType": "DetailView"
                     },
                     "ProfileSetupScreen": {
-                        "description": "Allows admins to set up their profile information including name, role, and contact details.",
-                        "sections": "This section includes fields for entering profile details and a 'Next' button that navigates to the User Management Setup Screen.",
+                        "description": "Allows admins to set up their profile information.",
+                        "sections": "This section includes fields for entering profile details including name, role, contact details and a 'Next' button that navigates to the User Management Setup Screen.",
                         "screenType": "Form"
                     },
                     "UserManagementSetupScreen": {
@@ -114,13 +110,8 @@
                         "screenType": "Settings"
                     },
                     "CommunicationSettingsSetupScreen": {
-                        "description": "Guides admins through the initial setup of communication settings, such as message retention policies, group settings, and notification preferences.",
-                        "sections": "This section includes dropdowns and toggles for configuring communication settings and a 'Next' button that navigates to the Analytics Setup Screen.",
-                        "screenType": "Settings"
-                    },
-                    "AnalyticsSetupScreen": {
-                        "description": "Guides admins through the setup of analytics and reporting tools to monitor user engagement and app performance.",
-                        "sections": "This section includes options for selecting key performance indicators and a 'Finish' button that completes the onboarding process.",
+                        "description": "Guides admins through the initial setup of communication settings.",
+                        "sections": "This section includes dropdowns and toggles for configuring communication settings such as message retention policies, group settings, and notification preferences.A 'Next' button that navigates to the Analytics Setup Screen.",
                         "screenType": "Settings"
                     },
                     "LoginScreen": {

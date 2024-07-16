@@ -8,19 +8,14 @@
         "description": "The onboarding flow introduces users to the platform features and guides them through setting up their profile and preferences.",
         "screens": {
           "LandingPage": {
-            "WelcomeScreen": {
-              "description": "The landing page is designed to welcome new users with a vibrant display of the platform's community and features.",
-              "sections": "1. HeroSection: Displays a captivating image with a 'Get Started' button that initiates the onboarding flow.",
-              "screenType": "DetailLayout"
-            },
-            "description": "This screen showcases the benefits and core features of the platform.",
-            "sections": "This section contains an image and a brief description of the platform. A 'Next' button navigates to the Preferences Screen.",
+            "description": "The landing page is designed to welcome new users with a vibrant display of the platform's community and features.",
+            "sections": "1. HeroSection: Displays a captivating image with a 'Get Started' button that initiates the onboarding flow.",
             "screenType": "DetailLayout"
           },
-          "PreferencesScreen": {
-            "description": "This screen allows users to select their interests to personalize their content feed.",
-            "sections": "This section offers various interest options as clickable tags. Selecting these tags helps tailor the content feed. A 'Next' button navigates to the Profile Setup Screen.",
-            "screenType": "Form"
+          "WelcomeScreen": {
+            "description": "This screen showcases the benefits and core features of the platform.",
+            "sections": "This section contains an image and a brief description of the platform. A 'Next' button navigates to the profiple setu Screen.",
+            "screenType": "DetailLayout"
           },
           "ProfileSetupScreen": {
             "description": "Users can set up their profile by adding a profile picture and a short bio.",
@@ -69,7 +64,7 @@
           "screens": {
             "MessageScreen": {
               "description": "Displays a list of all the conversations from our connections ",
-              "sections": "ChatList: List of conversations with friends, each item has friend's username and profile picture. clicking on the item it should navigate user to chat detail view",
+              "sections": "ChatList: List of conversations with friends, each item has friend's username and profile picture.",
               "screenType": "MessagesChat"
             }
           }
@@ -123,12 +118,12 @@
           },
           "ProfileSetupScreen": {
             "description": "Allows moderators to set up their profile information including name, profile picture, and contact details.",
-            "sections": "This section includes fields for entering profile details and a 'Next' button that navigates to the Moderation Tools Screen.",
+            "sections": "This section includes fields for entering profile details such as name, profile picture, contact details and a 'Next' button that navigates to the Moderation Tools Screen.",
             "screenType": "Form"
           },
           "ModerationToolsScreen": {
-            "description": "Introduces the various moderation tools available to moderators, such as content flagging, user reporting, and comment management.",
-            "sections": "This section includes an overview of tools with a 'Next' button that navigates to the Community Guidelines Screen.",
+            "description": "Introduces the various moderation tools available to moderators",
+            "sections": "This section includes an overview of tools such as content flagging, user reporting, and comment management, with a 'Next' button that navigates to the Community Guidelines Screen.",
             "screenType": "DetailView"
           },
           "CommunityGuidelinesScreen": {
@@ -185,7 +180,6 @@
             "ReportsAnalyticsScreen": {
               "description": "Displays detailed reports and statistics on content moderation and user behavior.",
               "sections": "ModerationStats: Key metrics of moderation activities on KPI cards to display the stats such as number of users, users reported, report requests.",
-              ,
               "screenType": "ReportsAnalytics"
             }
           }
@@ -208,24 +202,14 @@
             "screenType": "DetailView"
           },
           "PlatformSetupScreen": {
-            "description": "Allows admins to set up platform information including name, logo, and primary settings.",
-            "sections": "This section includes fields for entering platform details and a 'Next' button that navigates to the User Roles Configuration Screen.",
+            "description": "Allows admins to set up platform information.",
+            "sections": "This section includes fields for entering platform details including name, logo, and primary settings. A 'Next' button that navigates to the User Roles Configuration Screen.",
             "screenType": "Form"
           },
           "UserRolesConfigurationScreen": {
             "description": "Allows admins to configure user roles and permissions within the platform.",
             "sections": "This section includes options for setting permissions and a 'Next' button that navigates to the Content Management Screen.",
             "screenType": "Settings"
-          },
-          "ContentManagementScreen": {
-            "description": "Allows admins to manage content policies, community guidelines, and moderation rules.",
-            "sections": "This section includes options for configuring content policies and a 'Next' button that navigates to the Reporting Tools Screen.",
-            "screenType": "Form"
-          },
-          "ReportingToolsScreen": {
-            "description": "Introduces the various reporting and analytics tools available to admins.",
-            "sections": "This section includes an overview of tools with a 'Finish' button that completes the onboarding process.",
-            "screenType": "DetailView"
           },
           "LoginScreen": {
             "description": "Allows admins to create a new account or log in to an existing one.",
@@ -243,8 +227,7 @@
               "sections": 
                   "KPICards: Shows platform performance indicators such as active users, posts, and interactions,
                   SystemHealth: --line graph to show real-time data on 'system performance' and 'health'.,
-                  Alerts: Displays a of system alerts and issues requiring admin attention.",
-              "screenType": "Dashboard"
+                  Alerts: Displays a of system alerts and issues requiring admin attention.","screenType": "Dashboard"
             }
           }
         },
@@ -254,7 +237,6 @@
             "UserManagementScreen": {
               "description": "Displays a comprehensive list of all platform users with management options.",
               "sections": "UserOverview: Lists all users with 'Edit', 'Delete', or 'Review user activities' button.",
-              ,
               "screenType": "ListView"
             }
           }
@@ -266,8 +248,7 @@
               "description": "Provides tools to review and manage all user-generated content.",
               "sections": 
                   "ContentList: Displays a list of all content with buttons to 'Approve', 'Edit', or 'Remove'.,
-                  ContentFilters: Tools to filter content by type, date, and user.",
-              "screenType": "ListView"
+                  ContentFilters: Tools to filter content by type, date, and user.","screenType": "ListView"
             }
           }
         },
@@ -278,8 +259,7 @@
               "description": "Offers tools for creating and reviewing detailed operational reports.",
               "sections": 
                   "ReportGeneration: Includes a button to generate custom reports based on filters like report type, date range, specific user data, content categories, and other filters to generate tailored reports.,
-                  ReportArchive: List of historical reports for review and audit purposes, each item having report name, date, 'View Report' button which on clicking should navigate to detail report page and 'Download Report' button to download the report.  Includes options for filtering reports by date, report type, and status",
-              "screenType": "ReportsAnalytics"
+                  ReportArchive: List of historical reports for review and audit purposes, each item having report name, date, 'View Report' button which on click shows a complete report  and 'Download Report' button to download the report.  Includes options for filtering reports by date, report type, and status","screenType": "ReportsAnalytics"
             }
           }
         }

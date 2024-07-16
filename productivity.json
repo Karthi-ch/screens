@@ -14,12 +14,12 @@
                     },
                     "WelcomeScreen": {
                         "description": "Introduces the platform's features to new users with a welcoming image and text.",
-                        "sections": "This section contains a welcome message and a 'Next' button that navigates to the Preferences Setup Screen.",
+                        "sections": "This section contains a welcome message, Image and a 'Next' button that navigates to the Preferences Setup Screen.",
                         "screenType": "DetailView"
                     },
                     "PreferencesSetupScreen": {
-                        "description": "Allows users to set their productivity preferences including task categories, notification settings, and integrations.",
-                        "sections": "This section includes dropdowns and toggles for setting preferences and a 'Next' button that navigates to the Login Screen.",
+                        "description": "Allows users to set their productivity preferences.",
+                        "sections": "This section includes dropdowns and toggles for setting preferences such as task categories, notification settings, and integrations and a 'Next' button that navigates to the Login Screen.",
                         "screenType": "Form"
                     },
                     "LoginScreen": {
@@ -126,8 +126,8 @@
                         "screenType": "DetailView"
                     },
                     "PreferencesSetupScreen": {
-                        "description": "Allows administrators to set up their preferences including user roles, permissions, and system settings.",
-                        "sections": "This section includes dropdowns and toggles for setting preferences and a 'Next' button that navigates to the Login Screen.",
+                        "description": "Allows administrators to set up their preferences.",
+                        "sections": "This section includes dropdowns and toggles for setting preferences like user roles, permissions, and system settings.and a 'Next' button that navigates to the Login Screen.",
                         "screenType": "Form"
                     },
                     "LoginScreen": {

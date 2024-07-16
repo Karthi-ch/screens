@@ -14,27 +14,17 @@
                     },
                     "WelcomeScreen": {
                         "description": "Introduces the platform's features to new users with a welcoming image and text.",
-                        "sections": "This section contains a welcome message and a 'Next' button that navigates to the Preferences Setup Screen.",
+                        "sections": "This section contains a welcoming image and text. A 'Next' button that navigates to the Preferences Setup Screen.",
                         "screenType": "DetailView"
                     },
                     "PreferencesSetupScreen": {
-                        "description": "Allows users to set their entertainment preferences including favorite genres, shows, and movies.",
-                        "sections": "This section includes dropdowns and checkboxes for selecting preferences and a 'Next' button that navigates to the Profile Setup Screen.",
+                        "description": "Allows users to set their entertainment preferences.",
+                        "sections": "This section includes dropdowns and checkboxes for selecting preferences such as favorite genres, shows, and movies. A 'Next' button that navigates to the Profile Setup Screen.",
                         "screenType": "Form"
                     },
                     "ProfileSetupScreen": {
-                        "description": "Allows users to set up their profile information including name, profile picture, and viewing preferences.",
-                        "sections": "This section includes fields for entering profile details and a 'Next' button that navigates to the Subscription Plan Screen.",
-                        "screenType": "Form"
-                    },
-                    "SubscriptionPlanScreen": {
-                        "description": "Allows users to select a subscription plan that suits their needs.",
-                        "sections": "This section includes options for different subscription plans and a 'Next' button that navigates to the Payment Screen.",
-                        "screenType": "Form"
-                    },
-                    "PaymentScreen": {
-                        "description": "Allows users to enter payment information to complete their subscription.",
-                        "sections": "This section includes fields for payment details and a 'Finish' button that completes the onboarding process.",
+                        "description": "Allows users to set up their profile information.",
+                        "sections": "This section includes fields for entering profile details such as name, profile picture, and viewing preferences.and a 'Next' button that navigates to the login Screen.",
                         "screenType": "Form"
                     },
                     "LoginScreen": {
@@ -101,7 +91,7 @@
                         "ProfileScreen": {
                             "description": "Shows user profile details and preferences with options to edit account information and manage settings.",
                             "sections": 
-                  "AccountInfo: Displays user's profile picture, username, email, and subscription status with an 'Edit' button which navigates to account edit view.,
+                  "AccountInfo: Displays user's profile picture, username, email, and subscription status with an 'Edit' button which navigates to profile edit view.,
                   Preferences: Options to manage content preferences, playback settings, and notification preferences.,
                   Subscription: Information about the user's current subscription plan with buttons to 'Upgrade' or 'Cancel'.,
                   WatchHistory: A list of recently watched content with 'Clear' and 'Resume' buttons to clear history or resume playback.","screenType": "Profile"
@@ -146,17 +136,17 @@
                     },
                     "WelcomeScreen": {
                         "description": "Introduces the platform's admin features to new admins with a welcoming image and text.",
-                        "sections": "This section contains a welcome message and a 'Next' button that navigates to the Profile Setup Screen.",
+                        "sections": "This section contains a welcome message, Image and a 'Next' button that navigates to the Profile Setup Screen.",
                         "screenType": "DetailView"
                     },
                     "ProfileSetupScreen": {
-                        "description": "Allows admins to set up their profile information including name, role, and contact details.",
-                        "sections": "This section includes fields for entering profile details and a 'Next' button that navigates to the Content Management Setup Screen.",
+                        "description": "Allows admins to set up their profile information",
+                        "sections": "This section includes fields for entering profile details such as name, role, and contact details. and a 'Next' button that navigates to the Content Management Setup Screen.",
                         "screenType": "Form"
                     },
                     "ContentManagementSetupScreen": {
-                        "description": "Guides admins through the initial setup of content management including categories, genres, and metadata.",
-                        "sections": "This section includes dropdowns and checkboxes for setting up content categories and a 'Next' button that navigates to the User Management Setup Screen.",
+                        "description": "Guides admins through the initial setup of content management.",
+                        "sections": "This section includes dropdowns and checkboxes for setting up content categories, genres, metadata and a 'Next' button that navigates to the User Management Setup Screen.",
                         "screenType": "Form"
                     },
                     "UserManagementSetupScreen": {

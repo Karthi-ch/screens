@@ -14,27 +14,22 @@
                     },
                     "WelcomeScreen": {
                         "description": "Introduces the platform's features to new users with a welcoming image and text.",
-                        "sections": "This section contains a welcome message and a 'Next' button that navigates to the Account Setup Screen.",
+                        "sections": "This section contains a welcome message, welcome image and a 'Next' button that navigates to the Account Setup Screen.",
                         "screenType": "DetailView"
                     },
                     "AccountSetupScreen": {
-                        "description": "Allows users to set up their account information including name, contact details, and account type.",
-                        "sections": "This section includes fields for entering personal and account details and a 'Next' button that navigates to the Security Settings Screen.",
+                        "description": "Allows users to set up their account information.",
+                        "sections": "This section includes fields for entering personal and account details such as name, contact details, and account type. A 'Next' button that navigates to the Security Settings Screen.",
                         "screenType": "Form"
                     },
                     "SecuritySettingsScreen": {
-                        "description": "Allows users to configure their security settings including password, PIN, and two-factor authentication.",
-                        "sections": "This section includes options for setting up security measures and a 'Next' button that navigates to the Notification Preferences Screen.",
-                        "screenType": "Settings"
-                    },
-                    "NotificationPreferencesScreen": {
-                        "description": "Allows users to set their notification preferences for account activities, transactions, and updates.",
-                        "sections": "This section includes toggles for setting notification preferences and a 'Next' button that navigates to the Payment Methods Screen.",
+                        "description": "Allows users to configure their security settings.",
+                        "sections": "This section includes options for setting up security measures such as password, PIN, and two-factor authentication. A 'Next' button that navigates to the Notification Preferences Screen.",
                         "screenType": "Settings"
                     },
                     "PaymentMethodsScreen": {
-                        "description": "Allows users to add and manage their payment methods such as credit cards, debit cards, and bank accounts.",
-                        "sections": "This section includes fields for entering payment details and a 'Finish' button that completes the onboarding process.",
+                        "description": "Allows users to add and manage their payment methods.",
+                        "sections": "This section includes fields for entering payment details such as credit cards, debit cards, and bank accounts. Also a 'Finish' button that completes the onboarding process.",
                         "screenType": "Form"
                     },
                     "LoginScreen": {
@@ -66,6 +61,16 @@
                   "AccountList: Lists all linked bank accounts with balances.,
                   TransactionHistory: Shows a detailed history of transactions for a selected account.,
                   Statements: Provides 'Download' to download the statement and 'View account statement'button which navigates to statements detail view","screenType": "DetailView"
+                        }
+                    }
+                },
+                "StatementDetail": {
+                    "description": "The Statement Detail screen allows users to view detailed information about their account transactions.",
+                    "screens": {
+                        "StatementDetailScreen": {
+                            "description": "Displays a detailed list of transactions for a specific account statement period.",
+                            "sections": "AccountSummary: Overview of the account details, including account number, type, and current balance. TransactionList: List of transactions within the selected statement period, including date, description, amount, and transaction type. TransactionDetail: Detailed view of a selected transaction, showing additional information such as transaction ID, category, and merchant details. FilterOptions: Options to filter transactions by date range, transaction type, or category. ExportStatement: Option to export the statement as a PDF or CSV file for record-keeping or further analysis. PrintStatement: Option to print the statement directly from the app.",
+                            "screenType": "DetailView"
                         }
                     }
                 },
@@ -171,8 +176,8 @@
                         "screenType": "DetailView"
                     },
                     "OrganizationSetupScreen": {
-                        "description": "Allows admins to set up their organization information including name, logo, and contact details.",
-                        "sections": "This section includes fields for entering organization details and a 'Next' button that navigates to the User Permissions Screen.",
+                        "description": "Allows admins to set up their organization information.",
+                        "sections": "This section includes fields for entering organization details such asn name, logo, and contact details. A 'Next' button that navigates to the User Permissions Screen.",
                         "screenType": "Form"
                     },
                     "UserPermissionsScreen": {
@@ -181,14 +186,9 @@
                         "screenType": "Settings"
                     },
                     "FinancialProductsScreen": {
-                        "description": "Allows admins to manage financial products such as loans, savings accounts, and investment options.",
-                        "sections": "This section includes options for configuring financial products and a 'Next' button that navigates to the Reporting Tools Screen.",
+                        "description": "Allows admins to manage financial products.",
+                        "sections": "This section includes options for configuring financial products such as loans, savings accounts, and investment options. A 'Next' button that navigates to login Screen.",
                         "screenType": "Form"
-                    },
-                    "ReportingToolsScreen": {
-                        "description": "Introduces the various reporting and analytics tools available to admins.",
-                        "sections": "This section includes an overview of tools with a 'Finish' button that completes the onboarding process.",
-                        "screenType": "ReportsAnalytics"
                     },
                     "LoginScreen": {
                         "description": "Allows admins to create a new account or log in to an existing one.",
@@ -325,13 +325,13 @@
                         "screenType": "DetailView"
                     },
                     "ProfileSetupScreen": {
-                        "description": "Allows support agents to set up their profile information including name, profile picture, and contact details.",
-                        "sections": "This section includes fields for entering profile details and a 'Next' button that navigates to the Support Tools Screen.",
+                        "description": "Allows support agents to set up their profile information.",
+                        "sections": "This section includes fields for entering profile details including name, profile picture, contact details and a 'Next' button that navigates to the Support Tools Screen.",
                         "screenType": "Form"
                     },
                     "SupportToolsScreen": {
-                        "description": "Introduces the various support tools available to agents, such as ticketing systems and customer communication platforms.",
-                        "sections": "This section includes an overview of tools with a 'Next' button that navigates to the Customer Service Processes Screen.",
+                        "description": "Introduces the various support tools available to agents.",
+                        "sections": "This section includes an overview of tools such as ticketing systems, customer communication platforms and a 'Next' button that navigates to the Customer Service Processes Screen.",
                         "screenType": "DetailView"
                     },
                     "CustomerServiceProcessesScreen": {
@@ -476,27 +476,12 @@
                     },
                     "WelcomeScreen": {
                         "description": "Introduces the platform's features to new integrators with a welcoming image and text.",
-                        "sections": "This section contains a welcome message and a 'Next' button that navigates to the Integration Profile Setup Screen.",
+                        "sections": "This section contains a welcome image, Welcome message and a 'Next' button that navigates to the Integration Profile Setup Screen.",
                         "screenType": "DetailView"
                     },
                     "IntegrationProfileSetupScreen": {
-                        "description": "Allows integrators to set up their profile information including organization name, contact details, and integration goals.",
-                        "sections": "This section includes fields for entering profile details and a 'Next' button that navigates to the API Documentation Screen.",
-                        "screenType": "DetailView"
-                    },
-                    "APIDocumentationScreen": {
-                        "description": "Provides access to API documentation and guidelines for integrating with the banking platform.",
-                        "sections": "This section includes links to API documentation and a 'Next' button that navigates to the Integration Settings Screen.",
-                        "screenType": "DetailView"
-                    },
-                    "IntegrationSettingsScreen": {
-                        "description": "Allows integrators to configure integration settings including API keys, webhook URLs, and permissions.",
-                        "sections": "This section includes options for configuring settings and a 'Next' button that navigates to the Testing and Validation Screen.",
-                        "screenType": "Form"
-                    },
-                    "TestingAndValidationScreen": {
-                        "description": "Provides tools and resources for testing and validating the integration.",
-                        "sections": "This section includes links to testing tools, validation procedures, and a 'Finish' button that completes the onboarding process.",
+                        "description": "Allows integrators to set up their profile information.",
+                        "sections": "This section includes fields for entering profile details including organization name, contact details, integration goals, and a 'Next' button that navigates to the login Screen.",
                         "screenType": "DetailView"
                     },
                     "LoginScreen": {

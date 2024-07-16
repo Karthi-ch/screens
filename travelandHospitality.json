@@ -9,18 +9,13 @@
         "screens": {
           "LandingPage": {
             "description": "The first page that displays to users, featuring popular travel destinations and a search interface.",
-            "sections": "1. HeroSection: Contains a large featured list of popular destinations with a 'Search Destinations' button. Clicking the button navigates to the Welcome Screen",
-            "screenType": "LandingPage"
+            "sections": "1. HeroSection: Contains a large featured list of popular destinations with images and destination name, also include a 'Search Destinations' button. Clicking the button navigates to the Welcome Screen",
+            "screenType": "DetailView"
           },
           "WelcomeScreen": {
             "description": "Introduces the platform's features to new users with a welcoming image and text.",
-            "sections": "This section contains a welcome message and a 'Next' button that navigates to the Preferences Setup Screen.",
-            "screenType": "Intro"
-          },
-          "PreferencesSetupScreen": {
-            "description": "Allows users to set their travel preferences including destination, accommodation type, and budget.",
-            "sections": "This section includes dropdowns and sliders for setting preferences and a 'Next' button that navigates to the Login Screen.",
-            "screenType": "Form"
+            "sections": "This section contains a welcome message and a 'Next' button that navigates to the  login Screen.",
+            "screenType": "DetailView"
           },
           "LoginScreen": {
             "description": "Allows users to create a new account or log in to an existing one.",
@@ -37,8 +32,33 @@
               "description": "Displays featured deals, personalized travel recommendations, and recent searches.",
               "sections": 
                   "FeaturedDeals: Display a carousel highlighting special offers and discounts on flights, hotels, and vacation packages.,
-                  Recommendations: Display a cards for Personalized travel recommendations based on user preferences and past bookings. Each card must have an image and location name. Includes ''View Package' button on clicking navigates to package detail view,
+                  Recommendations: Display a cards for Personalized travel recommendations based on user preferences and past bookings. Each card must have an image and location name. Includes 'View Package' button on clicking navigates to package detail view,
                   RecentSearches: Display a cards of recent searches for quick access to previous queries.Each card must have an image and location name. Includes ''View Package' button on clicking navigates to package detail view","screenType": "Home"
+            }
+          }
+        },
+        "PackageDetail": {
+          "description": "Provides all the details of the package",
+          "screens": {
+            "BookingsScreen": {
+              "description": "Detailed description of the selected package",
+              "sections": 
+                  "DestinationPictures: Display a carasoul using the destination pictures,
+                  DetailedDescription: Includes all details such as duration of holidays, Itinerary details, policies, and summary
+                  Price: A card showing the total price of the trip, discount applied and coupons available etc. Also includes the  `Proceed to payment` button, which on click navigates to payment detail page","screenType": "ListView"
+            }
+          }
+        },
+        "PaymentDetails": {
+          "description": "The Payment Details screen allows users to enter and manage their payment information for bookings.",
+          "screens": {
+            "PaymentDetailsScreen": {
+              "description": "Displays fields for users to enter their payment information securely.",
+              "sections":"
+                CardInformation:Fields for entering credit/debit card details, including card number, expiration date, and CVV.,
+                PaymentSummary:Summary of the payment amount, including a breakdown of charges and taxes.,
+                SavePaymentOption:Option to save the payment method for future bookings.,
+                PaymentButton:'Pay now' button to confirm and process the payment.","screenType": "DetailView"
             }
           }
         },
@@ -48,7 +68,7 @@
             "BookingsScreen": {
               "description": "Lists all bookings with options to view details, modify, or cancel reservations.",
               "sections": 
-                  "UpcomingBookings: Displays a list of upcoming travel plans, each item in the list has 'View Details' button which on clicking would navigate to bookings detail page,
+                  "UpcomingBookings: Displays a list of upcoming travel plans, each item in the list has 'View Details' button which on clicking would navigate to package detail page,
                   PastBookings: Displays a list of previous trips, each item in the list has 'View receipts' which navigates to receipts detailed view and 'Rating and Review' button which on click would navigate to ratings and review create view","screenType": "ListView"
             }
           }
@@ -106,7 +126,7 @@
                   "AccountSettings: Options to update username, email, password, etc. Has 'Edit' button which on click navigates to edit profile view,
                   PrivacySettings: Control over who can see posts, send messages, and view profile.Has 'Edit' button which on click navigates to edit privacy view,
                   NotificationSettings: Manage notification preferences.Has 'Edit' button which on click navigates to edit notification view,
-                  DeleteAccount: Option to delete or deactivate the account. Includes 'Delete' button which on click navigates to delete account detail view","screenType": "Settings"
+                  DeleteAccount: Option to delete or deactivate the account. Includes 'Delete' button which on click deletes the account","screenType": "Settings"
             }
           }
         }
@@ -119,42 +139,42 @@
         "screens": {
           "LandingPage": {
             "description": "The first page that displays to admins, showcasing an overview of administrative features and tools.",
-            "sections": "1. HeroSection: Contains a summary of admin capabilities with a 'Get Started' button. Clicking the button navigates to the Welcome Screen",
+            "sections": "1. HeroSection: Contains a summary of admin capabilities with some images and a 'Get Started' button. Clicking the button navigates to the Welcome Screen.",
             "screenType": "DetailView"
           },
           "WelcomeScreen": {
             "description": "Introduces the platform's admin features to new admins with a welcoming image and text.",
-            "sections": "This section contains a welcome message and a 'Next' button that navigates to the Profile Setup Screen.",
+            "sections": "1. IntroSection: This section contains a welcome message and a 'Next' button that navigates to the Profile Setup Screen.",
             "screenType": "DetailView"
           },
           "ProfileSetupScreen": {
             "description": "Allows admins to set up their profile information including name, role, and contact details.",
-            "sections": "This section includes fields for entering profile details and a 'Next' button that navigates to the Listings Management Setup Screen.",
+            "sections": "1. ProfileForm: This section includes fields for entering profile details such as name, role, shift, ID number, etc., and a 'Next' button that navigates to the Listings Management Setup Screen.",
             "screenType": "Form"
           },
           "ListingsManagementSetupScreen": {
             "description": "Guides admins through the initial setup of listings management including property details, availability, and pricing.",
-            "sections": "This section includes forms and fields for setting up property listings and a 'Next' button that navigates to the User Management Setup Screen.",
+            "sections": "1. ListingsForm: This section includes forms and fields for setting up property listings, including property details, availability dates, pricing information, and a 'Next' button that navigates to the User Management Setup Screen.",
             "screenType": "Form"
           },
           "UserManagementSetupScreen": {
             "description": "Allows admins to configure user roles and permissions, manage user accounts, and oversee user activities.",
-            "sections": "This section includes options for setting up different user roles and access levels, and a 'Next' button that navigates to the Booking Management Setup Screen.",
+            "sections": "1. UserRoles: This section includes options for setting up different user roles and access levels, managing user accounts, and a 'Next' button that navigates to the Booking Management Setup Screen.",
             "screenType": "Settings"
           },
           "BookingManagementSetupScreen": {
             "description": "Guides admins through the setup of booking management tools to handle reservations, cancellations, and customer inquiries.",
-            "sections": "This section includes options for configuring booking settings and a 'Next' button that navigates to the Analytics Setup Screen.",
+            "sections": "1. BookingSettings: This section includes options for configuring booking settings such as reservation rules, cancellation policies, customer inquiry management, and a 'Next' button that navigates to the Analytics Setup Screen.",
             "screenType": "Settings"
           },
           "AnalyticsSetupScreen": {
             "description": "Guides admins through the setup of analytics and reporting tools to monitor performance and user engagement.",
-            "sections": "This section includes options for selecting key performance indicators and a 'Finish' button that completes the onboarding process.",
+            "sections": "1. AnalyticsConfig: This section includes options for selecting key performance indicators (KPIs), setting up reports, and a 'Finish' button that completes the onboarding process.",
             "screenType": "Settings"
           },
           "LoginScreen": {
             "description": "Allows admins to create a new account or log in to an existing one.",
-            "sections": "This section contains fields for email and password with a 'Login' button.",
+            "sections": "1. LoginFields: This section contains fields for email and password with a 'Login' button.",
             "screenType": "LoginRegister"
           }
         }
@@ -172,15 +192,20 @@
             }
           }
         },
-        "UserManagement": {
+        "Users": {
           "description": "Allows admins to manage accounts, roles, and permissions across the platform.",
           "screens": {
             "UserListScreen": {
               "description": "Displays a comprehensive list of all platform users with management options.",
               "sections": 
-                "UserOverview: Lists all users with options to edit, delete, or review user activities.Clicking on 'Edit' button navigates us to user edit screen, on clicking the 'Delete' button deletes the user data, on clicking the 'Review User data', navigates to user detail view,
+                "UserOverview: Lists all users with options to edit, delete, or review user activities.Clicking on 'Edit' button navigates to user edit screen, on clicking the 'Delete' button deletes the user data, on clicking the 'Review User data', navigates to user detail view,
                 SearchUsers: A search bar to find specific users.","screenType": "ListView"
-            },
+            }
+          }
+        },
+        "UserManagement": {
+          "description": "Allows admins to manage accounts, roles, and permissions across the platform.",
+          "screens": {
             "UserDetailScreen": {
               "description": "Provides detailed information about a specific user, including account activity and settings.",
               "sections": 
@@ -190,25 +215,30 @@
             }
           }
         },
-        "TransactionManagement": {
+        "Transactions": {
           "description": "Monitors and manages all transactions made on the platform.",
           "screens": {
             "TransactionListScreen": {
               "description": "Displays a list of all transactions with details and management options.",
               "sections": 
-                "TransactionOverview: Lists all transactions with details such as date, amount, and status.,
+                "TransactionOverview: Lists all transactions with details such as date, amount, and status, on clicking would navigate to transaction detail page,
                 FilterTransactions: Options to filter transactions by date, type, and status.","screenType": "ListView"
-            },
+            }
+          }
+        },
+        "TransactionManagement": {
+          "description": "Monitors and manages all transactions made on the platform.",
+          "screens": {
             "TransactionDetailScreen": {
               "description": "Provides detailed information about a specific transaction.",
               "sections": 
                 "TransactionInfo: Displays details such as transaction ID, date, amount, and involved parties.,
                 StatusUpdates: Shows the history of status updates for the transaction.,
-                Actions: Buttons for approving, rejecting, or refunding the transaction. clicking on 'Reject' or 'Refund' button should navigate to confirmation detail page","screenType": "DetailView"
+                Actions: Buttons for approving, rejecting, or refunding the transaction. has 'Reject' or 'Refund'","screenType": "DetailView"
             }
           }
         },
-        "ContentManagement": {
+        "ContentList": {
           "description": "Manages the content displayed on the platform, including travel deals, recommendations, and user-generated content.",
           "screens": {
             "ContentListScreen": {
@@ -216,7 +246,12 @@
               "sections": 
                 "ContentOverview: Lists all content items with options to edit, delete, or review. 'Edit' button navigates to edit content view, 'Delete' button deletes the record, 'Review' button should navigate to content detail view.,
                 FilterContent: Options to filter content by type, date, and status.","screenType": "ListView"
-            },
+            }
+          }
+        },
+        "ContentManagement": {
+          "description": "Manages the content displayed on the platform, including travel deals, recommendations, and user-generated content.",
+          "screens": {
             "ContentDetailScreen": {
               "description": "Provides detailed information about a specific content item.",
               "sections": [
@@ -270,23 +305,8 @@
           },
           "ProfileSetupScreen": {
             "description": "Allows moderators to set up their profile information including name, role, and contact details.",
-            "sections": "This section includes fields for entering profile details and a 'Next' button that navigates to the Content Moderation Setup Screen.",
+            "sections": "This section includes fields for entering profile details and a 'Next' button that navigates to the login screen",
             "screenType": "Form"
-          },
-          "ContentModerationSetupScreen": {
-            "description": "Guides moderators through the initial setup of content moderation including guidelines and tools for reviewing user-generated content.",
-            "sections": "This section includes dropdowns and checkboxes for setting up moderation preferences and a 'Next' button that navigates to the Review Management Setup Screen.",
-            "screenType": "Settings"
-          },
-          "ReviewManagementSetupScreen": {
-            "description": "Allows moderators to manage user reviews, including approving, rejecting, and responding to reviews.",
-            "sections": "This section includes options for managing reviews and a 'Next' button that navigates to the User Reports Management Screen.",
-            "screenType": "Settings"
-          },
-          "UserReportsManagementScreen": {
-            "description": "Guides moderators through the setup of handling user reports, including reviewing, taking action, and resolving issues.",
-            "sections": "This section includes options for managing user reports and a 'Finish' button that completes the onboarding process.",
-            "screenType": "Settings"
           },
           "LoginScreen": {
             "description": "Allows moderators to create a new account or log in to an existing one.",
@@ -308,7 +328,7 @@
             }
           }
         },
-        "ContentReview": {
+        "Content": {
           "description": "Allows moderators to review and manage user-generated content, such as reviews, photos, and comments.",
           "screens": {
             "ContentListScreen": {
@@ -316,7 +336,12 @@
               "sections": 
                 "ContentOverview: Lists all pending content items with options to approve, reject, or flag for further review using 'Approve','Reject','Flag for further review' buttons.,
                 FilterContent: Options to filter content by type, date, and status.","screenType": "ListView"
-            },
+            }
+          }
+        },
+        "ContentReview": {
+          "description": "Allows moderators to review and manage user-generated content, such as reviews, photos, and comments.",
+          "screens": {
             "ContentDetailScreen": {
               "description": "Provides detailed information about a specific content item, including user details and content history.",
               "sections": 
@@ -332,9 +357,14 @@
             "ReportListScreen": {
               "description": "Displays a list of all user reports with details and management options.",
               "sections": 
-                "ReportOverview: Lists all user reports with details such as report type, date, and status.,
+                "ReportOverview: Lists all user reports with details such as report type, date, and status.On clicking each item would navigate to report detail screen,
                 FilterReports: Options to filter reports by type, date, and status.","screenType": "ListView"
-            },
+            }
+          }
+        },
+        "UserReportsDetail": {
+          "description": "Enables moderators to manage user reports and take appropriate actions.",
+          "screens": {
             "ReportDetailScreen": {
               "description": "Provides detailed information about a specific user report, including the reported content and user history.",
               "sections": 
@@ -344,15 +374,20 @@
             }
           }
         },
-        "UserManagement": {
+        "Users": {
           "description": "Allows moderators to manage user accounts, including suspensions and bans.",
           "screens": {
             "UserListScreen": {
               "description": "Displays a list of all users with options to manage their accounts.",
               "sections": 
-                "UserOverview: Lists all users with, 'Suspend','Ban','Review' buttons to suspend, ban, or review user activities.,
+                "UserOverview: Lists all users with, 'Suspend','Ban','Review' buttons to suspend, ban, or review user activities.On clicking any of the list item, it should navigate to user detail screen,
                 SearchUsers: A search bar to find specific users.","screenType": "ListView"
-            },
+            }
+          }
+        },
+        "UserManagement": {
+          "description": "Allows moderators to manage user accounts, including suspensions and bans.",
+          "screens": {
             "UserDetailScreen": {
               "description": "Provides detailed information about a specific user, including account activity and moderation actions.",
               "sections": 
@@ -368,9 +403,14 @@
             "LogListScreen": {
               "description": "Displays a list of all moderation actions with details.",
               "sections": 
-                "LogOverview: Lists all moderation actions with details such as action type, date, and moderator involved.,
+                "LogOverview: Lists all moderation actions with details such as action type, date, and moderator involved.On clicking any item, it should navigate to logs detail screen,
                 FilterLogs: Options to filter logs by type, date, and moderator.","screenType": "ListView"
-            },
+            }
+          }
+        },
+        "ModerationLogsDetail": {
+          "description": "Keeps a record of all moderation actions taken by the moderators.",
+          "screens": {
             "LogDetailScreen": {
               "description": "Provides detailed information about a specific moderation action.",
               "sections": 
