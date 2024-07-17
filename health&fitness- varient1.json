@@ -1,7 +1,8 @@
 {
   "type": "APP",
   "description": "This platform facilitates health and fitness by offering tailored workout and diet plans, connecting users with fitness coaches, and providing tools to monitor health statistics like calorie intake and workout progress. It supports features like diet tracking, workout routines, progress monitoring, and health insights.",
-  "actors": {
+  "embedding_string":"A health and fitness platform that offers tailored workout and diet plans, connects users with fitness coaches, and provides tools to monitor health statistics like calorie intake and workout progress. It supports features like diet tracking, workout routines, progress monitoring, and health insights. Users set fitness goals, track daily activities, log meals, and interact with coaches. Trainers create and manage workout plans, monitor user progress, and provide guidance. Admins oversee user activities, manage content, and ensure smooth platform operation."
+,"actors": {
     "User": {
       "description": "The User is the primary actor who sets fitness goals, tracks daily activities, logs meals, and interacts with the coaches.",
       "OnboardingFlow": {
