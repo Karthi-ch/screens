@@ -1,6 +1,7 @@
 {
     "type": "APP",
     "description": "An entertainment and media app provides users with access to a wide range of content such as movies, TV shows, music, and news. It allows users to browse, stream, and download content, create playlists, and stay updated with the latest releases and trending media.",
+    "embedding_string":"An entertainment and media app provides users with access to a wide range of content such as movies, TV shows, music, and news. Users can browse, stream, and download content, create playlists, and stay updated with the latest releases and trending media. The app supports personalized recommendations, content detail views, playlist management, and notifications about new releases. Admins oversee the platform by managing media content, user accounts, analytics, and system settings.",
     "actors": {
         "User": {
             "description": "The user is the primary actor who browses, streams, and interacts with the content available on the platform.",

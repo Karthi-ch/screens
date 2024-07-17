@@ -1,12 +1,36 @@
 {
-    "type": "APP",
-    "doc_id": "E-commerce",
+    "type": "App",
     "description": "its a digital platform that enables users to buy and sell products or services over the internet. It facilitates online transactions through various features like product listings, shopping carts, secure payment gateways, order tracking, and customer reviews. The application aims to provide a seamless shopping experience to users while enabling businesses to reach a broader audience and manage their online sales efficiently.",
-  
+    "embedding_string": "An e-commerce platform that enables users to buy and sell products or services over the internet. It offers features like product listings, shopping carts, secure payment gateways, order tracking, and customer reviews. Buyers can browse, purchase, and review products, while sellers can manage inventory, process orders, and track sales performance. Admins oversee the platform, managing accounts and ensuring smooth operation. The platform aims to provide a seamless shopping experience and efficient sales management.",
     "actors": {
       "Buyer": {
         "description": "The Buyer is the primary actor who browses, purchases, and reviews products on the platform.",
-        "menuItems": {
+          "OnboardingFlow": {
+            "description": "Guides new buyers through account setup, browsing products, and making their first purchase.",
+            "screens": {
+              "LandingPage": {
+                "description": "The first page that displays to buyers, showcasing popular products and categories.",
+                "sections": "1. HeroSection: Contains a summary of featured products with a 'Get Started' button. Clicking the button navigates to the Welcome Screen.",
+                "screenType": "DetailView"
+              },
+              "WelcomeScreen": {
+                "description": "Introduces the platform's features to new buyers with a welcoming image and text.",
+                "sections": "1. IntroSection: This section contains a welcome message and a 'Next' button that navigates to the Profile Setup Screen.",
+                "screenType": "DetailView"
+              },
+              "ProfileSetupScreen": {
+                "description": "Allows buyers to set up their profile information.",
+                "sections": "1. ProfileForm: This section includes fields for entering profile details such as name, address, and contact details. A 'Next' button that navigates to the login Screen.",
+                "screenType": "Form"
+              },
+              "LoginScreen": {
+                "description": "Allows buyers to create a new account or log in to an existing one.",
+                "sections": "1. LoginFields: This section contains fields for email and password with a 'Login' button.",
+                "screenType": "LoginRegister"
+              }
+            }
+        } 
+        ,"menuItems": {
           "Home": {
             "description": "The Home page is the landing page of the application that displays featured products, personalized recommendations, promotional banners, and latest offers.",
             "screens": {
@@ -105,7 +129,12 @@
                   1. OrderList: This section lists all orders  card , each card contains order ID, products purchased, quantities, prices, order status, and action buttons 'View Order' for viewing order details.,
                        on click on view order button it will navigate to order details page",
                 "screenType":"ListView"
-              },
+              }
+            }
+          },
+          "OrderDetail":{
+            "description":"  The Orders page displays a list of all orders placed by the buyer, including order details, status, tracking information, and actions to manage orders.",
+            "screens":{
               "OrderDetailScreen":{
                 "description":"Displays detailed information about a specific order, including order ID, products purchased, quantities, prices, shipping address, payment status, and tracking information.",
                 "sections":"
@@ -116,7 +145,6 @@
                 "screenType":"DetailView"
               }
             }
-          
           },
           "Profile":{
             "description":"  The Profile page displays buyer account information, order history, saved addresses, payment methods, and settings.",
@@ -135,9 +163,34 @@
           }
           }
         },
-  
       "Seller": {
         "description": "The Seller lists products for sale, manages inventory, processes orders, and tracks sales performance on the platform.",
+          "OnboardingFlow": {
+            "description": "Guides new sellers through setting up their account, listing products, and managing orders.",
+            "screens": {
+              "LandingPage": {
+                "description": "The first page that displays to sellers, showcasing platform benefits and tools.",
+                "sections": "1. HeroSection: Contains a summary of seller capabilities with a 'Get Started' button. Clicking the button navigates to the Welcome Screen.",
+                "screenType": "DetailView"
+              },
+              "WelcomeScreen": {
+                "description": "Introduces the platform's features to new sellers with a welcoming image and text.",
+                "sections": "1. IntroSection: This section contains a welcome message, Image and a 'Next' button that navigates to the Profile Setup Screen.",
+                "screenType": "DetailView"
+              },
+              "ProfileSetupScreen": {
+                "description": "Allows sellers to set up their profile information.",
+                "sections": "1. ProfileForm: This section includes fields for entering profile details such as business name, address, and contact details. 'Next' button that navigates to the login Screen.",
+                "screenType": "Form"
+              },
+              "LoginScreen": {
+                "description": "Allows sellers to create a new account or log in to an existing one.",
+                "sections": "1. LoginFields: This section contains fields for email and password with a 'Login' button.",
+                "screenType": "LoginRegister"
+              }
+            }
+          }
+        ,
         "menuItems": {
           "Dashboard": {
             "description": "The Dashboard provides an overview of sales performance, recent orders, and key metrics to help sellers manage their business efficiently.",
@@ -213,10 +266,34 @@
           }
         }
       },
-  
       "Admin": {
           "description": "The Admin oversees the entire platform, manages buyer accounts, regulates content, and ensures smooth operation.",
-          "menuItems": {
+            "OnboardingFlow": {
+              "description": "Guides new admins through setting up their account and managing platform settings, user roles, and analytics.",
+              "screens": {
+                "LandingPage": {
+                  "description": "The first page that displays to admins, showcasing an overview of administrative features and tools.",
+                  "sections": "1. HeroSection: Contains a summary of admin capabilities with some images and a 'Get Started' button. Clicking the button navigates to the Welcome Screen.",
+                  "screenType": "DetailView"
+                },
+                "WelcomeScreen": {
+                  "description": "Introduces the platform's admin features to new admins with a welcoming image and text.",
+                  "sections": "1. IntroSection: This section contains a welcome message and a 'Next' button that navigates to the Profile Setup Screen.",
+                  "screenType": "Intro"
+                },
+                "ProfileSetupScreen": {
+                  "description": "Allows admins to set up their profile information including.",
+                  "sections": "1. ProfileForm: This section includes fields such as name, role, and contact details, for entering profile details such as name, role, shift, ID number, etc., and a 'Next' button that navigates to the Platform Management Setup Screen.",
+                  "screenType": "Form"
+                },
+                "LoginScreen": {
+                  "description": "Allows admins to create a new account or log in to an existing one.",
+                  "sections": "1. LoginFields: This section contains fields for email and password with a 'Login' button.",
+                  "screenType": "LoginRegister"
+                }
+              }
+            }
+          ,"menuItems": {
               "DashboardScreen":{
                   "description":"The Dashboard provides detailed insights and reports on app usage, sales performance, buyer activities, and system health. It helps admins monitor the platform's overall performance and address issues promptly",
                   "screens":{
@@ -230,6 +307,7 @@
                     - BarChart: Compares sales performance across different categories or products. Metrics include total sales per category, top-selling products, and revenue by product.,
                     - PieChart: Displays the distribution of sales across different regions or buyer segments. Metrics include sales percentage by region, buyer demographics, and sales by buyer type (new vs. returning).
                 ",
+                "screenType": "Dashboard"
                       }
                   }
   
@@ -281,6 +359,5 @@
           
           }
         }
-   
     }
   }

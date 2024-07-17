@@ -1,35 +1,36 @@
 {
-  "type": "APP",
-  "doc_id": "DateMatch",
+  "type": "App",
   "description": "A  platform that enables users to find matches based on interests, location, and preferences. Features include profile creation, swiping for matches, messaging, and privacy settings.",
-
+  "embedding_string":"A platform that enables users to find matches based on interests, location, and preferences. Features include profile creation, swiping for matches, messaging, and privacy settings. Users can set up their profile, search for matches, like profiles, and engage in conversations. Admins manage user accounts, resolve disputes, and ensure the platform operates smoothly. The platform offers tools for discovering matches, viewing profiles, chatting, and configuring account settings.",
   "actors": {
     "User": {
       "description": "The primary actor who can create and manage their profile, search for matches, like profiles, and engage in conversations.",
-
       "OnboardingFlow": {
-        "description": "Guides users through setting up their profile and preferences to start finding matches.",
-        "Screens": {
-          "LandingPage": {
-            "description": "Which describes about the platform with a image which represents people connecting ",
-            "sections": "This section includes a image which represents people connecting , on click on  'Get started' button it will navigate to welcome screen.",
-            "screenType": "Intro"
+        "screens": {
+          "WelcomeScreen": {
+            "description": "Introduces the platform's features to new users with a welcoming image and text.",
+            "sections": "This section contains a welcome message and a 'Get Started' button that navigates to the Profile Creation Screen.",
+            "screenType": "DetailView"
           },
-        "WelcomeScreen": {
-            "description": "Welcomes users to the platform and provides an overview of the features.",
-            "sections": "This section includes a welcome message and  quote about connection, on  'Next' button click navigates to the SignUpScreen.",
-            "screenType": "TutorialOnboarding"
-        },
-         
-          "ProfileSetupScreen": {
-            "description": "Users can set up their profile by adding photos, a bio, and preferences for matches.",
-            "sections": "Includes options to upload photos, write a bio, and set preferences such as age range, interests, and desired relationship type. on click on 'Next' button it will navigate to the PreferenceSetupScreen",
+          "ProfileCreationScreen": {
+            "description": "Allows users to set up their profile information including name, age, gender, and bio.",
+            "sections": "This section includes fields for entering profile details such as name, age, gender, bio, profile photo upload, etc. and a 'Next' button that navigates to the Preferences Setup Screen.",
             "screenType": "Form"
           },
-          "PreferenceSetupScreen": {
-            "description": "Allows users to fine-tune their matching preferences based on several criteria.",
-            "sections": "Options include sliders for distance, age range, and checkboxes for interests  , on click on 'Next' button it will navigate to the DiscoverScreen",
+          "PreferencesSetupScreen": {
+            "description": "Guides users through setting their match preferences.",
+            "sections": "This section includes dropdowns and sliders for setting preferences such as age range, interests, and location. A 'Next' button that navigates to the Tutorial Screen.",
             "screenType": "Form"
+          },
+          "TutorialScreen": {
+            "description": "Provides a quick tutorial on how to use the main features of the app, such as swiping for matches and messaging.",
+            "sections": "This section contains a brief tutorial with images and text explaining how to swipe, match, and chat. A 'Finish' button completes the onboarding process and navigates to the Discover Screen.",
+            "screenType": "DetailView"
+          },
+          "LoginScreen": {
+            "description": "Allows users to create a new account or log in to an existing one.",
+            "sections": "This section contains fields for email and password with a 'Login' button.",
+            "screenType": "LoginRegister"
           }
         }
       },
@@ -40,7 +41,7 @@
             "SwipeScreen": {
               "description": "Displays potential matches in carousel with (Effect cards) that users can swipe left to pass or right  ",
               "sections": "1. carousel with (Effect cards): Each carousel card shows a photo, name, age, and a short bio. on swipe right, the user will be able to see the next card and swipe left to pass the card. 2. its card that contains 'Left' and 'Right' buttons to swipe the card left or right. on click on the 'Right' button, the user will be able to see the next card and showed interest and on click on the 'Left' button, the user will be able to pass the card and not interested  ",
-              "screenType": "CardSwipe"
+              "screenType": "DetailView"
             }
           }
         },
@@ -51,7 +52,12 @@
               "description": "Shows all list  users who have mutually liked each other . Each user card contains a profile photo, name, and and click  'View' button its navigate to match detail screen, and 'Chat' button its navigate to chat screen",
               "sections": "Each match includes a profile photo, name, and an indicator of new messages.",
               "screenType": "ListView"
-            },
+            }
+          }
+        },
+        "MatchesDetail": {
+          "description": "Displays a detail view of matches and conversations.",
+          "screens": {
             "MatchDetailScreen": {
               "description": "Displays detailed information about a match, including photos, bio, and interests.",
               "sections": "1. Pictures: Displays a carousel of the match's photos, each carousel card contain image and caption . 2. Bio: Shows the match's bio in  2 or 3 lines of description   and  interests in chips format.  On click on the 'Chat' button, the user will be able to navigate to the chat screen.  On Click on the 'Unmatch' button, the user will be able to unmatch the user and remove from the match list. on Click on the 'Block' button, the user will be able to block the user and remove from the match list. ",
@@ -66,11 +72,16 @@
               "description": "List of all ongoing conversations.",
               "sections": "It displays list of chats Each conversation entry shows the match's name, last message, and time since the last message.On click 'Message' button, the user will be able to navigate to chat screen",
               "screenType": "ListView"
-            },
+            }
+          }
+        },
+        "Chat": {
+          "description": "Users can chat with their matches.",
+          "screens": {
             "ChatScreen": {
               "description": "A chat interface for messaging with matches.",
-              "sections": "1. Displays  ",
-              "screenType": "Chat"
+              "sections": "1. Displays a detail view of chat including the text exchanges between the two parties, Includes the profile picture and name",
+              "screenType": "MessagesChat"
             }
           }
         },
@@ -86,12 +97,26 @@
         }
       }
     },
-
     "Admin": {
       "description": "The administrator who manages user accounts, resolves disputes, and ensures the platform operates smoothly.",
-      "LandingPage": {
-        "description": "Admin dashboard for accessing various management features of the platform.",
-        "sections": "1. Displays   the what dashboard contains  ,dummy line and pie chats "
+      "OnboardingFlow": {
+        "screens": {
+          "WelcomeScreen": {
+            "description": "Introduces the platform's admin features to new admins with a welcoming image and text.",
+            "sections": "This section contains a welcome message and a 'Get Started' button that navigates to the Profile Setup Screen.",
+            "screenType": "Intro"
+          },
+          "ProfileSetupScreen": {
+            "description": "Allows admins to set up their profile information including name, role, and contact details.",
+            "sections": "This section includes fields for entering profile details such as name, role, contact information, etc. and a 'Next' button that navigates to the user login Screen.",
+            "screenType": "Form"
+          },
+          "LoginScreen": {
+            "description": "Allows admins to create a new account or log in to an existing one.",
+            "sections": "This section contains fields for email and password with a 'Login' button.",
+            "screenType": "LoginRegister"
+          }
+        }
       },
       "menuItems": {
         "Dashboard": {
@@ -104,22 +129,56 @@
             }
           }
         },
-        "UserManagement": {
+        "Users": {
           "description": "Allows admins to monitor and manage user accounts.",
           "screens": {
             "UserListScreen": {
               "description": "Displays a list of users with options to view, edit, or deactivate accounts. on top actions includes export user list, search and filter options with reported.",
               "sections": "Each user entry includes image , name, email, last login, and toggle button to activate or deactivate account,  on click on the 'View' button, the user will be able to navigate to the user detail screen, on click on the 'Edit' button, the user will be able to navigate to the user edit screen, on click on the 'Deactivate' button, the user will be able to deactivate the user account.",
               "screenType": "ListView"
-            },
+            }
+          }
+        },
+        "UserManagement": {
+          "description": "Allows admins to monitor and manage user accounts.",
+          "screens": {
             "UserDetailScreen": {
               "description": "Provides detailed information about a user’s account and activity.",
               "sections": "Details include profile information such as name, email, age, and interests. number of matches, likes,no of reports and messages and  buttons  include  'Deactivate' button to deactivate the user account, 'Block' button to block the user, '",
               "screenType": "DetailView"
             }
           }
+        },
+        "Reports": {
+          "description": "Enables admins to view and manage user reports.",
+          "screens": {
+            "ReportsListScreen": {
+              "description": "Displays a list of reported users with details of the reports.",
+              "sections": "Each report entry includes the reporter's name, reported user's name, reason for report, and date of report. On click on the 'View' button, the admin will be able to navigate to the report detail screen.",
+              "screenType": "ListView"
+            }
+          }
+        },
+        "ReportManagement": {
+          "description": "Enables admins to view and manage user reports.",
+          "screens": {
+            "ReportDetailScreen": {
+              "description": "Provides detailed information about a specific report.",
+              "sections": "Details include the reporter's name, reported user's name, reason for report, and date of report. Includes actions like 'Warn', 'Suspend', or 'Ban' the reported user.",
+              "screenType": "DetailView"
+            }
+          }
+        },
+        "Settings": {
+          "description": "Allows admins to configure platform settings and manage admin accounts.",
+          "screens": {
+            "SettingsScreen": {
+              "description": "Provides options for platform settings, admin account management, and security settings.",
+              "sections": "1. PlatformSettings: Options to configure general platform settings like privacy policies, terms of service, etc. 2. AdminManagement: Options to add or remove admin accounts, manage admin permissions, etc. 3. SecuritySettings: Options to configure security measures like two-factor authentication, login alerts, etc.",
+              "screenType": "Settings"
+            }
+          }
         }
-        
       }
     }
   }

@@ -1,6 +1,7 @@
 {
-  "type": "APP",
+  "type": "APP",  
   "description": "A social media platforms are a digital space that enables users to connect, share, and engage with content and each other online. It facilitates communication and interaction through various features like posts, comments, likes, and direct messages. Users can create profiles, follow others, join groups, and participate in discussions, creating a vibrant online community. The platform supports multimedia sharing, including photos and videos enhancing the user experience. It aims to foster connectivity and engagement while offering tools for content creation, discovery, and collaboration.",
+  "embedding_string":"A social media platform that enables users to connect, share, and engage with content and each other through features like posts, comments, likes, and direct messages. Users can create profiles, follow others, join groups, and participate in discussions. The platform supports multimedia sharing, including photos and videos, fostering connectivity and engagement while offering tools for content creation, discovery, and collaboration.",
   "actors": {
     "User": {
       "description": "The user is a primary actor who connects, share and engage the content with other users online",

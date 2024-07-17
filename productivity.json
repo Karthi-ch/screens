@@ -1,6 +1,7 @@
 {
     "type": "APP",
     "description": "Productivity Apps help users manage their tasks, schedules, and notes efficiently. These apps provide tools for organizing work, setting reminders, tracking progress, and collaborating with others. The aim is to enhance productivity and streamline daily activities through intuitive interfaces and powerful features.",
+    "embedding_string":"A productivity app that helps users manage tasks, schedules, and notes efficiently. It offers tools for organizing work, setting reminders, tracking progress, and collaborating with others. Users can create tasks, set deadlines, track habits, and take notes. Admins oversee user management, app settings, and generate reports on app usage and performance. The aim is to enhance productivity and streamline daily activities through intuitive interfaces and powerful features.",
     "actors": {
         "TaskMaster": {
             "description": "The User utilizes the app to manage tasks, schedules, and notes to enhance productivity and organization.",

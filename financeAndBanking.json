@@ -1,6 +1,7 @@
 {
     "type": "APP",
     "description": "A finance and banking app enables users to manage their financial activities conveniently through their mobile devices. It provides services like account management, funds transfer, bill payments, expense tracking, and investment monitoring, offering a secure and efficient way to handle personal finances.",
+    "embedding_string":"A finance and banking app that enables users to manage their financial activities conveniently through their mobile devices. It provides services like account management, funds transfer, bill payments, expense tracking, and investment monitoring. Users can manage their finances, perform transactions, and monitor their accounts securely and efficiently. Admins oversee the platform, managing user accounts, monitoring transactions, ensuring regulatory compliance, and maintaining security. Support agents assist users with inquiries and issues, providing resolutions to ensure a smooth user experience.",
     "actors": {
         "User": {
             "description": "The user is the primary actor who manages their finances, performs transactions, and monitors their accounts through the app.",

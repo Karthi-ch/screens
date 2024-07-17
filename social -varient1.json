@@ -7,11 +7,12 @@
         "description": "The User interacts with the platform by posting content, following other users, liking and commenting on posts, and messaging friends.",
         "OnboardingFlow": {
           "description": "The onboarding flow introduces users to the platform features and guides them through setting up their profile and preferences.",
-          "Screens": {
+          "screens": {
             "WelcomeScreen": {
               "LandingPage": {
                 "description": "The landing page is designed to welcome new users with a vibrant display of the platform's community and features.",
                 "sections": "1. HeroSection: Displays a captivating image with a 'Get Started' button that initiates the onboarding flow."
+                ,"screenType": "DetailLayout"
               },
               "description": "This screen showcases the benefits and core features of the platform.",
               "sections": "This section contains an image and a brief description of the platform. A 'Next' button navigates to the Preferences Screen.",
