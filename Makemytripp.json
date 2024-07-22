@@ -9,7 +9,7 @@
         "screens": {
           "HomeScreen": {
             "description": "Displays featured deals, travel recommendations, testimonials",
-            "sections":"'Login' button will be displayed on top right corner, which on click would navigate to login screenFeaturedBanners: Display a carousel of cards, highlighting special offers and discounts on flights, hotels, and vacation packages. Each offer is presented within a card. The cards are aligned in a grid format, two rows with three cards each.Each card will have 'View' button which on click would navigate to the login screen. ,FeaturingDomestic: Display a cards featuring Domestic holiday destinations. Each card must have an image and destination name. Includes 'View Package' button on clicking navigates to login screen,FeaturingInternational: Display a cards featuring International holiday destinations. Each card must have an image and destination name. Includes 'View Package' button on clicking navigates to login screen. TypeOfPackages: This section offers quick navigation cards for various holiday packages like Adventure package, Honeymoon package, Wildlife tour pacakge, Internationl cruise package and manymore. Each category card includes an image, a category name, and a brief description of what the category offers. Clicking on a category card will navigate to login page.",
+            "sections": "'Login' button will be displayed on top right corner, which on click would navigate to login screenFeaturedBanners: Display a carousel of cards, highlighting special offers and discounts on flights, hotels, and vacation packages. Each offer is presented within a card. The cards are aligned in a grid format, two rows with three cards each.Each card will have 'View' button which on click would navigate to the login screen. ,FeaturingDomestic: Display a cards featuring Domestic holiday destinations. Each card must have an image and destination name. Includes 'View Package' button on clicking navigates to login screen,FeaturingInternational: Display a cards featuring International holiday destinations. Each card must have an image and destination name. Includes 'View Package' button on clicking navigates to login screen. TypeOfPackages: This section offers quick navigation cards for various holiday packages like Adventure package, Honeymoon package, Wildlife tour pacakge, Internationl cruise package and manymore. Each category card includes an image, a category name, and a brief description of what the category offers. Clicking on a category card will navigate to login page.",
             "screenType": "Home"
           },
           "LoginScreen": {
@@ -25,63 +25,65 @@
           "screens": {
             "HomeScreen": {
               "description": "Displays featured deals, personalized travel recommendations, and recent searches.",
-              "sections": 
-                    "Four cards on top-center for 'Holidays','Flights' and 'Hotels'. Each card having a image, name and 'Explore' button, which on click would navigate to respective home screens.FeaturedBanners: Display a carousel of cards, highlighting special offers and discounts on flights, hotels, and vacation packages. Each offer is presented within a card.Each card will have 'View' button which on click would navigate to that specific detail screen. ,Recommendations: Display a cards for Personalized holiday recommendations based on user preferences and past bookings. Each card must have an image and location name. Includes 'View Package' button on clicking navigates to holiday detail view,
-                    FeaturingDomestic: Display a cards featuring Domestic holiday destinations. Each card must have an image and destination name. Includes 'View Package' button on clicking navigates to holiday detail view,
-                    FeaturingInternational: Display a cards featuring International holiday destinations. Each card must have an image and destination name. Includes 'View Package' button on clicking navigates to holiday detail.
-                    TypeOfPackages: This section offers quick navigation cards for various holiday packages like Adventure package, Honeymoon package, Wildlife tour pacakge, Internationl cruise package and manymore. Each category card includes an image, a category name, and a brief description of what the category offers. Clicking on a category card will navigate holiday list view   
-                    ","screenType": "Home"
+              "sections": "Four cards on top-center for 'Holidays','Flights' and 'Hotels'. Each card having a image, name and 'Explore' button, which on click would navigate to respective home screens.FeaturedBanners: Display a carousel of cards, highlighting special offers and discounts on flights, hotels, and vacation packages. Each offer is presented within a card.Each card will have 'View' button which on click would navigate to that specific detail screen. ,Recommendations: Display a cards for Personalized holiday recommendations based on user preferences and past bookings. Each card must have an image and location name. Includes 'View Package' button on clicking navigates to holiday detail view,FeaturingDomestic: Display a cards featuring Domestic holiday destinations. Each card must have an image and destination name. Includes 'View Package' button on clicking navigates to holiday detail view,FeaturingInternational: Display a cards featuring International holiday destinations. Each card must have an image and destination name. Includes 'View Package' button on clicking navigates to holiday detail.TypeOfPackages: This section offers quick navigation cards for various holiday packages like Adventure package, Honeymoon package, Wildlife tour pacakge, Internationl cruise package and manymore. Each category card includes an image, a category name, and a brief description of what the category offers. Clicking on a category card will navigate holiday list view",
+              "screenType": "Home"
             },
             "HolidayHome": {
-              "description":"The holiday home screen features discounts and offers on holiday packages. It includes various categories of holiday packages for travelers to choose from",
-              "sections":"
-              BestSellingDestinations: A carousel of cards showcasing the best selling domestic destinations. Each card includes image and 'Explore' button, which on click would navigate to Holiday list view.
-              InternationDestinations: A carousel of cards showcasing the best selling international destinations. Each card includes Image and 'Explore' button, which on click on would navigate to holiday list view.
-              HolidayThemes: A carousel of cards showcasing variety of holiday themes such as Premium, Adventurous, Honeymoon, Pilgrimage, Wildlife, Family, Solo etc. Each card includes Image, title and 'View more' button, which on click would navigate to holiday list view.
-              ",
-              "screenType":"Home"
+              "description": "The holiday home screen features discounts and offers on holiday packages. It includes various categories of holiday packages for travelers to choose from",
+              "sections": "BestSellingDestinations: A carousel of cards showcasing the best selling domestic destinations. Each card includes image and 'Explore' button, which on click would navigate to Holiday list view.InternationDestinations: A carousel of cards showcasing the best selling international destinations. Each card includes Image and 'Explore' button, which on click on would navigate to holiday list view.HolidayThemes: A carousel of cards showcasing variety of holiday themes such as Premium, Adventurous, Honeymoon, Pilgrimage, Wildlife, Family, Solo etc. Each card includes Image, title and 'View more' button, which on click would navigate to holiday list view.",
+              "screenType": "Home"
             },
-            "HolidayList":{
+            "HolidayList": {
               "description": "Displays detailed information about a specific holiday package, including itinerary, accommodation details, and booking options.",
-    "sections": "
-      1. PackageOverview: A summary of the holiday package including title, duration, price, and a brief description.
-      2. Itinerary: Detailed day-by-day itinerary of the holiday package, including activities, sightseeing, and meal plans.
-      3. Accommodation: Information about the accommodations provided during the holiday, including hotel names, images, and descriptions.
-      4. Inclusions: A list of inclusions such as flights, meals, transfers, and sightseeing.
-      5. Exclusions: A list of exclusions such as personal expenses, travel insurance, and additional activities.
-      6. BookingOptions: Options for booking the holiday package, including available dates, number of travelers, and a 'Book Now' button.
-      7. CustomerReviews: A section displaying customer reviews and ratings for the holiday package.
-    ",
-    "screenType": "DetailView"
+              "sections": "1. ListOfPackages: The list of cards, displaying wide range of holiday pacakges with different price range, destinations, no of places and inclusions etc. Each card contains an Image, Title, Duration, places to be covered, package inclusions, activities and the price.for example:  Title: Premium 5N Trip to Kerala, Duration: 5 Nights/6 Days (5N/6D) Itinerary:1 Night in Cochin, 2 Nights in Munnar, 1 Night in Thekkady, 1 Night in Alleppey. Inclusions:Round Trip Flights, 4 Star Hotels & Houseboat ,9 Activities ,Intercity Car Transfers ,Airport Transfers, Selected Meals. Activities:Houseboat Day Cruise, Visit to Alappuzha Beach, Periyar Lake, Eravikulam National Park, Visit to Tata Tea Museum, Dutch Palace, Jewish Synagogue. Cost: ₹44,162 per person. Image: A scenic photo of a sunset over water. 2. SortAndFilter: Sort options such as Popularity (High to Low, Low to High) and Price (High to Low, Low to High). Filter options such as Duration in nights, Flights, Budget, Hotel Category, Cities, and Package Type. 3. ViewDetailsButton: Each card has a 'View details' button which on click navigates to the Holiday Detail page. and 'Add to favorites' button which on click would be added to the Favorites",
+              "screenType": "ListView"
             },
-            "HolidayDetail":{
+            "HolidayDetail": {
+              "description": "Displays detailed information about a specific holiday package, including itinerary, accommodation details, and booking options.",
+              "sections": "0. The carousel of cards displayings various images of the destinations and hotels. 1. PackageOverview: A summary card of the holiday package including title, duration, price, and a brief description. 2. Itinerary:Using accordion field show Detailed day-by-day itinerary of the holiday package, including activities, sightseeing, and meal plans. 3. Accommodation: A small carousel of banners with information about the accommodations provided during the holiday, including hotel names, images, and descriptions.4. Inclusions: A list of inclusions such as flights, meals, transfers, and sightseeing. 5. Exclusions: A list of exclusions such as personal expenses, travel insurance, and additional activities.6. BookingOptions: Options for booking the holiday package, including available dates, number of travelers, and a 'Proceed to payment' button. which on click would navigate to payments detail page. 7. CustomerReviews: A List displaying customer reviews and ratings for the holiday package.",
+              "screenType": "DetailView"
             },
-            "Flights": {},
-            "Hotels": {}
-          }
-        },
-        "PackageDetail": {
-          "description": "Provides all the details of the package",
-          "screens": {
-            "BookingsScreen": {
-              "description": "Detailed description of the selected package",
-              "sections": 
-                    "DestinationPictures: Display a carasoul using the destination pictures,
-                    DetailedDescription: Includes all details such as duration of holidays, Itinerary details, policies, and summary
-                    Price: A card showing the total price of the trip, discount applied and coupons available etc. Also includes the  `Proceed to payment` button, which on click navigates to payment detail page","screenType": "ListView"
-            }
-          }
-        },
-        "PaymentDetails": {
-          "description": "The Payment Details screen allows users to enter and manage their payment information for bookings.",
-          "screens": {
-            "PaymentDetailsScreen": {
-              "description": "Displays fields for users to enter their payment information securely.",
+            "FlightsHome": {
+              "description": "The Flights section allows users to search, book, and manage flight reservations.",
               "sections":"
-                  CardInformation:Fields for entering credit/debit card details, including card number, expiration date, and CVV.,
-                  PaymentSummary:Summary of the payment amount, including a breakdown of charges and taxes.,
-                  SavePaymentOption:Option to save the payment method for future bookings.,
-                  PaymentButton:'Pay now' button to confirm and process the payment.","screenType": "DetailView"
+               1. SearchFlights: A search bar with fields for departure and destination cities, travel dates, number of passengers, and travel class.
+    2. FlightList: A list of available flights based on search criteria. Each card displays airline name, flight number, departure and arrival times, duration, and price. Each card includes a 'Book Now' button. which on click would navigate to flight detail page.
+    3. FilterAndSort: Filter options for airlines, price range, duration, layovers, and flight times. Sort options by price, duration, and departure time.
+    4. 'Add to favorites' button which on click would be added to the Favorites.","screenType": "ListView"
+            },
+            "FlightDetail": {
+              "description": "Displays detailed information about a specific flight, including flight times, seat availability, and amenities.",
+              "sections":"
+        1. FlightOverview: Summary of the flight, including airline name, flight number, departure and arrival times, duration, and price.
+        2. Amenities: List of amenities provided during the flight, such as in-flight entertainment, meals, and Wi-Fi.
+        3. BaggagePolicy: Using accordion field displays the information about the baggage policy, including carry-on and checked baggage allowances.
+        4. CustomerReviews: List of customer reviews and ratings for the flight.
+        5. ProceedTopayment: a card displaying the ticket details and a 'Book now' button which on click would navigate to a payment detail view.
+      ","screenType": "DetailView"
+            },
+            "HotelsHome": {
+              "description": "The Hotels section allows users to search, book, and manage hotel reservations.",
+              "sections": "1. SearchHotels: A search bar with fields for destination city, check-in and check-out dates, number of guests, and room type.
+    2. HotelList: A list of available hotels based on search criteria. Each card displays hotel name, star rating, location, price per night, and a brief description. Each card includes a 'View Details' button which on click would navigate to hotel detail view.
+    3. FilterAndSort: Filter options for price range, star rating, amenities, and guest rating. Sort options by price, star rating, and guest rating.
+    4. 'Add to favorites' button which on click would be added to the Favorites
+  ","screenType": "ListView"
+            },
+            "HotelDetail": {
+              "description": "Displays detailed information about a specific hotel, including room types, amenities, and guest reviews.",
+              "sections": "
+        1. HotelOverview: Summary of the hotel, including name, star rating, location, and a brief description.
+        2. RoomTypes: List of available room types with descriptions, photos, and prices. Using card.
+        3. Amenities: List of hotel amenities, such as free Wi-Fi, pool, gym, and restaurant.
+        4. Photos: Carousel of photos showcasing the hotel and its facilities.
+        5. CustomerReviews: List of customer reviews and ratings for the hotel.
+        6. BookingOptions: Options for booking a room, including guest details and 'Book now' button which on click would navigate to payment detail page.
+      ","screenType": "DetailView"
+            },
+            "PaymentDetail": {
+              "description": "The Payment Details screen allows users to enter and manage their payment information for bookings.",
+              "sections": "CardInformation:Fields for entering credit/debit card details, including card number, expiration date, and CVV., PaymentSummary:Summary of the payment amount, including a breakdown of charges and taxes.,SavePaymentOption:Option to save the payment method for future bookings.,PaymentButton:'Pay now' button to confirm and process the payment.",
+              "screenType": "DetailView"
             }
           }
         },
@@ -90,9 +92,55 @@
           "screens": {
             "BookingsScreen": {
               "description": "Lists all bookings with options to view details, modify, or cancel reservations.",
-              "sections": 
-                    "UpcomingBookings: Displays a list of upcoming travel plans, each item in the list has 'View Details' button which on clicking would navigate to package detail page,
-                    PastBookings: Displays a list of previous trips, each item in the list has 'View receipts' which navigates to receipts detailed view and 'Rating and Review' button which on click would navigate to ratings and review create view","screenType": "ListView"
+              "sections": "UpcomingBookings: Displays a list of upcoming travel plans, each item in the list has 'View Details' button which on clicking would navigate to bookings detail page,PastBookings: Displays a list of previous trips, each item in the list has 'Download receipts' which on click downloads receipts and 'Rating and Review' button which on click user would able to provide ratings and review",
+              "screenType": "ListView"
+            },
+            "BookingsDetails": {
+              "description": "Displays detailed information about a specific booking, including trip itinerary, accommodation details, and booking management options.",
+              "sections":" 
+              1. BookingOverview: Summary of the booking, including trip name, dates, and booking reference number.
+    2. Itinerary: Detailed day-by-day itinerary of the trip, including activities, sightseeing, and meal plans using accordion field.
+    3. AccommodationDetails: Information about the accommodations booked, including hotel names, addresses, and check-in/check-out times.
+    4. FlightDetails: Using cards displays the information about booked flights, including airline, flight number, departure and arrival times, and seat assignments.
+    6. PaymentSummary: Summary of payment details, including total cost, amount paid, and balance due.
+    8. TransportationDetails: Information about any additional transportation bookings, such as car rentals or airport transfers, including pickup and drop-off times and locations.
+    9. ActivityDetails: Information about any pre-booked activities or excursions, including activity name, date, time, and meeting point.
+    12. Documents: A section for downloading necessary documents like e-tickets, hotel vouchers, and itineraries.
+    13. ReviewsAndRatings: Option for the user to rate and review their booking experience after the trip.
+ ","screenType": "DetailView"
+            }
+          }
+        },
+        "Explore": {
+          "description": "Provides users with the ability to explore various travel destinations, activities, and experiences.",
+          "screens": {
+            "ExploreHome": {
+              "description": "Provides users with the ability to explore various travel destinations, activities, and experiences.",
+              "sections":"
+              WeekendGetAways: Provides a carousel of cards, showing weekend getaways from travellers location. each cards has an image, destination name, 'Explore' button which on click would navigate to content detail page.
+              EditorPicks: Provides a carousel of cards, showing best picks from the travel experts. each cards has an image, destination name, 'Explore' button which on click would navigate to content detail page.
+              MostTrending: Provides a carousel of banners, showing best the most trending places for travellers. each banner has an image and a title, which on click would navigate to navigate to destination gallery view.
+              InFocus: Provides a carousel of banners showcasing curated lists for travellers, each banner has an image and a title, for example: Top 8 wellness retreats in India, Top international destinations for July, World's finest destinations and Stunning rainforests of South America. on click of the banner would navigate to the content list view. 
+              ","screenType": "Home"
+            },
+            "DestinationGallery": {
+              "description": "A display of pictures and videos posted by travellers from that particular destination",
+              "sections": "The gallery view has the wide range of pictures from the certain destination",
+              "screenType": "DetailView"
+            },
+            "ContentList": {
+              "description": "Displays a list of curated content related to a specific travel theme or destination.",
+              "sections": "ListOfArticles: A list of banners related to the selected theme or destination. Each item includes a title, brief description, and an image. Clicking on an item navigates to the ContentDetail page.",
+              "screenType": "ListView"
+            },
+            "ContentDetail": {
+              "description": "Provides detailed information about a specific piece of content, such as an article, blog post, or guide.",
+              "sections":"
+               ContentHeader: Includes the title, author, publication date, and a brief summary or introduction to the content.
+        MainContent: The main body of the content, including text, images.
+        BestTimeToVist: A carousel of cards on peak season, moderate season and off-season. each card displaying the reasons on why one should visit during that time.
+        RelatedContent: Suggestions for related articles or posts that might interest the user, based on the current content.
+        ShareOptions: Buttons for sharing the content on social media or via email","screenType": "DetailView"
             }
           }
         },
@@ -102,47 +150,21 @@
             "ProfileScreen": {
               "description": "Shows user account information, travel preferences, and settings.",
               "sections": 
-                    "AccountInfo: Displays the user's account information including profile picture, username, and bio, with an 'Edit Profile' button which on click would navigate to edit profile screen.,
-                    TravelPreferences: Allows the user to set and edit their travel preferences.On clicking 'Edit' it will navigate to travel preferences edit screen,
-                    Settings: Access to account settings and preferences.","screenType": "Profile"
-            }
-          }
-        },
-        "Notifications": {
-          "description": "Displays a list of notifications related to bookings, deals, and travel updates.",
-          "screens": {
+                    "AccountInfo: Displays the user's account information including profile picture, username, and bio, with an 'Edit Profile' button which on click would let user edit profie details,
+                    TravelPreferences: Allows the user to set and edit their travel preferences.",
+              "screenType": "Profile"
+            },
             "NotificationsScreen": {
               "description": "Shows notifications for booking updates, special deals, and other relevant information.",
               "sections": 
                     "NotificationList: List of notifications with icons, short descriptions, and timestamps.,
                     ClearButton: A 'Clear' button to remove all notifications.","screenType": "ListView"
-            }
-          }
-        },
-        "Messages": {
-          "description": "Displays a list of conversations with customer support and service providers.",
-          "screens": {
-            "MessagesScreen": {
-              "description": "Lists all conversations with customer support and service providers.",
-              "sections": 
-                    "ChatList: List of conversations with icons for each service provider or support agent.,
-                    NewMessageButton: A 'New Message' button to start a new conversation.","screenType": "MessagesChat"
-            }
-          }
-        },
-        "Favorites": {
-          "description": "Displays a list of saved flights, hotels, and destinations.",
-          "screens": {
+            },
             "FavoritesScreen": {
               "description": "Shows a list of flights, hotels, and destinations that the user has marked as favorites.",
-              "sections": "FavoriteList: Displays favorite items with 'View details' onclicking should navigate to package detail view or 'Remove' button to delete from favorites.",
+              "sections": "FavoriteList: Displays favorite items with 'View details' onclicking should navigate to that respective detail view or 'Remove' button to delete from favorites.",
               "screenType": "ListView"
-            }
-          }
-        },
-        "Settings": {
-          "description": "A centralized location for managing account details, privacy controls, notification preferences, and security options.",
-          "screens": {
+            },
             "SettingsScreen": {
               "description": "Allows the user to manage account details, privacy controls, notification preferences, and security options.",
               "sections": 
@@ -223,12 +245,7 @@
               "sections": 
                   "UserOverview: Lists all users with options to edit, delete, or review user activities.Clicking on 'Edit' button navigates to user edit screen, on clicking the 'Delete' button deletes the user data, on clicking the 'Review User data', navigates to user detail view,
                   SearchUsers: A search bar to find specific users.","screenType": "ListView"
-            }
-          }
-        },
-        "UserManagement": {
-          "description": "Allows admins to manage accounts, roles, and permissions across the platform.",
-          "screens": {
+            },
             "UserDetailScreen": {
               "description": "Provides detailed information about a specific user, including account activity and settings.",
               "sections": 
@@ -246,12 +263,7 @@
               "sections": 
                   "TransactionOverview: Lists all transactions with details such as date, amount, and status, on clicking would navigate to transaction detail page,
                   FilterTransactions: Options to filter transactions by date, type, and status.","screenType": "ListView"
-            }
-          }
-        },
-        "TransactionManagement": {
-          "description": "Monitors and manages all transactions made on the platform.",
-          "screens": {
+            },
             "TransactionDetailScreen": {
               "description": "Provides detailed information about a specific transaction.",
               "sections": 
@@ -261,7 +273,7 @@
             }
           }
         },
-        "ContentList": {
+        "Content": {
           "description": "Manages the content displayed on the platform, including travel deals, recommendations, and user-generated content.",
           "screens": {
             "ContentListScreen": {
@@ -269,12 +281,7 @@
               "sections": 
                   "ContentOverview: Lists all content items with options to edit, delete, or review. 'Edit' button navigates to edit content view, 'Delete' button deletes the record, 'Review' button should navigate to content detail view.,
                   FilterContent: Options to filter content by type, date, and status.","screenType": "ListView"
-            }
-          }
-        },
-        "ContentManagement": {
-          "description": "Manages the content displayed on the platform, including travel deals, recommendations, and user-generated content.",
-          "screens": {
+            },
             "ContentDetailScreen": {
               "description": "Provides detailed information about a specific content item.",
               "sections": [
@@ -359,12 +366,7 @@
               "sections": 
                   "ContentOverview: Lists all pending content items with options to approve, reject, or flag for further review using 'Approve','Reject','Flag for further review' buttons.,
                   FilterContent: Options to filter content by type, date, and status.","screenType": "ListView"
-            }
-          }
-        },
-        "ContentReview": {
-          "description": "Allows moderators to review and manage user-generated content, such as reviews, photos, and comments.",
-          "screens": {
+            },
             "ContentDetailScreen": {
               "description": "Provides detailed information about a specific content item, including user details and content history.",
               "sections": 
@@ -382,12 +384,7 @@
               "sections": 
                   "ReportOverview: Lists all user reports with details such as report type, date, and status.On clicking each item would navigate to report detail screen,
                   FilterReports: Options to filter reports by type, date, and status.","screenType": "ListView"
-            }
-          }
-        },
-        "UserReportsDetail": {
-          "description": "Enables moderators to manage user reports and take appropriate actions.",
-          "screens": {
+            },
             "ReportDetailScreen": {
               "description": "Provides detailed information about a specific user report, including the reported content and user history.",
               "sections": 
@@ -405,12 +402,7 @@
               "sections": 
                   "UserOverview: Lists all users with, 'Suspend','Ban','Review' buttons to suspend, ban, or review user activities.On clicking any of the list item, it should navigate to user detail screen,
                   SearchUsers: A search bar to find specific users.","screenType": "ListView"
-            }
-          }
-        },
-        "UserManagement": {
-          "description": "Allows moderators to manage user accounts, including suspensions and bans.",
-          "screens": {
+            },
             "UserDetailScreen": {
               "description": "Provides detailed information about a specific user, including account activity and moderation actions.",
               "sections": 
@@ -428,12 +420,7 @@
               "sections": 
                   "LogOverview: Lists all moderation actions with details such as action type, date, and moderator involved.On clicking any item, it should navigate to logs detail screen,
                   FilterLogs: Options to filter logs by type, date, and moderator.","screenType": "ListView"
-            }
-          }
-        },
-        "ModerationLogsDetail": {
-          "description": "Keeps a record of all moderation actions taken by the moderators.",
-          "screens": {
+            },
             "LogDetailScreen": {
               "description": "Provides detailed information about a specific moderation action.",
               "sections": 
