@@ -1,0 +1,5 @@
+{
+    "type": "App",
+    "description": "It is a versatile project management tool designed to help users organize tasks, projects, and workflows in a visually intuitive way. It uses boards, lists, and cards to represent projects and tasks, allowing users to easily track progress and manage their work. Users can create and customize boards for different projects, add lists to indicate stages of progress, and use cards to detail individual tasks. App supports features like due dates, checklists, attachments, labels, and comments to enhance task management. It also enables collaboration by allowing team members to assign tasks, share updates, and communicate through card comments. The platform is designed to increase productivity and organization for individuals and teams alike.",
+    "actors": ""
+  }

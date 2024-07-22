@@ -1,0 +1,363 @@
+{
+    "type": "App",
+    "description": "This digital platform, positioned in the 'Fashion and Lifestyle' e-commerce category, specializes in selling apparel, footwear, accessories, and other fashion-related products. It enables users to purchase items from sellers online, offering a seamless shopping experience through features such as detailed product listings, convenient shopping carts, secure payment gateways, order tracking, and insightful customer reviews. The application is designed to enhance user convenience and satisfaction while empowering sellers to reach a broader audience and efficiently manage their online sales. With its comprehensive suite of tools, the platform aims to become a go-to destination for fashion enthusiasts and merchants alike.",
+    "actors": {
+        "Buyer": {
+            "description": "The Buyer is the primary actor who browses, purchases, and reviews products on the platform.",
+            "OnboardingFlow": {
+                "description": "Guides new buyers through account setup, browsing products, and making their first purchase.",
+                "screens": {
+                    "HomeScreen": {
+                        "description": "Displays featured products, personalized recommendations, promotional banners, and latest offers,and as top actions it will have addProduct button which navigates to add product page ",
+                        "sections": "1. PromotionalBanners: This section features carousel images promoting various campaigns. Each image banner provides a summary of the promotion, including key details like discount percentages, sale dates, and call-to-action buttons where each one navigates to login screen. Clicking on an image banner will navigate  to login screen2. FeaturedProducts: This section contains product cards showcasing 'New Arrivals'. Each card provides a quick summary of the product with an image, name, price and view button. Clicking on view button will navigate the buyer to the login page.,3. TopBrands: This section contains a brand cards showcasing top brands. Each card has a product image of that brand, brand name and price. Clicking on the card navigates to login screen.4. TopCategories: This section offers quick navigation cards for various product categories. Each category card includes an image, a category name, and a brief description of what the category offers. Clicking on a category card will navigate to login page.",
+                        "screenType": "Home",
+                        "templateName": "BuyerHomeScreen"
+                    },
+                    "WelcomeScreen": {
+                        "description": "Introduces the platform's features to new buyers with a welcoming image and text.",
+                        "sections": "1. IntroSection: This section contains a welcome message, image and a 'Next' button that navigates to the  Home Screen.",
+                        "screenType": "DetailView",
+                        "templateName": "GenericWelcomeScreen"
+                    },
+                    "LoginScreen": {
+                        "description": "Allows buyers to create a new account or log in to an existing one.",
+                        "sections": "1. LoginFields: This section contains fields for email and password with a 'Login' button.",
+                        "screenType": "LoginRegister",
+                        "templateName": "StandardLoginRegisterScreen"
+                    }
+                }
+            },
+            "menuItems": {
+                "Home": {
+                    "description": "The Home page is the landing page of the application that displays featured products, personalized recommendations, promotional banners, and latest offers.",
+                    "screens": {
+                        "HomeScreen": {
+                            "description": "Displays featured products, personalized recommendations, promotional banners, and latest offers,and as top actions it will have addProduct button which navigates to add product page ",
+                            "sections": "1. PromotionalBanners: This section features carousel images promoting various campaigns. Each image banner provides a summary of the promotion, including key details like discount percentages, sale dates, and call-to-action buttons. Clicking on an image banner will navigate  to products list page with   filter promotion,2. ProductCategories: This section contains category cards like Men, Women, Kids, Home & Living and Beauty. Each Card has category picture and name of the category. Also includes 'Explore' button which navigates to CategoryProductListings page. 3. FeaturedProducts: This section contains product cards showcasing 'New Arrivals'. Each card provides a quick summary of the product with an image, name, price and view button. Clicking on view button will navigate the buyer to the product details page for more information and purchase options.4. TopBrands: This section contains a brand cards showcasing top brands. Each card has a product image of that brand, brand name and price. Clicking on the card navigates to shop list view.5. PersonalizedRecommendations: This section provides personalized product suggestions based on the buyer's past interactions with cards. Each card shows an image, name, and price of the product, with a brief description or label. Clicking on a card will navigate the buyer to the product details page or a curated collection based on the recommendation type.6. TopCategories: This section offers quick navigation cards for various product categories. Each category card includes an image, a category name, and a brief description of what the category offers. Clicking on a category card will navigate to category list page .",
+                            "screenType": "Home",
+                            "templateName": "BuyerHomeScreen"
+                        }
+                    }
+                },
+                "Shop": {
+                    "description": "The Shop page displays all available products in the store, allowing users to browse and filter products based on categories, brands, prices, and other attributes.",
+                    "screens": {
+                        "ShopListScreen": {
+                            "description": "Displays all available products in the store, allowing users to browse and filter products based on categories, brands, prices, and other attributes.",
+                            "sections": "ProductList: This section displays a list of product cards, each card contains product  image, name, price, and 'View' button., on  click on a  view button it will navigate to  product detail page, also Includes 'Add to wishlist' which on click will be added to the wishlist list screen",
+                            "screenType": "ListView",
+                            "templateName": "BuyerShopListScreen"
+                        },
+                        "ProductDetailScreen": {
+                            "description": "Displays detailed information about a specific product, including images, name, price, description, specifications, reviews, and related products. Users can view product details, add the product to the cart, read reviews, and explore related products.",
+                            "sections":"
+                    1. ProductImages: This section displays a carousel of product images, allowing users to view the product from different angles or perspectives.,
+                    2. ProductDetails: This section provides information about the product, including name, price, description,
+                    3. ProductSpecsSelecting:  This section allows users to select product variations such as size, color, quantity.
+                    4. ActionButtons: This section contains buttons to 'Add to cart' and 'Buy Now' on click of 'Add to Cart' button  product will be added to the cart and, on click on 'Buy Now' button buyer will be navigated to checkout page,
+                    5. ProductReviews: This section shows buyer reviews and ratings for the product,  each rating card contains buyer image,  name,  rating  out of 5, review, and date.,
+                    6. RelatedProducts: This section displays a list of related or similar products, each card contains product image, name, price, and view button. Clicking on a related product card will navigate the buyer to the product details page for that product.
+                  ","screenType": "DetailView","templateName": "BuyerProductDetailScreen"
+                        },
+                        "CategoryProductListings": {
+                            "description": "Displays all the available categories and their subcategories",
+                            "sections":"
+                            1.Categories: This section displays the list of various categories and their sub-categories for example Men has Top wears, Bottom wear, Innerwear, Footwear, Sportswear, Gadgets and Fashion accessories categories. Similarly for Women, Kids,  Home & Living and Beauty.
+                            2.Subcategories: This section displays the list of subcategories under the categories, for example Top wear of Men has subcategories like Tshirts, Formal Shirts, Casual shirts, Sweat shirts, Jackets and Suits.  Similarly for all the categories.
+                            3.Clicking on any category or sub-category should navigate buyer to ShopList Screen.
+                            ","screenType": "ListView","templateName": "BuyerCategoryProductListings",
+                        }
+                    }
+                },
+                "Cart": {
+                    "description": "  The Cart page displays all products added by the buyer for purchase, update quantities, remove products, apply discounts, and proceed to checkout.",
+                    "screen": {
+                        "CartScreen": {
+                            "description": "Displays all products added by the buyer for purchase, update quantities, remove products, apply discounts, and proceed to checkout.",
+                            "sections": "1. CartItems: This section lists all products added to the cart with details such as product image, name, price, quantity, total amount ,2. ActionButtons : This section displays  the quantity of products with numarical stepper,  and selection of colos or sizes '.3. CouponSection : This section allows users to apply discount codes or vouchers to avail additional savings with input boxes  and havina  'Apply ' button, on click of apply button it will apply the discount and', 4. CartSummary: This section provides a summary of the cart total, including subtotals, discounts, taxes, shipping costs, and the final payable amount. Users can apply discount codes or vouchers in input box to avail additional savings.,5. CheckoutButton: This section contains a button  'Checkout ' to proceed to the checkout process. Clicking on the checkout button will navigate the buyer to the checkout page to complete the order.",
+                            "screenType": "CartView",
+                            "templateName": "BuyerCartView"
+                        },
+                        "CheckOutScreen": {
+                            "description": "  Displays all information related to order , entering shipping details, review order summary ",
+                            "sections": "1. ShippingDetails: This section allows users to enter shipping information, including name, address, city, state, country, and contact details.,2. OrderSummary: This section displays a summary of the order, including product details, quantities, prices, discounts, taxes, shipping charges, and the final payable amount. Users can review the order before confirming the purchase.,3. PlaceOrderButton: This section contains a button 'Place Order'. Clicking on the place order button  will navigate the buyer to the payment gateway page to complete the transaction.",
+                            "screenType": "Checkout",
+                            "templateName": "BuyerProductDetailScreen"
+                        },
+                        "PaymentGatewayScreen": {
+                            "description": "  Displays all information related to order to complete the transaction",
+                            "sections": "1. contains Payment Card type  input field, card number, expiry date, CVV, and billing address fields.,2. PayButton: This section c,ontains a button 'Pay' to complete the payment process. Clicking on the pay button will process the payment and display a confirmation message  and navigate to conformation page.",
+                            "screenType": "Payment",
+                            "templateName": "StandardPaymentGateway"
+                        },
+                        "OrderConfirmationScreen": {
+                            "description": "  Displays  information about the order placed, order ID, products purchased, quantities, prices, shipping address, and payment status.",
+                            "sections": " 1. OrderDetails: This section displays the order details, including order ID, products purchased, quantities, prices, shipping address, and payment status.,2. OrderSummary: This section provides a summary of the order, including subtotals, discounts, taxes, shipping charges, and the final payable amount.3. TrackOrderButton: This section contains a button 'View Order' to view the order. Clicking on the view order button will navigate the buyer to the order details page.",
+                            "screenType": "Confirmation",
+                            "templateName": "OrderConfirmationScreen"
+                        }
+                    }
+                },
+                "Wishlist": {
+                    "description": "Display of all the products user liked",
+                    "screens": {
+                        "WishlistListScreen": {
+                            "description": "  Display of all the products user liked",
+                            "sections": "WishlistProducts: List of cards, each card has product image, price, product name and 'Add to cart which on click gets added to the cart.'",
+                            "screenType": "ListView",
+                            "templateName": "WishlistScreen"
+                        }
+                    }
+                },
+                "Orders": {
+                    "description": "  The Orders page displays a list of all orders placed by the buyer, including order details, status, tracking information, and actions to manage orders.",
+                    "screens": {
+                        "OrderListScreen": {
+                            "description": "Displays a list of all orders placed by the buyer, including order details, status, tracking information, and actions to manage orders.",
+                            "sections": "1. OrderList: This section lists all orders  card , each card contains order ID, products purchased, quantities, prices, order status, and action buttons 'View Order' for viewing order details., on click on view order button it will navigate to order details page",
+                            "screenType": "ListView",
+                            "templateName": "SellerOrderListScreen"
+                        },
+                        "OrderDetailScreen": {
+                            "description": "Displays detailed information about a specific order, including order ID, products purchased, quantities, prices, shipping address, payment status, and tracking information.",
+                            "sections": "1. OrderDetails: This section displays the order details, including order ID, products purchased, quantities, prices, shipping address, payment status, and tracking information.,2. OrderSummary: This section provides a summary of the order, including subtotals, discounts, taxes, shipping charges, and the final payable amount.,3. Order tracking: This section contains progress stepper / indicator to track the order status from 'Order Placed' to 'Shipped' to 'Delivered'. Each step is marked with a status icon and description.,",
+                            "screenType": "DetailView",
+                            "templateName": "BuyerOrderDetailScreen"
+                        }
+                    }
+                },
+                "Profile": {
+                    "description": "  The Profile page displays buyer account information, order history, saved addresses, payment methods, and settings.",
+                    "screens": {
+                        "ProfileScreen": {
+                            "description": "Displays buyer account information, order history, saved addresses, payment methods, and settings.",
+                            "sections": "1. AccountDetails: This section displays buyer account information, including name, email, contact number, and account creation date.2. its contains buttons to 'Edit','Change Password', and 'Delete Account'. on click on edit button it will navigate to edit profile page , on click of change password it will navigate to change password page and on click of delete account it will show the dialog box to confirm the delete account.,",
+                            "screenType": "Profile",
+                            "templateName": "BuyerProfileScreen"
+                        }
+                    }
+                }
+            }
+        },
+        "Seller": {
+            "description": "The Seller lists products for sale, manages inventory, processes orders, and tracks sales performance on the platform.",
+            "OnboardingFlow": {
+                "description": "Guides new sellers through setting up their account, listing products, and managing orders.",
+                "screens": {
+                    "LandingPage": {
+                        "description": "The first page that displays to sellers, showcasing platform benefits and tools.",
+                        "sections": "1. HeroSection: Contains a summary of seller capabilities with a 'Get Started' button. Clicking the button navigates to the Welcome Screen.",
+                        "screenType": "DetailView",
+                        "templateName": "GenericLandingPage"
+                    },
+                    "WelcomeScreen": {
+                        "description": "Introduces the platform's features to new sellers with a welcoming image and text.",
+                        "sections": "1. IntroSection: This section contains a welcome message, Image and a 'Next' button that navigates to the Profile Setup Screen.",
+                        "screenType": "DetailView",
+                        "templateName": "GenericWelcomeScreen"
+                    },
+                    "Home": {
+                        "description": "Provides an overview for seller about the platform features and educate them for onboarding",
+                        "screens": {
+                            "HomeScreen": {
+                                "description": "Provides an overview for seller about the platform features and educate them for onboarding",
+                                "sections": "0. 'Login' button should be displayed just above the banners on top-right, which on click would navigate to the login screen.1. Banners: Top section features carousel images promoting various campaigns such as seller workshops, blogs etc. Each image banner has call to action buttons like 'View details' which on click would navigate to content detail page.2. Each card for Register, Sell, Grow and Earn. These four cards are at the very center of the page, where each card has a title, small description and 'Read more' button which on click would navigate to content detail page.3. Displaying the list of the testimonials, each has reviews and ratings from different sellers/Brands.4. FAQs: Display of frequnetly asked questions by sellers. Each having question and an answer.",
+                                "screenType": "Home",
+                                "templateName": "SellerHomeScreen"
+                            },
+                            "Content": {
+                                "description": "Provides an articles/blogs to guide the sellers about the platform",
+                                "screens": {
+                                    "ContentList": {
+                                        "description": "List of all the articles",
+                                        "sections": "List of articles on various topics for sellers, each having title of the article and description., on click on item it will navigate to the content detail screen.",
+                                        "screenType": "ListView",
+                                        "templateName": "SellerContentList"
+                                    },
+                                    "ContentDetail": {
+                                        "description": "Detailed view of each article",
+                                        "sections": "Provides seller with a detailed articles",
+                                        "screenType": "DetailView",
+                                        "templateName": "SellerContentDetailView"
+                                    }
+                                }
+                            },
+                            "FAQs": {
+                                "description": "Display of frequnetly asked questions by sellers. Each having question and an answer",
+                                "sections": "Question and answers for top 5 most frequesntly asked questions.",
+                                "screenType": "FAQHelp",
+                                "templateName": "SellerFAQScreen"
+                            }
+                        }
+                    },
+                    "LoginScreen": {
+                        "description": "Allows sellers to create a new account or log in to an existing one.",
+                        "sections": "1. LoginFields: This section contains fields for email and password with a 'Login' button.",
+                        "screenType": "LoginRegister",
+                        "templateName": "StandardLoginRegisterScreen"
+                    }
+                }
+            },
+            "menuItems": {
+                "Dashboard": {
+                    "description": "The Dashboard provides an overview of sales performance, recent orders, and key metrics to help sellers manage their business efficiently.",
+                    "screens": {
+                        "DashboardScreen": {
+                            "description": "Displays an overview of sales performance, recent orders, and key metrics.",
+                            "sections": "1. SalesSummary: This section shows KPI cards displaying 'Total Sales', 'Pending Orders', 'Completed Orders', and 'Returned Orders'. Each card provides a quick summary of the respective count with real-time updates. Clicking on any KPI card updates the dashboard to reflect relevant detailed data.,2. RecentOrders: This section lists the most recent order cards  with details such as order ID, customer name, product, quantity, total amount, and status and 'view Order' Button. Clicking on an  view order the seller to view more order details.3. statistics: This section displays charts of sales performance  with line graph. 4. A card containing a list of latest notifications from the platform, orders and latest updates etc.",
+                            "screenType": "Dashboard",
+                            "templateName": "SellerDashboardScreen"
+                        }
+                    }
+                },
+                "Products": {
+                    "description": "The Products page allows sellers to manage their product listings, add new products, update existing product details, and view inventory status.",
+                    "screens": {
+                        "ProductsListScreen": {
+                            "description": "Displays all product listings with options to add new products, update existing product details, and view inventory status.and as top actions it contains 'Add Product' button which navigates to add product page",
+                            "sections": "1. ProductList: This section displays a list of all products . Each product Card  shows an image, name, SKU, price, stock status, and  view order button which navigates to the Product Detail Page.,",
+                            "screenType": "DetailView",
+                            "templateName": "SellerProductsListScreen"
+                        },
+                        "AddProductScreen": {
+                            "description": "Allows sellers to add new products to their inventory.",
+                            "sections": "=1. ProductDetailsForm: This section contains fields for entering product details such as name, description, price, categories, and  'Upload images' button.  and InventoryManagement fields  such as sku , Stock Quantity, Stock Status etc.. .2. AddProductButton: This section contains a button  'Add Product' to add to the the inventory. Clicking on the add product button will save the product details and navigate the seller back to the product list page.",
+                            "screenType": "Form",
+                            "templateName": "SellerAddProductForm"
+                        },
+                        "ProductDetailScreen": {
+                            "description": "Displays detailed information about a specific product, including images, name, price, description, specifications, stock status, and sales performance.",
+                            "sections": " 1. ProductImages: This section displays a carousel of product images, allowing sellers to view the product from different angles or perspectives.,2. ProductDetails: This section provides information about the product, including name, price, description, specifications, stock status, and sales performance.,3. InventoryManagement: This section allows sellers to manage inventory details such as SKU, stock quantity, stock status, and sales performance.,4. ProductActions: This section contains buttons to 'Edit' , 'Update Inventory', 'Delete'.",
+                            "screenType": "DetailView",
+                            "templateName": "SellerProductDetailScreen"
+                        }
+                    }
+                },
+                "Orders": {
+                    "description": "The Orders page allows sellers to view and manage all orders received.",
+                    "screens": {
+                        "OrderListScreen": {
+                            "description": "Displays a list of all orders received by the seller, with details such as order ID, customer name, product, quantity, total amount, and status.as top actions it contains  'Export' button to export the order list",
+                            "sections": "1. OrderList: This section displays a list of all orders with details such as order ID, customer name,product, quantity, total amount, and status and  button 'View Order',.on click on view order button it will navigate to order details page ,",
+                            "screenType": "ListView",
+                            "templateName": "SellerOrderListScreen"
+                        },
+                        "OrderDetailScreen": {
+                            "description": "Displays detailed information about a specific order, including customer information, shipping address, product details, quantity, total amount, and order status.",
+                            "sections": " 1. CustomerDetails: This section provides detailed information about the customer, including name, contact information, and shipping address.,2. ProductDetails: This section provides detailed information about the products in the order, including name, quantity, price, and total amount.,3. OrderActions: This section includes action buttons for updating the order status, 'Processing', 'Packed', 'shipped' etc on click on  processing , packed and shiped  it will update the respective status' .",
+                            "screenType": "DetailView",
+                            "templateName": "SellerOrderDetailScreen"
+                        }
+                    }
+                },
+                "Returns": {
+                    "description": "Manage returns.",
+                    "screens": {
+                        "ReturnListScreen": {
+                            "description": "Displays a list of all return requests.",
+                            "sections": "1. ReturnList: List of return requests with details such as order ID, customer name, product, reason for return, and status.",
+                            "screenType": "ListView",
+                            "templateName": "SellerReturnListScreen"
+                        },
+                        "ReturnDetailScreen": {
+                            "description": "Displays detailed information about a specific return request.",
+                            "sections": "1. ReturnDetails: Detailed information about the return request, including reason for return, product details, and status. 2. ReturnActions: Buttons to approve or reject the return.",
+                            "screenType": "DetailView",
+                            "templateName": "SellerReturnDetailScreen"
+                        }
+                    }
+                },
+                "Payment": {
+                    "description": "Manage payments and transactions.",
+                    "screens": {
+                        "PaymentListScreen": {
+                            "description": "Displays a list of all payment transactions.",
+                            "sections": "1. PaymentList: List of payment transactions with details such as transaction ID, order ID, amount, payment method, and status. Clicking on any item in the list would navigate to payment detail screen.2. Should be able to filter based on the month and the year.3. Each item in the list includes 'Download' icon which on click would download the payment details.",
+                            "screenType": "ListView",
+                            "templateName": "SellerPaymentListScreen"
+                        },
+                        "PaymentDetailScreen": {
+                            "description": "Displays detailed information about a specific payment transaction.",
+                            "sections": "1. PaymentDetails: Detailed information about the payment transaction, including transaction ID, order ID, amount, payment method, and status.  2. Contains 'Download' report button which on click would download the report.3. Contains a KPI cards for showing the transactioned amount, remaining balance, total amount",
+                            "screenType": "DetailView",
+                            "templateName": "SellerPaymentDetailScreen"
+                        }
+                    }
+                }
+            }
+        },
+        "Admin": {
+            "description": "The Admin oversees the entire platform, manages buyer accounts, regulates content, and ensures smooth operation.",
+            "OnboardingFlow": {
+                "description": "Guides new admins through setting up their account and managing platform settings, user roles, and analytics.",
+                "screens": {
+                    "LandingPage": {
+                        "description": "The first page that displays to admins, showcasing an overview of administrative features and tools.",
+                        "sections": "1. HeroSection: Contains a summary of admin capabilities with some images and a 'Get Started' button. Clicking the button navigates to the Welcome Screen.",
+                        "screenType": "DetailView",
+                        "templateName": "GenericLandingPage"
+                    },
+                    "WelcomeScreen": {
+                        "description": "Introduces the platform's admin features to new admins with a welcoming image and text.",
+                        "sections": "1. IntroSection: This section contains a welcome message and a 'Next' button that navigates to the login  Screen.",
+                        "screenType": "DetailView",
+                        "templateName": "GenericWelcomeScreen"
+                    },
+                    "LoginScreen": {
+                        "description": "Allows admins to create a new account or log in to an existing one.",
+                        "sections": "1. LoginFields: This section contains fields for email and password with a 'Login' button.",
+                        "screenType": "LoginRegister",
+                        "templateName": "StandardLoginRegisterScreen"
+                    }
+                }
+            },
+            "menuItems": {
+                "DashboardScreen": {
+                    "description": "The Dashboard provides detailed insights and reports on app usage, sales performance, buyer activities, and system health. It helps admins monitor the platform's overall performance and address issues promptly",
+                    "screens": {
+                        "DashboardScreen": {
+                            "description": "Displays key performance indicators, recent activities, system alerts, various reports, and sales performance statistics to help admins monitor and manage the platform efficiently",
+                            "sections": "1. KPICards: This section displays key performance indicators (KPI Cards) such as 'Total Users', 'Active Users', 'Total Sales', 'New Registrations'. Each card provides a quick summary with real-time updates.,2. SalesReports: This section  kpi cards  provides sales performance reports including daily, weekly, and monthly sales .,3. Statistics: This section displays charts of sales performance with various chart types to visualize data trends over time. Using eCharts, the charts include:- LineChart: Shows trends in total sales over time. Metrics include total sales amount, number of orders, and revenue by day, week, or month.,- BarChart: Compares sales performance across different categories or products. Metrics include total sales per category, top-selling products, and revenue by product.,- PieChart: Displays the distribution of sales across different regions or buyer segments. Metrics include sales percentage by region, buyer demographics, and sales by buyer type (new vs. returning).",
+                            "screenType": "Dashboard",
+                            "templateName": "AdminDashboardScreen"
+                        }
+                    }
+                },
+                "BuyerManagement": {
+                    "description": "The Buyer Management page allows admins to manage customer and seller accounts, set permissions, and handle account-related issues.",
+                    "screens": {
+                        "BuyerListScreen": {
+                            "description": "Displays a list of all users with options to view, edit, delete, or set permissions.as top actions it contains  export button to export the buyer list",
+                            "sections": "1. UserList: This section displays a list of all users with details such as buyer ID, name, email, role, and status and 'View Buyer ' button . on click on view buyer button it will navigate to buyer details page,",
+                            "screenType": "ListView",
+                            "templateName": "AdminBuyerListScreen"
+                        },
+                        "DetailScreen": {
+                            "description": "Displays detailed information about a specific buyer, including account details, order history, and activity logs.",
+                            "sections": "1. AccountDetails: This section displays detailed account information cards  including buyer ID, name, email, contact number, and registration date.,2. OrderHistory: This section lists all order cards  placed by the buyer with details such as order ID, products purchased, dates, and statuses.,",
+                            "screenType": "DetailView",
+                            "templateName": "AdminBuyerDetailView"
+                        }
+                    }
+                },
+                "SellerManagement": {
+                    "description": "The Seller Management page allows admins to manage seller accounts, oversee their activities, and handle account-related issues.",
+                    "screens": {
+                        "SellerListScreen": {
+                            "description": "Displays a list of all sellers with options to view, edit, delete, or set permissions.",
+                            "sections": "1. SellerList: This section displays a list of all sellers with details such as seller ID,name, email, business name, status, and total sales and view sellers button .n click on view seller button it will navigate to seller details page,",
+                            "screenType": "ListView",
+                            "templateName": "AdminSellerListScreen"
+                        },
+                        "SellerDetailScreen": {
+                            "description": "Displays detailed information about a specific seller, including account details, product listings, sales performance, and activity logs.",
+                            "sections": "1. AccountDetails: This section displays detailed account information including seller ID, name, email, business name, contact number, and registration date.,2. ProductListings: This section contains buttons such as View Products  ect.. . Clicking on view products button will navigate the admin to the product list page., 3. SalesPerformance: This section provides KPI cards with  an overview of the seller's sales performance, including metrics such as total sales, average order value, and top-selling products.,",
+                            "screenType": "DetailView",
+                            "templateName": "AdminSellerDetailView"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

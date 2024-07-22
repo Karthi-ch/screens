@@ -1,7 +1,6 @@
 {
-    "type": "APP",
-    "description": "A communication app facilitates real-time messaging and collaboration between users. It supports various features such as one-on-one messaging, group chats, file sharing, voice and video calls, and notifications. Users can create profiles, manage contacts, and customize their communication preferences. The app aims to enhance connectivity and productivity by providing seamless communication tools.",
-    "embedding_string":"A communication app that enhances connectivity and productivity through real-time messaging, voice and video calls, group chats, and file sharing. Users can manage profiles, contacts, and communication preferences while admins oversee user accounts, monitor performance, and enforce guidelines.",
+    "type": "App",
+    "description": "Communication app is designed to facilitate real-time messaging and collaboration among users. It supports a range of features including one-on-one messaging, group chats, file sharing, and voice and video calls, ensuring versatile communication options. Users can create and manage profiles, organize contacts, and customize their communication preferences to suit their needs. The app aims to enhance both connectivity and productivity by providing a comprehensive suite of seamless communication tools that streamline interactions and collaboration.",
     "actors": {
         "User": {
             "description": "The primary actor who uses the communication app to send messages, make calls, share files, and manage communication settings.",

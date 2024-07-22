@@ -1,8 +1,7 @@
 {
-  "type": "APP",
-  "description": "A Travel and Hospitality platform is designed to facilitate booking and managing travel plans. It allows users to search for flights, hotels, and rental cars, make reservations, and explore destinations. The platform aims to provide a seamless travel planning experience by offering features like itinerary management, travel recommendations, user reviews, and customer support.",
-  "embedding_string":"A travel and hospitality platform designed to facilitate booking and managing travel plans. Users can search for flights, hotels, and rental cars, make reservations, and explore destinations. The app offers features like itinerary management, travel recommendations, user reviews, and customer support. Travelers can browse deals, personalize recommendations, and manage their bookings and profiles. Admins oversee user accounts, transactions, and compliance. Moderators manage user-generated content, ensuring compliance with community guidelines, and handling user reports.",
-  "actors": {
+  "type": "App",
+  "description": "This Travel and Hospitality platform is designed to streamline the booking and management of travel plans. Users can search for flights, hotels, and rental cars, make reservations, and explore various destinations all in one place. The platform enhances the travel planning experience with features such as itinerary management to keep track of travel details, personalized travel recommendations to help users discover new options, user reviews for informed decision-making, and comprehensive customer support for assistance throughout the process. The goal is to provide a seamless, user-friendly experience for all aspects of travel planning.",
+"actors": {
     "Traveler": {
       "description": "The Traveler uses the platform to plan, book, and manage their travel itineraries, including flights, accommodations, and transportation.",
       "OnboardingFlow": {

@@ -1,7 +1,6 @@
 {
-    "type": "APP",
-    "description": "A project management tool facilitates team collaboration and project tracking. It offers features like task management, deadline tracking, milestone setting, and resource allocation. The platform supports real-time updates, communication, and reporting to enhance project efficiency and team productivity.",
-    "embedding_string": "A project management tool that facilitates team collaboration and project tracking. It offers features like task management, deadline tracking, milestone setting, and resource allocation. Team members can view and manage tasks, track deadlines, access project information, and update their profiles. Admins oversee platform usage, manage user accounts, track project progress, and provide support. The platform supports real-time updates, communication, and reporting to enhance project efficiency and team productivity.",
+    "type": "App",
+    "description": "This project management tool is designed to enhance team collaboration and streamline project tracking. It provides a range of features including task management for assigning and tracking work, deadline tracking to ensure timely completion, milestone setting to mark key project achievements, and resource allocation to optimize team and material usage. The platform supports real-time updates and communication, allowing team members to stay informed and coordinate effectively. Additionally, it offers comprehensive reporting tools to monitor project progress and performance, thereby improving overall project efficiency and boosting team productivity.",
     "actors": {
       "TeamMember": {
         "description": "The team member interacts with the project management tool to view and manage tasks, track deadlines, access project information, and update their profile.",

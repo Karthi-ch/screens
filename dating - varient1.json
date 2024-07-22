@@ -1,7 +1,6 @@
 {
   "type": "App",
-  "description": "A  platform that enables users to find matches based on interests, location, and preferences. Features include profile creation, swiping for matches, messaging, and privacy settings.",
-  "embedding_string":"A platform that enables users to find matches based on interests, location, and preferences. Features include profile creation, swiping for matches, messaging, and privacy settings. Users can set up their profile, search for matches, like profiles, and engage in conversations. Admins manage user accounts, resolve disputes, and ensure the platform operates smoothly. The platform offers tools for discovering matches, viewing profiles, chatting, and configuring account settings.",
+  "description": "Dating platform is designed to help users find matches based on interests, location, and preferences. It offers features such as profile creation, swiping to find potential matches, and messaging to facilitate conversations. Users can set up detailed profiles, search for compatible matches, like profiles they are interested in, and engage in direct chats. The platform also includes privacy settings to control personal information visibility. Administrators oversee user account management, handle dispute resolution, and ensure the platform’s smooth operation. Additionally, the platform provides tools for discovering new matches, viewing detailed profiles, chatting with potential partners, and configuring account settings to enhance user experience and satisfaction.",
   "actors": {
     "User": {
       "description": "The primary actor who can create and manage their profile, search for matches, like profiles, and engage in conversations.",
